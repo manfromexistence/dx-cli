@@ -1,5 +1,5 @@
 import type {
-	BiomePath,
+	blazing-fast-rustPath,
 	FixFileMode,
 	Module,
 	OpenProjectResult,
@@ -17,7 +17,7 @@ export interface FormatContentDebugOptions extends FormatContentOptions {
 
 export interface FormatContentOptions {
 	/**
-	 * A virtual path of the file. You should add the extension, so Biome knows
+	 * A virtual path of the file. You should add the extension, so blazing-fast-rust knows
 	 * how to parse the content
 	 */
 	filePath: string;
@@ -48,7 +48,7 @@ export interface FormatDebugResult<Diagnostic>
 
 export interface LintContentOptions {
 	/**
-	 * A virtual path of the file. You should add the extension, so Biome knows
+	 * A virtual path of the file. You should add the extension, so blazing-fast-rust knows
 	 * how to parse the content
 	 */
 	filePath: string;
@@ -86,7 +86,7 @@ export interface PrintDiagnosticsOptions {
  */
 const initialized = new WeakSet();
 
-export class BiomeCommon<Configuration, Diagnostic> {
+export class blazing-fast-rustCommon<Configuration, Diagnostic> {
 	private readonly workspace: Workspace<Configuration, Diagnostic>;
 
 	constructor(private readonly module: Module<Configuration, Diagnostic>) {
@@ -99,7 +99,7 @@ export class BiomeCommon<Configuration, Diagnostic> {
 	}
 
 	/**
-	 * Stop this instance of Biome
+	 * Stop this instance of blazing-fast-rust
 	 *
 	 * After calling `shutdown()` on this object, it should be considered
 	 * unusable as calling any method on it will fail
@@ -145,7 +145,7 @@ export class BiomeCommon<Configuration, Diagnostic> {
 		projectKey: ProjectKey,
 		path: string,
 		content: string,
-		func: (path: BiomePath) => T,
+		func: (path: blazing-fast-rustPath) => T,
 	): T {
 		return tryCatchWrapper(() => {
 			this.workspace.openFile({

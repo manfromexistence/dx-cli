@@ -1,24 +1,24 @@
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import type { ProjectKey } from "../../backend-jsonrpc/dist";
-import { Biome, Distribution } from "../dist";
+import { blazing-fast-rust, Distribution } from "../dist";
 
-describe("Biome WebAssembly formatContent", () => {
-	let biome: Biome;
+describe("blazing-fast-rust WebAssembly formatContent", () => {
+	let blazing-fast-rust: blazing-fast-rust;
 	let projectKey: ProjectKey;
 	beforeEach(async () => {
-		biome = await Biome.create({
+		blazing-fast-rust = await blazing-fast-rust.create({
 			distribution: Distribution.NODE,
 		});
-		const result = biome.openProject();
+		const result = blazing-fast-rust.openProject();
 		projectKey = result.projectKey;
 	});
 
 	afterEach(() => {
-		biome.shutdown();
+		blazing-fast-rust.shutdown();
 	});
 
 	it("should format JavaScript content", () => {
-		const result = biome.formatContent(projectKey, "function f   () {  }", {
+		const result = blazing-fast-rust.formatContent(projectKey, "function f   () {  }", {
 			filePath: "example.js",
 		});
 
@@ -27,7 +27,7 @@ describe("Biome WebAssembly formatContent", () => {
 	});
 
 	it("should format JSON content", () => {
-		const result = biome.formatContent(
+		const result = blazing-fast-rust.formatContent(
 			projectKey,
 			'{ "lorem": "ipsum", "foo": false, "bar": 23, "lorem": "ipsum", "foo": false, "bar": 23 }',
 			{ filePath: "example.json" },
@@ -41,7 +41,7 @@ describe("Biome WebAssembly formatContent", () => {
 
 	it("should not format and have diagnostics", () => {
 		const content = "function   () {  }";
-		const result = biome.formatContent(projectKey, content, {
+		const result = blazing-fast-rust.formatContent(projectKey, content, {
 			filePath: "example.js",
 		});
 
@@ -54,7 +54,7 @@ describe("Biome WebAssembly formatContent", () => {
 	});
 
 	it("should format content in debug mode", () => {
-		const result = biome.formatContent(projectKey, "function f() {}", {
+		const result = blazing-fast-rust.formatContent(projectKey, "function f() {}", {
 			filePath: "example.js",
 			debug: true,
 		});
@@ -67,7 +67,7 @@ describe("Biome WebAssembly formatContent", () => {
 	});
 
 	it("should not format content with range", () => {
-		const result = biome.formatContent(
+		const result = blazing-fast-rust.formatContent(
 			projectKey,
 			"let a   ; function g () {  }",
 			{ filePath: "file.js", range: [20, 25] },
@@ -78,7 +78,7 @@ describe("Biome WebAssembly formatContent", () => {
 	});
 
 	it("should not format content with range in debug mode", () => {
-		const result = biome.formatContent(
+		const result = blazing-fast-rust.formatContent(
 			projectKey,
 			"let a   ; function g () {  }",
 			{
@@ -112,7 +112,7 @@ describe("Biome WebAssembly formatContent", () => {
 }
 `;
 
-		biome.applyConfiguration(projectKey, {
+		blazing-fast-rust.applyConfiguration(projectKey, {
 			formatter: {
 				indentStyle: "space",
 				indentWidth: 8,
@@ -125,7 +125,7 @@ describe("Biome WebAssembly formatContent", () => {
 			},
 		});
 
-		const result = biome.formatContent(projectKey, content, {
+		const result = blazing-fast-rust.formatContent(projectKey, content, {
 			filePath: "example.js",
 		});
 
@@ -137,7 +137,7 @@ describe("Biome WebAssembly formatContent", () => {
 		const formatted = `<div bar='foo' baz={"foo"} />;
 `;
 
-		biome.applyConfiguration(projectKey, {
+		blazing-fast-rust.applyConfiguration(projectKey, {
 			formatter: {
 				indentStyle: "space",
 				indentWidth: 8,
@@ -150,7 +150,7 @@ describe("Biome WebAssembly formatContent", () => {
 			},
 		});
 
-		const result = biome.formatContent(projectKey, content, {
+		const result = blazing-fast-rust.formatContent(projectKey, content, {
 			filePath: "example.js",
 		});
 

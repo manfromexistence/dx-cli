@@ -2,11 +2,11 @@
 import type { Transport } from "./transport";
 export interface SupportsFeatureParams {
 	features: FeatureName;
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	projectKey: ProjectKey;
 }
 export type FeatureName = FeatureKind[];
-export type BiomePath = string;
+export type blazing-fast-rustPath = string;
 export type ProjectKey = number;
 export type FeatureKind = "format" | "lint" | "search" | "assist" | "debug";
 export interface FileFeaturesResult {
@@ -22,10 +22,10 @@ export type SupportKind =
 export interface UpdateSettingsParams {
 	configuration: Configuration;
 	projectKey: ProjectKey;
-	workspaceDirectory?: BiomePath;
+	workspaceDirectory?: blazing-fast-rustPath;
 }
 /**
- * The configuration that is contained inside the file `biome.json`
+ * The configuration that is contained inside the file `blazing-fast-rust.json`
  */
 export interface Configuration {
 	/**
@@ -85,7 +85,7 @@ export interface Configuration {
 	 */
 	plugins?: Plugins;
 	/**
-	 * Indicates whether this configuration file is at the root of a Biome project. By default, this is `true`.
+	 * Indicates whether this configuration file is at the root of a blazing-fast-rust project. By default, this is `true`.
 	 */
 	root?: Bool;
 	/**
@@ -96,15 +96,15 @@ export interface Configuration {
 export type Schema = string;
 export interface AssistConfiguration {
 	/**
-	 * Whether Biome should fail in CLI if the assist were not applied to the code.
+	 * Whether blazing-fast-rust should fail in CLI if the assist were not applied to the code.
 	 */
 	actions?: Actions;
 	/**
-	 * Whether Biome should enable assist via LSP and CLI.
+	 * Whether blazing-fast-rust should enable assist via LSP and CLI.
 	 */
 	enabled?: Bool;
 	/**
-	 * A list of glob patterns. Biome will include files/folders that will match these patterns.
+	 * A list of glob patterns. blazing-fast-rust will include files/folders that will match these patterns.
 	 */
 	includes?: NormalizedGlob[];
 }
@@ -139,9 +139,9 @@ export type Extends = string[] | string;
  */
 export interface FilesConfiguration {
 	/**
-	* Set of file and folder names that should be unconditionally ignored by Biome's scanner.
+	* Set of file and folder names that should be unconditionally ignored by blazing-fast-rust's scanner.
 
-Biome maintains an internal list of default ignore entries, which is based on user feedback and which may change in any release. This setting allows overriding this internal list completely.
+blazing-fast-rust maintains an internal list of default ignore entries, which is based on user feedback and which may change in any release. This setting allows overriding this internal list completely.
 
 This is considered an advanced feature that users _should_ not need to tweak themselves, but they can as a last resort. This setting can only be configured in root configurations, and is ignored in nested configs.
 
@@ -159,11 +159,11 @@ Please be aware that rules relying on the module graph or type inference informa
 	 */
 	experimentalScannerIgnores?: string[];
 	/**
-	 * Tells Biome to not emit diagnostics when handling files that doesn't know
+	 * Tells blazing-fast-rust to not emit diagnostics when handling files that doesn't know
 	 */
 	ignoreUnknown?: Bool;
 	/**
-	 * A list of glob patterns. Biome will handle only those files/folders that will match these patterns.
+	 * A list of glob patterns. blazing-fast-rust will handle only those files/folders that will match these patterns.
 	 */
 	includes?: NormalizedGlob[];
 	/**
@@ -189,7 +189,7 @@ export interface FormatterConfiguration {
 	bracketSpacing?: BracketSpacing;
 	enabled?: Bool;
 	/**
-	 * Whether to expand arrays and objects on multiple lines. When set to `auto`, object literals are formatted on multiple lines if the first property has a newline, and array literals are formatted on a single line if it fits in the line. When set to `always`, these literals are formatted on multiple lines, regardless of length of the list. When set to `never`, these literals are formatted on a single line if it fits in the line. When formatting `package.json`, Biome will use `always` unless configured otherwise. Defaults to "auto".
+	 * Whether to expand arrays and objects on multiple lines. When set to `auto`, object literals are formatted on multiple lines if the first property has a newline, and array literals are formatted on a single line if it fits in the line. When set to `always`, these literals are formatted on multiple lines, regardless of length of the list. When set to `never`, these literals are formatted on a single line if it fits in the line. When formatting `package.json`, blazing-fast-rust will use `always` unless configured otherwise. Defaults to "auto".
 	 */
 	expand?: Expand;
 	/**
@@ -217,7 +217,7 @@ export interface FormatterConfiguration {
 	 */
 	lineWidth?: LineWidth;
 	/**
-	* Use any `.editorconfig` files to configure the formatter. Configuration in `biome.json` will override `.editorconfig` configuration.
+	* Use any `.editorconfig` files to configure the formatter. Configuration in `blazing-fast-rust.json` will override `.editorconfig` configuration.
 
 Default: `true`. 
 	 */
@@ -341,7 +341,7 @@ export type Overrides = OverridePattern[];
 export type Plugins = PluginConfiguration[];
 export type Bool = boolean;
 /**
- * Set of properties to integrate Biome with a VCS software.
+ * Set of properties to integrate blazing-fast-rust with a VCS software.
  */
 export interface VcsConfiguration {
 	/**
@@ -353,29 +353,29 @@ export interface VcsConfiguration {
 	 */
 	defaultBranch?: string;
 	/**
-	 * Whether Biome should integrate itself with the VCS client
+	 * Whether blazing-fast-rust should integrate itself with the VCS client
 	 */
 	enabled?: Bool;
 	/**
-	* The folder where Biome should check for VCS files. By default, Biome will use the same folder where `biome.json` was found.
+	* The folder where blazing-fast-rust should check for VCS files. By default, blazing-fast-rust will use the same folder where `blazing-fast-rust.json` was found.
 
-If Biome can't find the configuration, it will attempt to use the current working directory. If no current working directory can't be found, Biome won't use the VCS integration, and a diagnostic will be emitted 
+If blazing-fast-rust can't find the configuration, it will attempt to use the current working directory. If no current working directory can't be found, blazing-fast-rust won't use the VCS integration, and a diagnostic will be emitted 
 	 */
 	root?: string;
 	/**
-	 * Whether Biome should use the VCS ignore file. When [true], Biome will ignore the files specified in the ignore file.
+	 * Whether blazing-fast-rust should use the VCS ignore file. When [true], blazing-fast-rust will ignore the files specified in the ignore file.
 	 */
 	useIgnoreFile?: Bool;
 }
 export interface Actions {
 	/**
-	 * It enables the assist actions recommended by Biome. `true` by default.
+	 * It enables the assist actions recommended by blazing-fast-rust. `true` by default.
 	 */
 	recommended?: boolean;
 	source?: Source;
 }
 /**
- * Normalized Biome glob pattern that strips `./` from the pattern.
+ * Normalized blazing-fast-rust glob pattern that strips `./` from the pattern.
  */
 export type NormalizedGlob = Glob;
 /**
@@ -623,7 +623,7 @@ export interface JsFormatterConfiguration {
 	 */
 	enabled?: Bool;
 	/**
-	 * Whether to expand arrays and objects on multiple lines. When set to `auto`, object literals are formatted on multiple lines if the first property has a newline, and array literals are formatted on a single line if it fits in the line. When set to `always`, these literals are formatted on multiple lines, regardless of length of the list. When set to `never`, these literals are formatted on a single line if it fits in the line. When formatting `package.json`, Biome will use `always` unless configured otherwise. Defaults to "auto".
+	 * Whether to expand arrays and objects on multiple lines. When set to `auto`, object literals are formatted on multiple lines if the first property has a newline, and array literals are formatted on a single line if it fits in the line. When set to `always`, these literals are formatted on multiple lines, regardless of length of the list. When set to `never`, these literals are formatted on a single line if it fits in the line. When formatting `package.json`, blazing-fast-rust will use `always` unless configured otherwise. Defaults to "auto".
 	 */
 	expand?: Expand;
 	/**
@@ -716,7 +716,7 @@ export interface JsonFormatterConfiguration {
 	 */
 	enabled?: Bool;
 	/**
-	 * Whether to expand arrays and objects on multiple lines. When set to `auto`, object literals are formatted on multiple lines if the first property has a newline, and array literals are formatted on a single line if it fits in the line. When set to `always`, these literals are formatted on multiple lines, regardless of length of the list. When set to `never`, these literals are formatted on a single line if it fits in the line. When formatting `package.json`, Biome will use `always` unless configured otherwise. Defaults to "auto".
+	 * Whether to expand arrays and objects on multiple lines. When set to `auto`, object literals are formatted on multiple lines if the first property has a newline, and array literals are formatted on a single line if it fits in the line. When set to `always`, these literals are formatted on multiple lines, regardless of length of the list. When set to `never`, these literals are formatted on a single line if it fits in the line. When formatting `package.json`, blazing-fast-rust will use `always` unless configured otherwise. Defaults to "auto".
 	 */
 	expand?: Expand;
 	/**
@@ -770,7 +770,7 @@ export interface Rules {
 	nursery?: SeverityOrGroup_for_Nursery;
 	performance?: SeverityOrGroup_for_Performance;
 	/**
-	 * It enables the lint rules recommended by Biome. `true` by default.
+	 * It enables the lint rules recommended by blazing-fast-rust. `true` by default.
 	 */
 	recommended?: boolean;
 	security?: SeverityOrGroup_for_Security;
@@ -807,7 +807,7 @@ export interface OverridePattern {
 	 */
 	html?: HtmlConfiguration;
 	/**
-	 * A list of glob patterns. Biome will include files/folders that will match these patterns.
+	 * A list of glob patterns. blazing-fast-rust will include files/folders that will match these patterns.
 	 */
 	includes?: OverrideGlobs;
 	/**
@@ -946,7 +946,7 @@ export interface OverrideFormatterConfiguration {
 	bracketSpacing?: BracketSpacing;
 	enabled?: Bool;
 	/**
-	 * Whether to expand arrays and objects on multiple lines. When set to `auto`, object literals are formatted on multiple lines if the first property has a newline, and array literals are formatted on a single line if it fits in the line. When set to `always`, these literals are formatted on multiple lines, regardless of length of the list. When set to `never`, these literals are formatted on a single line if it fits in the line. When formatting `package.json`, Biome will use `always` unless configured otherwise. Defaults to "auto".
+	 * Whether to expand arrays and objects on multiple lines. When set to `auto`, object literals are formatted on multiple lines if the first property has a newline, and array literals are formatted on a single line if it fits in the line. When set to `always`, these literals are formatted on multiple lines, regardless of length of the list. When set to `never`, these literals are formatted on a single line if it fits in the line. When formatting `package.json`, blazing-fast-rust will use `always` unless configured otherwise. Defaults to "auto".
 	 */
 	expand?: Expand;
 	/**
@@ -1612,7 +1612,7 @@ export interface Nursery {
 	/**
 	 * Succinct description of the rule.
 	 */
-	noQuickfixBiome?: RuleConfiguration_for_NoQuickfixBiomeOptions;
+	noQuickfixblazing-fast-rust?: RuleConfiguration_for_NoQuickfixblazing-fast-rustOptions;
 	/**
 	 * Disallow assigning to React component props.
 	 */
@@ -2887,9 +2887,9 @@ export type RuleConfiguration_for_NoNoninteractiveElementInteractionsOptions =
 export type RuleFixConfiguration_for_NoProcessGlobalOptions =
 	| RulePlainConfiguration
 	| RuleWithFixOptions_for_NoProcessGlobalOptions;
-export type RuleConfiguration_for_NoQuickfixBiomeOptions =
+export type RuleConfiguration_for_NoQuickfixblazing-fast-rustOptions =
 	| RulePlainConfiguration
-	| RuleWithOptions_for_NoQuickfixBiomeOptions;
+	| RuleWithOptions_for_NoQuickfixblazing-fast-rustOptions;
 export type RuleConfiguration_for_NoReactPropAssignOptions =
 	| RulePlainConfiguration
 	| RuleWithOptions_for_NoReactPropAssignOptions;
@@ -5175,7 +5175,7 @@ export interface RuleWithFixOptions_for_NoProcessGlobalOptions {
 	 */
 	options: NoProcessGlobalOptions;
 }
-export interface RuleWithOptions_for_NoQuickfixBiomeOptions {
+export interface RuleWithOptions_for_NoQuickfixblazing-fast-rustOptions {
 	/**
 	 * The severity of the emitted diagnostics by the rule
 	 */
@@ -5183,7 +5183,7 @@ export interface RuleWithOptions_for_NoQuickfixBiomeOptions {
 	/**
 	 * Rule's options
 	 */
-	options: NoQuickfixBiomeOptions;
+	options: NoQuickfixblazing-fast-rustOptions;
 }
 export interface RuleWithOptions_for_NoReactPropAssignOptions {
 	/**
@@ -7683,7 +7683,7 @@ export interface NoMisusedPromisesOptions {}
 export interface NoNestedComponentDefinitionsOptions {}
 export interface NoNoninteractiveElementInteractionsOptions {}
 export interface NoProcessGlobalOptions {}
-export interface NoQuickfixBiomeOptions {
+export interface NoQuickfixblazing-fast-rustOptions {
 	/**
 	 * A list of additional JSON files that should be checked.
 	 */
@@ -8375,7 +8375,7 @@ export type Category =
 	| "lint/nursery/noNestedComponentDefinitions"
 	| "lint/nursery/noNoninteractiveElementInteractions"
 	| "lint/nursery/noProcessGlobal"
-	| "lint/nursery/noQuickfixBiome"
+	| "lint/nursery/noQuickfixblazing-fast-rust"
 	| "lint/nursery/noReactPropAssign"
 	| "lint/nursery/noReactSpecificProps"
 	| "lint/nursery/noRestrictedElements"
@@ -8400,7 +8400,7 @@ export type Category =
 	| "lint/nursery/noUselessUndefined"
 	| "lint/nursery/noVueReservedProps"
 	| "lint/nursery/useAdjacentGetterSetter"
-	| "lint/nursery/useBiomeSuppressionComment"
+	| "lint/nursery/useblazing-fast-rustSuppressionComment"
 	| "lint/nursery/useConsistentObjectDefinition"
 	| "lint/nursery/useConsistentResponse"
 	| "lint/nursery/useExhaustiveSwitchCases"
@@ -8726,13 +8726,13 @@ export interface OpenProjectParams {
 	 */
 	onlyRules?: RuleCode[];
 	/**
-	 * Whether the folder should be opened as a project, even if no `biome.json` can be found.
+	 * Whether the folder should be opened as a project, even if no `blazing-fast-rust.json` can be found.
 	 */
 	openUninitialized: boolean;
 	/**
 	 * The path to open
 	 */
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	/**
 	 * Whether the client wants to skip some lint rule. This is needed to compute the kind of [ScanKind].
 	 */
@@ -8765,14 +8765,14 @@ If a target path indicates a folder, all files within are scanned as well.
 
 Target paths must be absolute. 
 	 */
-				targetPaths: BiomePath[];
+				targetPaths: blazing-fast-rustPath[];
 			};
 	  }
 	| "project";
 export interface OpenFileParams {
 	content: FileContent;
 	documentFileSource?: DocumentFileSource;
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	/**
 	* Set to `true` to persist the node cache used during parsing, in order to speed up subsequent reparsing if the document has been edited.
 
@@ -8842,7 +8842,7 @@ export type JsonFileVariant = "standard" | "jsonc";
 /**
 	* The style of CSS contained in the file.
 
-Currently, Biome only supports plain CSS, and aims to be compatible with the latest Recommendation level standards. 
+Currently, blazing-fast-rust only supports plain CSS, and aims to be compatible with the latest Recommendation level standards. 
 	 */
 export type CssVariant = "standard";
 /**
@@ -8853,16 +8853,16 @@ export type HtmlVariant = "Standard" | "Astro" | "Vue" | "Svelte";
 export type GritVariant = "Standard";
 export interface ChangeFileParams {
 	content: string;
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	projectKey: ProjectKey;
 	version: number;
 }
 export interface CloseFileParams {
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	projectKey: ProjectKey;
 }
 export interface GetSyntaxTreeParams {
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	projectKey: ProjectKey;
 }
 export interface GetSyntaxTreeResult {
@@ -8870,10 +8870,10 @@ export interface GetSyntaxTreeResult {
 	cst: string;
 }
 export interface FileExitsParams {
-	filePath: BiomePath;
+	filePath: blazing-fast-rustPath;
 }
 export interface CheckFileSizeParams {
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	projectKey: ProjectKey;
 }
 export interface CheckFileSizeResult {
@@ -8881,28 +8881,28 @@ export interface CheckFileSizeResult {
 	limit: number;
 }
 export interface GetFileContentParams {
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	projectKey: ProjectKey;
 }
 export interface GetControlFlowGraphParams {
 	cursor: TextSize;
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	projectKey: ProjectKey;
 }
 export interface GetFormatterIRParams {
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	projectKey: ProjectKey;
 }
 export interface GetTypeInfoParams {
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	projectKey: ProjectKey;
 }
 export interface GetRegisteredTypesParams {
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	projectKey: ProjectKey;
 }
 export interface GetSemanticModelParams {
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	projectKey: ProjectKey;
 }
 export interface PullDiagnosticsParams {
@@ -8912,7 +8912,7 @@ export interface PullDiagnosticsParams {
 	 */
 	enabledRules?: RuleCode[];
 	only?: RuleCode[];
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	projectKey: ProjectKey;
 	/**
 	 * When `false` the diagnostics, don't have code frames of the code actions (fixes, suppressions, etc.)
@@ -8931,7 +8931,7 @@ export interface PullActionsParams {
 	categories?: RuleCategories;
 	enabledRules?: RuleCode[];
 	only?: RuleCode[];
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	projectKey: ProjectKey;
 	range?: TextRange;
 	skip?: RuleCode[];
@@ -8956,7 +8956,7 @@ export type ActionCategory =
 	| { source: SourceActionKind }
 	| { other: OtherActionCategory };
 /**
- * A Suggestion that is provided by Biome's linter, and can be reported to the user, and can be automatically applied if it has the right [`Applicability`].
+ * A Suggestion that is provided by blazing-fast-rust's linter, and can be reported to the user, and can be automatically applied if it has the right [`Applicability`].
  */
 export interface CodeSuggestion {
 	applicability: Applicability;
@@ -8993,7 +8993,7 @@ export type OtherActionCategory =
  */
 export type Applicability = "always" | "maybeIncorrect";
 export interface FormatFileParams {
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	projectKey: ProjectKey;
 }
 export interface Printed {
@@ -9016,13 +9016,13 @@ export interface SourceMarker {
 	source: TextSize;
 }
 export interface FormatRangeParams {
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	projectKey: ProjectKey;
 	range: TextRange;
 }
 export interface FormatOnTypeParams {
 	offset: TextSize;
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	projectKey: ProjectKey;
 }
 export interface FixFileParams {
@@ -9032,7 +9032,7 @@ export interface FixFileParams {
 	enabledRules?: RuleCode[];
 	fixFileMode: FixFileMode;
 	only?: RuleCode[];
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	projectKey: ProjectKey;
 	ruleCategories: RuleCategories;
 	shouldFormat: boolean;
@@ -9076,7 +9076,7 @@ export interface FixAction {
 }
 export interface RenameParams {
 	newName: string;
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	projectKey: ProjectKey;
 	symbolAt: TextSize;
 }
@@ -9100,13 +9100,13 @@ export interface ParsePatternResult {
 }
 export type PatternId = string;
 export interface SearchPatternParams {
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	pattern: PatternId;
 	projectKey: ProjectKey;
 }
 export interface SearchResults {
 	matches: TextRange[];
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 }
 export interface DropPatternParams {
 	pattern: PatternId;
@@ -9144,79 +9144,79 @@ export interface Workspace {
 export function createWorkspace(transport: Transport): Workspace {
 	return {
 		fileFeatures(params) {
-			return transport.request("biome/file_features", params);
+			return transport.request("blazing-fast-rust/file_features", params);
 		},
 		updateSettings(params) {
-			return transport.request("biome/update_settings", params);
+			return transport.request("blazing-fast-rust/update_settings", params);
 		},
 		openProject(params) {
-			return transport.request("biome/open_project", params);
+			return transport.request("blazing-fast-rust/open_project", params);
 		},
 		openFile(params) {
-			return transport.request("biome/open_file", params);
+			return transport.request("blazing-fast-rust/open_file", params);
 		},
 		changeFile(params) {
-			return transport.request("biome/change_file", params);
+			return transport.request("blazing-fast-rust/change_file", params);
 		},
 		closeFile(params) {
-			return transport.request("biome/close_file", params);
+			return transport.request("blazing-fast-rust/close_file", params);
 		},
 		getSyntaxTree(params) {
-			return transport.request("biome/get_syntax_tree", params);
+			return transport.request("blazing-fast-rust/get_syntax_tree", params);
 		},
 		fileExists(params) {
-			return transport.request("biome/file_exists", params);
+			return transport.request("blazing-fast-rust/file_exists", params);
 		},
 		checkFileSize(params) {
-			return transport.request("biome/check_file_size", params);
+			return transport.request("blazing-fast-rust/check_file_size", params);
 		},
 		getFileContent(params) {
-			return transport.request("biome/get_file_content", params);
+			return transport.request("blazing-fast-rust/get_file_content", params);
 		},
 		getControlFlowGraph(params) {
-			return transport.request("biome/get_control_flow_graph", params);
+			return transport.request("blazing-fast-rust/get_control_flow_graph", params);
 		},
 		getFormatterIr(params) {
-			return transport.request("biome/get_formatter_ir", params);
+			return transport.request("blazing-fast-rust/get_formatter_ir", params);
 		},
 		getTypeInfo(params) {
-			return transport.request("biome/get_type_info", params);
+			return transport.request("blazing-fast-rust/get_type_info", params);
 		},
 		getRegisteredTypes(params) {
-			return transport.request("biome/get_registered_types", params);
+			return transport.request("blazing-fast-rust/get_registered_types", params);
 		},
 		getSemanticModel(params) {
-			return transport.request("biome/get_semantic_model", params);
+			return transport.request("blazing-fast-rust/get_semantic_model", params);
 		},
 		pullDiagnostics(params) {
-			return transport.request("biome/pull_diagnostics", params);
+			return transport.request("blazing-fast-rust/pull_diagnostics", params);
 		},
 		pullActions(params) {
-			return transport.request("biome/pull_actions", params);
+			return transport.request("blazing-fast-rust/pull_actions", params);
 		},
 		formatFile(params) {
-			return transport.request("biome/format_file", params);
+			return transport.request("blazing-fast-rust/format_file", params);
 		},
 		formatRange(params) {
-			return transport.request("biome/format_range", params);
+			return transport.request("blazing-fast-rust/format_range", params);
 		},
 		formatOnType(params) {
-			return transport.request("biome/format_on_type", params);
+			return transport.request("blazing-fast-rust/format_on_type", params);
 		},
 		fixFile(params) {
-			return transport.request("biome/fix_file", params);
+			return transport.request("blazing-fast-rust/fix_file", params);
 		},
 		rename(params) {
-			return transport.request("biome/rename", params);
+			return transport.request("blazing-fast-rust/rename", params);
 		},
 		parsePattern(params) {
-			return transport.request("biome/parse_pattern", params);
+			return transport.request("blazing-fast-rust/parse_pattern", params);
 		},
 		searchPattern(params) {
-			return transport.request("biome/search_pattern", params);
+			return transport.request("blazing-fast-rust/search_pattern", params);
 		},
 		dropPattern(params) {
-			return transport.request("biome/drop_pattern", params);
+			return transport.request("blazing-fast-rust/drop_pattern", params);
 		},
 		destroy() {
 			transport.destroy();

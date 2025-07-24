@@ -1,5 +1,5 @@
 {
-  "name": "@biomejs/aria-data",
+  "name": "@blazing-fast-rust/aria-data",
   "version": "0.0.0",
   "description": "Structured representation of the ARIA roles, properties, and states",
   "private": true,

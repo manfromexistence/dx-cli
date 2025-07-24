@@ -1,4 +1,4 @@
-# @biomejs/backend-jsonrpc
+# @blazing-fast-rust/backend-jsonrpc
 
 ## 2.0.9
 
@@ -22,4 +22,4 @@
 
 ### Major Changes
 
-- [`9d5d95f`](https://github.com/biomejs/biome/commit/9d5d95fffd5734522c8911db18c6d16ee6a96756) Thanks [@arendjr](https://github.com/arendjr)! - Made the package compatible with the new Biome APIs.
+- [`9d5d95f`](https://github.com/manfromexistence/blazing-fast-rust/commit/9d5d95fffd5734522c8911db18c6d16ee6a96756) Thanks [@arendjr](https://github.com/arendjr)! - Made the package compatible with the new blazing-fast-rust APIs.

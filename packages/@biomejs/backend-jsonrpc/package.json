@@ -1,5 +1,5 @@
 {
-  "name": "@biomejs/backend-jsonrpc",
+  "name": "@blazing-fast-rust/backend-jsonrpc",
   "version": "2.0.9",
   "main": "dist/index.js",
   "scripts": {
@@ -15,15 +15,15 @@
     "LICENSE-MIT",
     "ROME-LICENSE-MIT"
   ],
-  "homepage": "https://biomejs.dev",
+  "homepage": "https://manfromexistence.vercel.app",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/biomejs/biome.git",
+    "url": "git+https://github.com/manfromexistence/blazing-fast-rust.git",
     "directory": "npm/backend-jsonrpc"
   },
-  "author": "Biome Developers and Contributors",
-  "bugs": "https://github.com/biomejs/biome/issues",
-  "description": "Bindings to the JSON-RPC Workspace API of the Biome daemon",
+  "author": "blazing-fast-rust Developers and Contributors",
+  "bugs": "https://github.com/manfromexistence/blazing-fast-rust/issues",
+  "description": "Bindings to the JSON-RPC Workspace API of the blazing-fast-rust daemon",
   "keywords": [
     "JavaScript",
     "TypeScript",
@@ -42,16 +42,16 @@
     "vitest": "3.2.4"
   },
   "publishConfig": {
-    "provenance": true
+    "provenance": false
   },
   "optionalDependencies": {
-    "@biomejs/cli-win32-x64": "2.1.2",
-    "@biomejs/cli-win32-arm64": "2.1.2",
-    "@biomejs/cli-darwin-x64": "2.1.2",
-    "@biomejs/cli-darwin-arm64": "2.1.2",
-    "@biomejs/cli-linux-x64": "2.1.2",
-    "@biomejs/cli-linux-arm64": "2.1.2",
-    "@biomejs/cli-linux-x64-musl": "2.1.2",
-    "@biomejs/cli-linux-arm64-musl": "2.1.2"
+    "@blazing-fast-rust/cli-win32-x64": "2.1.2",
+    "@blazing-fast-rust/cli-win32-arm64": "2.1.2",
+    "@blazing-fast-rust/cli-darwin-x64": "2.1.2",
+    "@blazing-fast-rust/cli-darwin-arm64": "2.1.2",
+    "@blazing-fast-rust/cli-linux-x64": "2.1.2",
+    "@blazing-fast-rust/cli-linux-arm64": "2.1.2",
+    "@blazing-fast-rust/cli-linux-x64-musl": "2.1.2",
+    "@blazing-fast-rust/cli-linux-arm64-musl": "2.1.2"
   }
 }

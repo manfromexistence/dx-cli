@@ -19,24 +19,24 @@ function isMusl() {
 
 const PLATFORMS = {
 	win32: {
-		x64: "@biomejs/cli-win32-x64/biome.exe",
-		arm64: "@biomejs/cli-win32-arm64/biome.exe",
+		x64: "@blazing-fast-rust/cli-win32-x64/blazing-fast-rust.exe",
+		arm64: "@blazing-fast-rust/cli-win32-arm64/blazing-fast-rust.exe",
 	},
 	darwin: {
-		x64: "@biomejs/cli-darwin-x64/biome",
-		arm64: "@biomejs/cli-darwin-arm64/biome",
+		x64: "@blazing-fast-rust/cli-darwin-x64/blazing-fast-rust",
+		arm64: "@blazing-fast-rust/cli-darwin-arm64/blazing-fast-rust",
 	},
 	linux: {
-		x64: "@biomejs/cli-linux-x64/biome",
-		arm64: "@biomejs/cli-linux-arm64/biome",
+		x64: "@blazing-fast-rust/cli-linux-x64/blazing-fast-rust",
+		arm64: "@blazing-fast-rust/cli-linux-arm64/blazing-fast-rust",
 	},
 	"linux-musl": {
-		x64: "@biomejs/cli-linux-x64-musl/biome",
-		arm64: "@biomejs/cli-linux-arm64-musl/biome",
+		x64: "@blazing-fast-rust/cli-linux-x64-musl/blazing-fast-rust",
+		arm64: "@blazing-fast-rust/cli-linux-arm64-musl/blazing-fast-rust",
 	},
 };
 
-const binPath = env.BIOME_BINARY ||
+const binPath = env.blazing-fast-rust_BINARY ||
 	(platform === "linux" && isMusl()
 		? PLATFORMS?.["linux-musl"]?.[arch]
 		: PLATFORMS?.[platform]?.[arch]
@@ -68,8 +68,8 @@ if (binPath) {
 	process.exitCode = result.status;
 } else {
 	console.error(
-		"The Biome CLI package doesn't ship with prebuilt binaries for your platform yet. " +
-			"You can still use the CLI by cloning the biome/tools repo from GitHub, " +
+		"The blazing-fast-rust CLI package doesn't ship with prebuilt binaries for your platform yet. " +
+			"You can still use the CLI by cloning the blazing-fast-rust/tools repo from GitHub, " +
 			"and follow the instructions there to build the CLI for your platform.",
 	);
 	process.exitCode = 1;

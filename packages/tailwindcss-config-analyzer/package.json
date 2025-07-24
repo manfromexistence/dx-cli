@@ -1,7 +1,7 @@
 {
   "name": "tailwindcss-config-analyzer",
   "version": "0.0.0",
-  "description": "Tools to introspect Tailwind CSS configurations for integration with Biome",
+  "description": "Tools to introspect Tailwind CSS configurations for integration with blazing-fast-rust",
   "private": true,
   "license": "MIT OR Apache-2.0",
   "author": "Dani Guardiola",

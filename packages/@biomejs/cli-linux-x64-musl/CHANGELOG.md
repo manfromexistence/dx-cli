@@ -1,4 +1,4 @@
-# @biomejs/cli-linux-x64-musl
+# @blazing-fast-rust/cli-linux-x64-musl
 
 ## 2.1.2
 

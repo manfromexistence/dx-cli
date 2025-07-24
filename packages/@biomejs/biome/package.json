@@ -1,21 +1,21 @@
 {
-  "name": "@biomejs/biome",
+  "name": "@blazing-fast-rust/blazing-fast-rust",
   "version": "2.1.2",
   "bin": {
-    "biome": "bin/biome"
+    "blazing-fast-rust": "bin/blazing-fast-rust"
   },
-  "homepage": "https://biomejs.dev",
+  "homepage": "https://manfromexistence.vercel.app",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/biomejs/biome.git",
-    "directory": "packages/@biomejs/biome"
+    "url": "git+https://github.com/manfromexistence/blazing-fast-rust.git",
+    "directory": "packages/@blazing-fast-rust/blazing-fast-rust"
   },
-  "author": "Emanuele Stoppa",
+  "author": "manfromexistence",
   "license": "MIT OR Apache-2.0",
-  "bugs": "https://github.com/biomejs/biome/issues",
-  "description": "Biome is a toolchain for the web: formatter, linter and more",
+  "bugs": "https://github.com/manfromexistence/blazing-fast-rust/issues",
+  "description": "Enhance Developer Expreince",
   "files": [
-    "bin/biome",
+    "bin/blazing-fast-rust",
     "configuration_schema.json",
     "README.md",
     "LICENSE-APACHE",
@@ -40,19 +40,19 @@
   },
   "funding": {
     "type": "opencollective",
-    "url": "https://opencollective.com/biome"
+    "url": "https://opencollective.com/blazing-fast-rust"
   },
   "publishConfig": {
-    "provenance": true
+    "provenance": false
   },
   "optionalDependencies": {
-    "@biomejs/cli-win32-x64": "2.1.2",
-    "@biomejs/cli-win32-arm64": "2.1.2",
-    "@biomejs/cli-darwin-x64": "2.1.2",
-    "@biomejs/cli-darwin-arm64": "2.1.2",
-    "@biomejs/cli-linux-x64": "2.1.2",
-    "@biomejs/cli-linux-arm64": "2.1.2",
-    "@biomejs/cli-linux-x64-musl": "2.1.2",
-    "@biomejs/cli-linux-arm64-musl": "2.1.2"
+    "@blazing-fast-rust/cli-win32-x64": "2.1.2",
+    "@blazing-fast-rust/cli-win32-arm64": "2.1.2",
+    "@blazing-fast-rust/cli-darwin-x64": "2.1.2",
+    "@blazing-fast-rust/cli-darwin-arm64": "2.1.2",
+    "@blazing-fast-rust/cli-linux-x64": "2.1.2",
+    "@blazing-fast-rust/cli-linux-arm64": "2.1.2",
+    "@blazing-fast-rust/cli-linux-x64-musl": "2.1.2",
+    "@blazing-fast-rust/cli-linux-arm64-musl": "2.1.2"
   }
 }

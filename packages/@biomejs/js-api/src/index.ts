@@ -1,16 +1,16 @@
 import type {
 	Configuration as ConfigurationBundler,
 	Diagnostic as DiagnosticBundler,
-} from "@biomejs/wasm-bundler";
+} from "@blazing-fast-rust/wasm-bundler";
 import type {
 	Configuration as ConfigurationNodejs,
 	Diagnostic as DiagnosticNodeJs,
-} from "@biomejs/wasm-nodejs";
+} from "@blazing-fast-rust/wasm-nodejs";
 import type {
 	Configuration as ConfigurationWeb,
 	Diagnostic as DiagnosticWeb,
-} from "@biomejs/wasm-web";
-import { BiomeCommon } from "./common";
+} from "@blazing-fast-rust/wasm-web";
+import { blazing-fast-rustCommon } from "./common";
 
 export type * from "./common";
 export type Configuration =
@@ -20,7 +20,7 @@ export type Configuration =
 export type Diagnostic = DiagnosticBundler | DiagnosticNodeJs | DiagnosticWeb;
 
 /**
- * What kind of client Biome should use to communicate with the binary
+ * What kind of client blazing-fast-rust should use to communicate with the binary
  */
 export enum Distribution {
 	/**
@@ -40,22 +40,22 @@ export enum Distribution {
 	WEB = 2,
 }
 
-export interface BiomeCreate {
+export interface blazing-fast-rustCreate {
 	distribution: Distribution;
 }
 
-export class Biome extends BiomeCommon<Configuration, Diagnostic> {
+export class blazing-fast-rust extends blazing-fast-rustCommon<Configuration, Diagnostic> {
 	/**
-	 * It creates a new instance of the class {Biome}.
+	 * It creates a new instance of the class {blazing-fast-rust}.
 	 */
-	static async create({ distribution }: BiomeCreate): Promise<Biome> {
+	static async create({ distribution }: blazing-fast-rustCreate): Promise<blazing-fast-rust> {
 		switch (distribution) {
 			case Distribution.BUNDLER:
-				return new Biome(await import("@biomejs/wasm-bundler"));
+				return new blazing-fast-rust(await import("@blazing-fast-rust/wasm-bundler"));
 			case Distribution.NODE:
-				return new Biome(await import("@biomejs/wasm-nodejs"));
+				return new blazing-fast-rust(await import("@blazing-fast-rust/wasm-nodejs"));
 			case Distribution.WEB:
-				return new Biome(await import("@biomejs/wasm-web"));
+				return new blazing-fast-rust(await import("@blazing-fast-rust/wasm-web"));
 			default:
 				throw new Error(`Unknown distribution: ${distribution}`);
 		}

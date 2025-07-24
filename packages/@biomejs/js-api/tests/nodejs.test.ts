@@ -1,21 +1,21 @@
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
-import { Biome, type ProjectKey } from "../dist/nodejs";
+import { blazing-fast-rust, type ProjectKey } from "../dist/nodejs";
 
-describe("Biome for Node.js", () => {
-	let biome: Biome;
+describe("blazing-fast-rust for Node.js", () => {
+	let blazing-fast-rust: blazing-fast-rust;
 	let projectKey: ProjectKey;
 	beforeEach(() => {
-		biome = new Biome();
-		const result = biome.openProject();
+		blazing-fast-rust = new blazing-fast-rust();
+		const result = blazing-fast-rust.openProject();
 		projectKey = result.projectKey;
 	});
 
 	afterEach(() => {
-		biome.shutdown();
+		blazing-fast-rust.shutdown();
 	});
 
 	it("should format content", () => {
-		const result = biome.formatContent(projectKey, "let foo  = 'bar'", {
+		const result = blazing-fast-rust.formatContent(projectKey, "let foo  = 'bar'", {
 			filePath: "example.js",
 		});
 
@@ -24,7 +24,7 @@ describe("Biome for Node.js", () => {
 	});
 
 	it("should emit diagnotics", () => {
-		const result = biome.lintContent(projectKey, "a { font-color: red }", {
+		const result = blazing-fast-rust.lintContent(projectKey, "a { font-color: red }", {
 			filePath: "example.css",
 		});
 		expect(result.diagnostics).toHaveLength(1);

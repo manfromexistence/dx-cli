@@ -1,4 +1,4 @@
-# @biomejs/cli-win32-x64
+# @blazing-fast-rust/cli-win32-x64
 
 ## 2.1.2
 

@@ -1,23 +1,23 @@
 {
-  "name": "@biomejs/wasm-nodejs",
+  "name": "@blazing-fast-rust/wasm-nodejs",
   "collaborators": [
-    "Biome Developers and Contributors"
+    "blazing-fast-rust Developers and Contributors"
   ],
-  "description": "WebAssembly bindings to the Biome workspace API",
+  "description": "WebAssembly bindings to the blazing-fast-rust workspace API",
   "version": "2.1.2",
   "license": "MIT OR Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/biomejs/biome"
+    "url": "https://github.com/manfromexistence/blazing-fast-rust"
   },
   "files": [
-    "biome_wasm_bg.wasm",
-    "biome_wasm.js",
-    "biome_wasm.d.ts"
+    "blazing-fast-rust_wasm_bg.wasm",
+    "blazing-fast-rust_wasm.js",
+    "blazing-fast-rust_wasm.d.ts"
   ],
-  "main": "biome_wasm.js",
-  "homepage": "https://biomejs.dev/",
-  "types": "biome_wasm.d.ts",
+  "main": "blazing-fast-rust_wasm.js",
+  "homepage": "https://manfromexistence.vercel.app/",
+  "types": "blazing-fast-rust_wasm.d.ts",
   "keywords": [
     "parser",
     "linter",
@@ -25,6 +25,6 @@
     "wasm"
   ],
   "publishConfig": {
-    "provenance": true
+    "provenance": false
   }
 }

@@ -1,10 +1,10 @@
-# @biomejs/biome
+# @blazing-fast-rust/blazing-fast-rust
 
 ## 2.1.2
 
 ### Patch Changes
 
-- [#6865](https://github.com/biomejs/biome/pull/6865) [`b35bf64`](https://github.com/biomejs/biome/commit/b35bf6448fb1950c922e627254588e96748e287f) Thanks [@denbezrukov](https://github.com/denbezrukov)! - Fix [#6485](https://github.com/biomejs/biome/issues/6485): Handle multiple semicolons correctly in blocks (#6485)
+- [#6865](https://github.com/manfromexistence/blazing-fast-rust/pull/6865) [`b35bf64`](https://github.com/manfromexistence/blazing-fast-rust/commit/b35bf6448fb1950c922e627254588e96748e287f) Thanks [@denbezrukov](https://github.com/denbezrukov)! - Fix [#6485](https://github.com/manfromexistence/blazing-fast-rust/issues/6485): Handle multiple semicolons correctly in blocks (#6485)
 
   ```css
   div {
@@ -13,11 +13,11 @@
   }
   ```
 
-- [#6798](https://github.com/biomejs/biome/pull/6798) [`3579ffa`](https://github.com/biomejs/biome/commit/3579ffaae4e86835b001fee4ab7dd8aabb03ae54) Thanks [@dyc3](https://github.com/dyc3)! - Fixed [#6762](https://github.com/biomejs/biome/issues/6762), Biome now knows that `~/.config/zed/settings.json` and `~/.config/Code/User/settings.json` allows comments by default.
+- [#6798](https://github.com/manfromexistence/blazing-fast-rust/pull/6798) [`3579ffa`](https://github.com/manfromexistence/blazing-fast-rust/commit/3579ffaae4e86835b001fee4ab7dd8aabb03ae54) Thanks [@dyc3](https://github.com/dyc3)! - Fixed [#6762](https://github.com/manfromexistence/blazing-fast-rust/issues/6762), blazing-fast-rust now knows that `~/.config/zed/settings.json` and `~/.config/Code/User/settings.json` allows comments by default.
 
-- [#6839](https://github.com/biomejs/biome/pull/6839) [`4cd62d8`](https://github.com/biomejs/biome/commit/4cd62d8ae2e5cb24d6f308e05b38003486294548) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6838](https://github.com/biomejs/biome/issues/6838), where the Biome File Watcher incorrectly watched and stored ignored files, causing possible memory leaks when those files were dynamically created (e.g. built files).
+- [#6839](https://github.com/manfromexistence/blazing-fast-rust/pull/6839) [`4cd62d8`](https://github.com/manfromexistence/blazing-fast-rust/commit/4cd62d8ae2e5cb24d6f308e05b38003486294548) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6838](https://github.com/manfromexistence/blazing-fast-rust/issues/6838), where the blazing-fast-rust File Watcher incorrectly watched and stored ignored files, causing possible memory leaks when those files were dynamically created (e.g. built files).
 
-- [#6879](https://github.com/biomejs/biome/pull/6879) [`0059cd9`](https://github.com/biomejs/biome/commit/0059cd9b5e6ba33cabb5e153bd03e2041effb0cd) Thanks [@denbezrukov](https://github.com/denbezrukov)! - Refactor: remove one level of indirection for CSS declarations with semicolon
+- [#6879](https://github.com/manfromexistence/blazing-fast-rust/pull/6879) [`0059cd9`](https://github.com/manfromexistence/blazing-fast-rust/commit/0059cd9b5e6ba33cabb5e153bd03e2041effb0cd) Thanks [@denbezrukov](https://github.com/denbezrukov)! - Refactor: remove one level of indirection for CSS declarations with semicolon
   Previously, accessing a declaration from a list required an extra step:
 
   ```rust
@@ -32,21 +32,21 @@
   item.as_css_declaration_with_semicolon()
   ```
 
-- [#6839](https://github.com/biomejs/biome/pull/6839) [`4cd62d8`](https://github.com/biomejs/biome/commit/4cd62d8ae2e5cb24d6f308e05b38003486294548) Thanks [@ematipico](https://github.com/ematipico)! - Fixed a bug where the Biome Language Server didn't correctly ignore specific files when `vcs.useIgnoreFile` is set to `true`.
+- [#6839](https://github.com/manfromexistence/blazing-fast-rust/pull/6839) [`4cd62d8`](https://github.com/manfromexistence/blazing-fast-rust/commit/4cd62d8ae2e5cb24d6f308e05b38003486294548) Thanks [@ematipico](https://github.com/ematipico)! - Fixed a bug where the blazing-fast-rust Language Server didn't correctly ignore specific files when `vcs.useIgnoreFile` is set to `true`.
 
-- [#6884](https://github.com/biomejs/biome/pull/6884) [`5ff50f8`](https://github.com/biomejs/biome/commit/5ff50f8291ca6f8f59fccfc326c8f0bdc3127842) Thanks [@arendjr](https://github.com/arendjr)! - Improved the performance of `noImportCycles` by ~30%.
+- [#6884](https://github.com/manfromexistence/blazing-fast-rust/pull/6884) [`5ff50f8`](https://github.com/manfromexistence/blazing-fast-rust/commit/5ff50f8291ca6f8f59fccfc326c8f0bdc3127842) Thanks [@arendjr](https://github.com/arendjr)! - Improved the performance of `noImportCycles` by ~30%.
 
-- [#6903](https://github.com/biomejs/biome/pull/6903) [`241dd9e`](https://github.com/biomejs/biome/commit/241dd9e487226fc58b4ceceaf3164e36d8e22d3b) Thanks [@arendjr](https://github.com/arendjr)! - Fixed [#6829](https://github.com/biomejs/biome/issues/6829): Fixed a false positive reported by `useImportExtensions` when importing a `.js` file that had a matching `.d.ts` file in the same folder.
+- [#6903](https://github.com/manfromexistence/blazing-fast-rust/pull/6903) [`241dd9e`](https://github.com/manfromexistence/blazing-fast-rust/commit/241dd9e487226fc58b4ceceaf3164e36d8e22d3b) Thanks [@arendjr](https://github.com/arendjr)! - Fixed [#6829](https://github.com/manfromexistence/blazing-fast-rust/issues/6829): Fixed a false positive reported by `useImportExtensions` when importing a `.js` file that had a matching `.d.ts` file in the same folder.
 
-- [#6846](https://github.com/biomejs/biome/pull/6846) [`446112e`](https://github.com/biomejs/biome/commit/446112e79d695c50ca9cc9f2d25c91cf03115f50) Thanks [@darricheng](https://github.com/darricheng)! - Fixed an issue where biome was using the wrong string quotes when the classes string has quotes, resulting in invalid code after applying the fix.
+- [#6846](https://github.com/manfromexistence/blazing-fast-rust/pull/6846) [`446112e`](https://github.com/manfromexistence/blazing-fast-rust/commit/446112e79d695c50ca9cc9f2d25c91cf03115f50) Thanks [@darricheng](https://github.com/darricheng)! - Fixed an issue where blazing-fast-rust was using the wrong string quotes when the classes string has quotes, resulting in invalid code after applying the fix.
 
-- [#6823](https://github.com/biomejs/biome/pull/6823) [`eebc48e`](https://github.com/biomejs/biome/commit/eebc48e0120958a39186f510278e1e5eacad3f1c) Thanks [@arendjr](https://github.com/arendjr)! - Improved [#6172](https://github.com/biomejs/biome/issues/6172): Optimised the way function arguments are stored in Biome's type inference. This led to about 10% performance improvement in `RedisCommander.d.ts` and about 2% on `@next/font` type definitions.
+- [#6823](https://github.com/manfromexistence/blazing-fast-rust/pull/6823) [`eebc48e`](https://github.com/manfromexistence/blazing-fast-rust/commit/eebc48e0120958a39186f510278e1e5eacad3f1c) Thanks [@arendjr](https://github.com/arendjr)! - Improved [#6172](https://github.com/manfromexistence/blazing-fast-rust/issues/6172): Optimised the way function arguments are stored in blazing-fast-rust's type inference. This led to about 10% performance improvement in `RedisCommander.d.ts` and about 2% on `@next/font` type definitions.
 
-- [#6878](https://github.com/biomejs/biome/pull/6878) [`3402976`](https://github.com/biomejs/biome/commit/340297602c1162928735d1c073d7a409c22e90bd) Thanks [@ematipico](https://github.com/ematipico)! - Fixed a bug where the Biome Language Server would apply an unsafe fix when using the code action `quickfix.biome`.
+- [#6878](https://github.com/manfromexistence/blazing-fast-rust/pull/6878) [`3402976`](https://github.com/manfromexistence/blazing-fast-rust/commit/340297602c1162928735d1c073d7a409c22e90bd) Thanks [@ematipico](https://github.com/ematipico)! - Fixed a bug where the blazing-fast-rust Language Server would apply an unsafe fix when using the code action `quickfix.blazing-fast-rust`.
 
-  Now Biome no longer applies an unsafe code fix when using the code action `quickfix.biome`.
+  Now blazing-fast-rust no longer applies an unsafe code fix when using the code action `quickfix.blazing-fast-rust`.
 
-- [#6794](https://github.com/biomejs/biome/pull/6794) [`4d5fc0e`](https://github.com/biomejs/biome/commit/4d5fc0ef38f8c4ad820e297749efc83e983b5a91) Thanks [@vladimir-ivanov](https://github.com/vladimir-ivanov)! - Fixed [#6719](https://github.com/biomejs/biome/issues/6719): The `noInvalidUseBeforeDeclaration` rule covers additional use cases.
+- [#6794](https://github.com/manfromexistence/blazing-fast-rust/pull/6794) [`4d5fc0e`](https://github.com/manfromexistence/blazing-fast-rust/commit/4d5fc0ef38f8c4ad820e297749efc83e983b5a91) Thanks [@vladimir-ivanov](https://github.com/vladimir-ivanov)! - Fixed [#6719](https://github.com/manfromexistence/blazing-fast-rust/issues/6719): The `noInvalidUseBeforeDeclaration` rule covers additional use cases.
 
   Examples:
 
@@ -65,17 +65,17 @@
   }
   ```
 
-- [#6863](https://github.com/biomejs/biome/pull/6863) [`531e97e`](https://github.com/biomejs/biome/commit/531e97e3f691e3ff34d2382fab414072ecb68e8b) Thanks [@dyc3](https://github.com/dyc3)! - Biome now considers whether the linter is enabled when figuring out how the project should be scanned. Resolves [#6815](https://github.com/biomejs/biome/issues/6815).
+- [#6863](https://github.com/manfromexistence/blazing-fast-rust/pull/6863) [`531e97e`](https://github.com/manfromexistence/blazing-fast-rust/commit/531e97e3f691e3ff34d2382fab414072ecb68e8b) Thanks [@dyc3](https://github.com/dyc3)! - blazing-fast-rust now considers whether the linter is enabled when figuring out how the project should be scanned. Resolves [#6815](https://github.com/manfromexistence/blazing-fast-rust/issues/6815).
 
-- [#6832](https://github.com/biomejs/biome/pull/6832) [`bdbc2b1`](https://github.com/biomejs/biome/commit/bdbc2b10ac21dcb35b41e93b17e712ba80f421ca) Thanks [@togami2864](https://github.com/togami2864)! - Fixed [#6165](https://github.com/biomejs/biome/issues/6165): Fixed false negative in [`noUnusedPrivateClassMembers`](https://biomejs.dev/linter/rules/no-unused-private-class-members/) rule when checking member usage in classes
+- [#6832](https://github.com/manfromexistence/blazing-fast-rust/pull/6832) [`bdbc2b1`](https://github.com/manfromexistence/blazing-fast-rust/commit/bdbc2b10ac21dcb35b41e93b17e712ba80f421ca) Thanks [@togami2864](https://github.com/togami2864)! - Fixed [#6165](https://github.com/manfromexistence/blazing-fast-rust/issues/6165): Fixed false negative in [`noUnusedPrivateClassMembers`](https://manfromexistence.vercel.app/linter/rules/no-unused-private-class-members/) rule when checking member usage in classes
 
-- [#6839](https://github.com/biomejs/biome/pull/6839) [`4cd62d8`](https://github.com/biomejs/biome/commit/4cd62d8ae2e5cb24d6f308e05b38003486294548) Thanks [@ematipico](https://github.com/ematipico)! - Fixed a bug where the root ignore file wasn't correctly loaded during the scanning phase, causing false positives and incorrect expectations among users.
+- [#6839](https://github.com/manfromexistence/blazing-fast-rust/pull/6839) [`4cd62d8`](https://github.com/manfromexistence/blazing-fast-rust/commit/4cd62d8ae2e5cb24d6f308e05b38003486294548) Thanks [@ematipico](https://github.com/ematipico)! - Fixed a bug where the root ignore file wasn't correctly loaded during the scanning phase, causing false positives and incorrect expectations among users.
 
   Now, when using `vcs.useIgnoreFile`, the **the globs specified in the ignore file from the project root** will have the same semantics as the `files.includes` setting of the root configuration.
 
-  Refer to the [relative web page](https://biomejs.dev/internals/architecture/#configuring-the-scanner) to understand how they work.
+  Refer to the [relative web page](https://manfromexistence.vercel.app/internals/architecture/#configuring-the-scanner) to understand how they work.
 
-- [#6898](https://github.com/biomejs/biome/pull/6898) [`5beb024`](https://github.com/biomejs/biome/commit/5beb024d8e9af8733bc115ba4b07d20036fe336e) Thanks [@arendjr](https://github.com/arendjr)! - Fixed [#6891](https://github.com/biomejs/biome/issues/6891): Improved type inference for array indices.
+- [#6898](https://github.com/manfromexistence/blazing-fast-rust/pull/6898) [`5beb024`](https://github.com/manfromexistence/blazing-fast-rust/commit/5beb024d8e9af8733bc115ba4b07d20036fe336e) Thanks [@arendjr](https://github.com/arendjr)! - Fixed [#6891](https://github.com/manfromexistence/blazing-fast-rust/issues/6891): Improved type inference for array indices.
 
   **Example:**
 
@@ -84,7 +84,7 @@
   numbers[42]; // This now infers to `number | undefined`.
   ```
 
-- [#6809](https://github.com/biomejs/biome/pull/6809) [`8192451`](https://github.com/biomejs/biome/commit/819245188e587d0a5ede53aa07899a2cb9fcce4f) Thanks [@arendjr](https://github.com/arendjr)! - Fixed [#6796](https://github.com/biomejs/biome/issues/6796): Fixed a false positive that happened in `noFloatingPromises` when calling functions that were declared as part of `for ... of` syntax inside `async` functions.
+- [#6809](https://github.com/manfromexistence/blazing-fast-rust/pull/6809) [`8192451`](https://github.com/manfromexistence/blazing-fast-rust/commit/819245188e587d0a5ede53aa07899a2cb9fcce4f) Thanks [@arendjr](https://github.com/arendjr)! - Fixed [#6796](https://github.com/manfromexistence/blazing-fast-rust/issues/6796): Fixed a false positive that happened in `noFloatingPromises` when calling functions that were declared as part of `for ... of` syntax inside `async` functions.
 
   Instead, the variables declared inside `for ... of` loops are now correctly
   inferred if the expression being iterated evaluates to an `Array` (support for other iterables will follow later).
@@ -117,7 +117,7 @@
   }
   ```
 
-- [#6757](https://github.com/biomejs/biome/pull/6757) [`13a0818`](https://github.com/biomejs/biome/commit/13a0818be8cc08efd303829252cbc3e64bcbca3a) Thanks [@mdevils](https://github.com/mdevils)! - Added the rule [`noVueReservedProps`](https://biomejs.dev/linter/rules/no-vue-reserved-props/), resolves [#6309](https://github.com/biomejs/biome/issues/6309).
+- [#6757](https://github.com/manfromexistence/blazing-fast-rust/pull/6757) [`13a0818`](https://github.com/manfromexistence/blazing-fast-rust/commit/13a0818be8cc08efd303829252cbc3e64bcbca3a) Thanks [@mdevils](https://github.com/mdevils)! - Added the rule [`noVueReservedProps`](https://manfromexistence.vercel.app/linter/rules/no-vue-reserved-props/), resolves [#6309](https://github.com/manfromexistence/blazing-fast-rust/issues/6309).
 
   It prevents the use of reserved Vue prop names such as `key` and `ref` which can cause conflicts and unexpected behavior in Vue components.
 
@@ -157,26 +157,26 @@
   </script>
   ```
 
-- [#6840](https://github.com/biomejs/biome/pull/6840) [`1a57b51`](https://github.com/biomejs/biome/commit/1a57b51097c7bf4faeb0dcc5330d49e17f86789b) Thanks [@denbezrukov](https://github.com/denbezrukov)! - Allow multiple identifiers in ::part() pseudo-element selector.
+- [#6840](https://github.com/manfromexistence/blazing-fast-rust/pull/6840) [`1a57b51`](https://github.com/manfromexistence/blazing-fast-rust/commit/1a57b51097c7bf4faeb0dcc5330d49e17f86789b) Thanks [@denbezrukov](https://github.com/denbezrukov)! - Allow multiple identifiers in ::part() pseudo-element selector.
 
   ```css
   ::part(first second) {
   }
   ```
 
-- [#6845](https://github.com/biomejs/biome/pull/6845) [`4fd44ec`](https://github.com/biomejs/biome/commit/4fd44ec17a3ac6a5486ac94f01e85e62310b8061) Thanks [@arendjr](https://github.com/arendjr)! - Fixed [#6510](https://github.com/biomejs/biome/issues/6510): The scanner no longer shows diagnostics on inaccessible files unless `--verbose` is used.
+- [#6845](https://github.com/manfromexistence/blazing-fast-rust/pull/6845) [`4fd44ec`](https://github.com/manfromexistence/blazing-fast-rust/commit/4fd44ec17a3ac6a5486ac94f01e85e62310b8061) Thanks [@arendjr](https://github.com/arendjr)! - Fixed [#6510](https://github.com/manfromexistence/blazing-fast-rust/issues/6510): The scanner no longer shows diagnostics on inaccessible files unless `--verbose` is used.
 
-- [#6844](https://github.com/biomejs/biome/pull/6844) [`b7e2d4d`](https://github.com/biomejs/biome/commit/b7e2d4d3a8b2654278596eaecdccc30405457fc8) Thanks [@sterliakov](https://github.com/sterliakov)! - Fixed [#6837](https://github.com/biomejs/biome/issues/6837): Fixed regression with multiple consecutive line suppression comments using instances (like `// biome-ignore lint/correctness/useExhaustiveDependencies(depName): reason`).
+- [#6844](https://github.com/manfromexistence/blazing-fast-rust/pull/6844) [`b7e2d4d`](https://github.com/manfromexistence/blazing-fast-rust/commit/b7e2d4d3a8b2654278596eaecdccc30405457fc8) Thanks [@sterliakov](https://github.com/sterliakov)! - Fixed [#6837](https://github.com/manfromexistence/blazing-fast-rust/issues/6837): Fixed regression with multiple consecutive line suppression comments using instances (like `// blazing-fast-rust-ignore lint/correctness/useExhaustiveDependencies(depName): reason`).
 
-- [#6818](https://github.com/biomejs/biome/pull/6818) [`5f3f5a6`](https://github.com/biomejs/biome/commit/5f3f5a6e8c12b56dc36bcfb4f8d5077eb33ccf08) Thanks [@siketyan](https://github.com/siketyan)! - Fixed an issue where `textDocument/codeAction` in the LSP could respond with outdated text edits after the workspace watcher observed outdated changes to the file.
+- [#6818](https://github.com/manfromexistence/blazing-fast-rust/pull/6818) [`5f3f5a6`](https://github.com/manfromexistence/blazing-fast-rust/commit/5f3f5a6e8c12b56dc36bcfb4f8d5077eb33ccf08) Thanks [@siketyan](https://github.com/siketyan)! - Fixed an issue where `textDocument/codeAction` in the LSP could respond with outdated text edits after the workspace watcher observed outdated changes to the file.
 
-- [#6804](https://github.com/biomejs/biome/pull/6804) [`3e6ab16`](https://github.com/biomejs/biome/commit/3e6ab1663ab15f9f00ae069ee790e5fd90327082) Thanks [@arendjr](https://github.com/arendjr)! - `noFloatingPromises` will no longer suggest to add `await` keyword inside synchronous callbacks nested inside `async` functions.
+- [#6804](https://github.com/manfromexistence/blazing-fast-rust/pull/6804) [`3e6ab16`](https://github.com/manfromexistence/blazing-fast-rust/commit/3e6ab1663ab15f9f00ae069ee790e5fd90327082) Thanks [@arendjr](https://github.com/arendjr)! - `noFloatingPromises` will no longer suggest to add `await` keyword inside synchronous callbacks nested inside `async` functions.
 
-- [#6901](https://github.com/biomejs/biome/pull/6901) [`c9e969a`](https://github.com/biomejs/biome/commit/c9e969a84158b29d175cd04ea8b921c737b7ed8f) Thanks [@arendjr](https://github.com/arendjr)! - Fixed [#6777](https://github.com/biomejs/biome/issues/6777): Fixed type inference handling of `this` to avoid infinite recursion.
+- [#6901](https://github.com/manfromexistence/blazing-fast-rust/pull/6901) [`c9e969a`](https://github.com/manfromexistence/blazing-fast-rust/commit/c9e969a84158b29d175cd04ea8b921c737b7ed8f) Thanks [@arendjr](https://github.com/arendjr)! - Fixed [#6777](https://github.com/manfromexistence/blazing-fast-rust/issues/6777): Fixed type inference handling of `this` to avoid infinite recursion.
 
   Thanks to @sterliakov for the thorough investigation!
 
-- [#6855](https://github.com/biomejs/biome/pull/6855) [`d1581c7`](https://github.com/biomejs/biome/commit/d1581c7c874b2917132a864d1c65df041ad9181b) Thanks [@vladimir-ivanov](https://github.com/vladimir-ivanov)! - Fixed [#6775](https://github.com/biomejs/biome/issues/6775): `useReadonlyClassProperties` now also captures mutations inside function arguments.
+- [#6855](https://github.com/manfromexistence/blazing-fast-rust/pull/6855) [`d1581c7`](https://github.com/manfromexistence/blazing-fast-rust/commit/d1581c7c874b2917132a864d1c65df041ad9181b) Thanks [@vladimir-ivanov](https://github.com/vladimir-ivanov)! - Fixed [#6775](https://github.com/manfromexistence/blazing-fast-rust/issues/6775): `useReadonlyClassProperties` now also captures mutations inside function arguments.
 
   Example:
 
@@ -190,11 +190,11 @@
   }
   ```
 
-- [#6839](https://github.com/biomejs/biome/pull/6839) [`4cd62d8`](https://github.com/biomejs/biome/commit/4cd62d8ae2e5cb24d6f308e05b38003486294548) Thanks [@ematipico](https://github.com/ematipico)! - Fixed a bug where Biome didn't throw any error when `vcs.useIgnoreFile` is set to `true`, and there wasn't any ignore file read. Now Biome correctly throws an error if no ignore files are found.
+- [#6839](https://github.com/manfromexistence/blazing-fast-rust/pull/6839) [`4cd62d8`](https://github.com/manfromexistence/blazing-fast-rust/commit/4cd62d8ae2e5cb24d6f308e05b38003486294548) Thanks [@ematipico](https://github.com/ematipico)! - Fixed a bug where blazing-fast-rust didn't throw any error when `vcs.useIgnoreFile` is set to `true`, and there wasn't any ignore file read. Now blazing-fast-rust correctly throws an error if no ignore files are found.
 
-- [#6911](https://github.com/biomejs/biome/pull/6911) [`6d68074`](https://github.com/biomejs/biome/commit/6d68074bf2a2ca4bc514398a180524394690fafe) Thanks [@arendjr](https://github.com/arendjr)! - Fixed [#6838](https://github.com/biomejs/biome/issues/6838): Reduce resource consumption in the Biome Language Server by using non-recursive filesystem watchers instead of recursive ones.
+- [#6911](https://github.com/manfromexistence/blazing-fast-rust/pull/6911) [`6d68074`](https://github.com/manfromexistence/blazing-fast-rust/commit/6d68074bf2a2ca4bc514398a180524394690fafe) Thanks [@arendjr](https://github.com/arendjr)! - Fixed [#6838](https://github.com/manfromexistence/blazing-fast-rust/issues/6838): Reduce resource consumption in the blazing-fast-rust Language Server by using non-recursive filesystem watchers instead of recursive ones.
 
-  Watchers are responsible for notifying Biome of changes to files in the filesystem. We used to set up a single recursive watcher, but that meant that Biome would receive filesystem notifications for _all_ files in your project, even for ignored folders such as `build/` or `dist/` folders.
+  Watchers are responsible for notifying blazing-fast-rust of changes to files in the filesystem. We used to set up a single recursive watcher, but that meant that blazing-fast-rust would receive filesystem notifications for _all_ files in your project, even for ignored folders such as `build/` or `dist/` folders.
 
   With this patch, we set up non-recursive watchers only for the folders that are relevant to a project.
 
@@ -204,9 +204,9 @@
 
 ### Patch Changes
 
-- [#6781](https://github.com/biomejs/biome/pull/6781) [`9bbd34f`](https://github.com/biomejs/biome/commit/9bbd34f8d4be3dd4ba4c63746a5b2915e578e339) Thanks [@siketyan](https://github.com/siketyan)! - Fixed the `FileFeaturesResult` interface in the WASM API was defined as a mapped object but the actual value was a `Map` object.
+- [#6781](https://github.com/manfromexistence/blazing-fast-rust/pull/6781) [`9bbd34f`](https://github.com/manfromexistence/blazing-fast-rust/commit/9bbd34f8d4be3dd4ba4c63746a5b2915e578e339) Thanks [@siketyan](https://github.com/siketyan)! - Fixed the `FileFeaturesResult` interface in the WASM API was defined as a mapped object but the actual value was a `Map` object.
 
-- [#6761](https://github.com/biomejs/biome/pull/6761) [`cf3c2ce`](https://github.com/biomejs/biome/commit/cf3c2ce3ac28a36eee948ad689794783b0ba23ef) Thanks [@dyc3](https://github.com/dyc3)! - Fixed [#6759](https://github.com/biomejs/biome/issues/6759), a false positive for `noFocusedTests` that was triggered by calling any function with the name `fit` on any object.
+- [#6761](https://github.com/manfromexistence/blazing-fast-rust/pull/6761) [`cf3c2ce`](https://github.com/manfromexistence/blazing-fast-rust/commit/cf3c2ce3ac28a36eee948ad689794783b0ba23ef) Thanks [@dyc3](https://github.com/dyc3)! - Fixed [#6759](https://github.com/manfromexistence/blazing-fast-rust/issues/6759), a false positive for `noFocusedTests` that was triggered by calling any function with the name `fit` on any object.
 
   The following code will now pass the `noFocusedTests` rule:
 
@@ -219,7 +219,7 @@
 
 ### Minor Changes
 
-- [#6512](https://github.com/biomejs/biome/pull/6512) [`0c0bf82`](https://github.com/biomejs/biome/commit/0c0bf82c92ee4e853172f44e38af57afde6de2ce) Thanks [@arendjr](https://github.com/arendjr)! - The rule [`noFloatingPromises`](https://biomejs.dev/linter/rules/no-misused-promises/) can now detect floating arrays of `Promise`s.
+- [#6512](https://github.com/manfromexistence/blazing-fast-rust/pull/6512) [`0c0bf82`](https://github.com/manfromexistence/blazing-fast-rust/commit/0c0bf82c92ee4e853172f44e38af57afde6de2ce) Thanks [@arendjr](https://github.com/arendjr)! - The rule [`noFloatingPromises`](https://manfromexistence.vercel.app/linter/rules/no-misused-promises/) can now detect floating arrays of `Promise`s.
 
   **Invalid examples**
 
@@ -234,7 +234,7 @@
   await Promise.all([1, 2, 3].map(async (x) => x + 1));
   ```
 
-- [#6637](https://github.com/biomejs/biome/pull/6637) [`6918085`](https://github.com/biomejs/biome/commit/6918085e14b8e34bfd0adc472acce22c31484ab3) Thanks [@arendjr](https://github.com/arendjr)! - Type inference is now able to handle the sequence operator (`,`), as well as post- and pre-update operators: `++`.
+- [#6637](https://github.com/manfromexistence/blazing-fast-rust/pull/6637) [`6918085`](https://github.com/manfromexistence/blazing-fast-rust/commit/6918085e14b8e34bfd0adc472acce22c31484ab3) Thanks [@arendjr](https://github.com/arendjr)! - Type inference is now able to handle the sequence operator (`,`), as well as post- and pre-update operators: `++`.
 
   **Example**
 
@@ -246,13 +246,13 @@
   (x++, new Promise((resolve) => resolve("comma")));
   ```
 
-- [#6752](https://github.com/biomejs/biome/pull/6752) [`c9eaca4`](https://github.com/biomejs/biome/commit/c9eaca4b944acfd18b700c65c904806b11c318d5) Thanks [@arendjr](https://github.com/arendjr)! - Fixed [#6646](https://github.com/biomejs/biome/issues/6646): `.gitignore` files are now picked up even when running Biome from a nested directory, or when the ignore file itself is ignored through `files.includes`.
+- [#6752](https://github.com/manfromexistence/blazing-fast-rust/pull/6752) [`c9eaca4`](https://github.com/manfromexistence/blazing-fast-rust/commit/c9eaca4b944acfd18b700c65c904806b11c318d5) Thanks [@arendjr](https://github.com/arendjr)! - Fixed [#6646](https://github.com/manfromexistence/blazing-fast-rust/issues/6646): `.gitignore` files are now picked up even when running blazing-fast-rust from a nested directory, or when the ignore file itself is ignored through `files.includes`.
 
-- [#6746](https://github.com/biomejs/biome/pull/6746) [`90aeead`](https://github.com/biomejs/biome/commit/90aeeadf80700aee9f29121511d0c4c9019a49d6) Thanks [@arendjr](https://github.com/arendjr)! - `biome migrate` no longer enables style rules that were recommended in v1, because that would be undesirable for users upgrading from 2.0.
+- [#6746](https://github.com/manfromexistence/blazing-fast-rust/pull/6746) [`90aeead`](https://github.com/manfromexistence/blazing-fast-rust/commit/90aeeadf80700aee9f29121511d0c4c9019a49d6) Thanks [@arendjr](https://github.com/arendjr)! - `blazing-fast-rust migrate` no longer enables style rules that were recommended in v1, because that would be undesirable for users upgrading from 2.0.
 
-  Users who are upgrading from Biome 1.x are therefore advised to first upgrade to Biome 2.0, and run the migration, before continuing to Biome 2.1 or later.
+  Users who are upgrading from blazing-fast-rust 1.x are therefore advised to first upgrade to blazing-fast-rust 2.0, and run the migration, before continuing to blazing-fast-rust 2.1 or later.
 
-- [#6583](https://github.com/biomejs/biome/pull/6583) [`d415a3f`](https://github.com/biomejs/biome/commit/d415a3f6f204cc7b109dc08f6117fe97ef07b216) Thanks [@arendjr](https://github.com/arendjr)! - Added the nursery rule [`noMisusedPromises`](https://biomejs.dev/linter/rules/no-misused-promises/).
+- [#6583](https://github.com/manfromexistence/blazing-fast-rust/pull/6583) [`d415a3f`](https://github.com/manfromexistence/blazing-fast-rust/commit/d415a3f6f204cc7b109dc08f6117fe97ef07b216) Thanks [@arendjr](https://github.com/arendjr)! - Added the nursery rule [`noMisusedPromises`](https://manfromexistence.vercel.app/linter/rules/no-misused-promises/).
 
   It signals `Promise`s in places where conditionals or iterables are expected.
 
@@ -288,7 +288,7 @@
   console.log({ foo: 42, ...(await promise) });
   ```
 
-- [#6405](https://github.com/biomejs/biome/pull/6405) [`cd4a9bb`](https://github.com/biomejs/biome/commit/cd4a9bbdcbc176fa2294fd5a2a2565a13b12a51d) Thanks [@vladimir-ivanov](https://github.com/vladimir-ivanov)! - Added the `ignoreRestSiblings` option to the `noUnusedFunctionParameters` rule.
+- [#6405](https://github.com/manfromexistence/blazing-fast-rust/pull/6405) [`cd4a9bb`](https://github.com/manfromexistence/blazing-fast-rust/commit/cd4a9bbdcbc176fa2294fd5a2a2565a13b12a51d) Thanks [@vladimir-ivanov](https://github.com/vladimir-ivanov)! - Added the `ignoreRestSiblings` option to the `noUnusedFunctionParameters` rule.
 
   This option is used to ignore unused function parameters that are siblings of the rest parameter.
 
@@ -304,25 +304,25 @@
   }
   ```
 
-- [#6614](https://github.com/biomejs/biome/pull/6614) [`0840021`](https://github.com/biomejs/biome/commit/0840021860fcc5e9055f781dce84e80353f9f5ce) Thanks [@arendjr](https://github.com/arendjr)! - We have implemented a more targeted version of the scanner, which ensures that if you provide file paths to handle on the CLI, the scanner will exclude directories that are not relevant to those paths.
+- [#6614](https://github.com/manfromexistence/blazing-fast-rust/pull/6614) [`0840021`](https://github.com/manfromexistence/blazing-fast-rust/commit/0840021860fcc5e9055f781dce84e80353f9f5ce) Thanks [@arendjr](https://github.com/arendjr)! - We have implemented a more targeted version of the scanner, which ensures that if you provide file paths to handle on the CLI, the scanner will exclude directories that are not relevant to those paths.
 
-  Note that for many commands, such as `biome check` and `biome format`, the file paths to handle are implicitly set to the current working directory if you do not provide any path explicitly. The targeted scanner also works with such implicit paths, which means that if you run Biome from a subfolder, other folders that are part of the project are automatically exempted.
+  Note that for many commands, such as `blazing-fast-rust check` and `blazing-fast-rust format`, the file paths to handle are implicitly set to the current working directory if you do not provide any path explicitly. The targeted scanner also works with such implicit paths, which means that if you run blazing-fast-rust from a subfolder, other folders that are part of the project are automatically exempted.
 
-  Use cases where you invoke Biome from the root of the project without providing a path, as well as those where project rules are enabled, are not expected to see performance benefits from this.
+  Use cases where you invoke blazing-fast-rust from the root of the project without providing a path, as well as those where project rules are enabled, are not expected to see performance benefits from this.
 
-  Implemented [#6234](https://github.com/biomejs/biome/issues/6234), and fixed [#6483](https://github.com/biomejs/biome/issues/6483) and [#6563](https://github.com/biomejs/biome/issues/6563).
+  Implemented [#6234](https://github.com/manfromexistence/blazing-fast-rust/issues/6234), and fixed [#6483](https://github.com/manfromexistence/blazing-fast-rust/issues/6483) and [#6563](https://github.com/manfromexistence/blazing-fast-rust/issues/6563).
 
-- [#6488](https://github.com/biomejs/biome/pull/6488) [`c5ee385`](https://github.com/biomejs/biome/commit/c5ee38569fc0b91ea9411da25560d3a1076870c6) Thanks [@ianzone](https://github.com/ianzone)! - `nx.json` and `project.json` have been added to the list of well-known files.
+- [#6488](https://github.com/manfromexistence/blazing-fast-rust/pull/6488) [`c5ee385`](https://github.com/manfromexistence/blazing-fast-rust/commit/c5ee38569fc0b91ea9411da25560d3a1076870c6) Thanks [@ianzone](https://github.com/ianzone)! - `nx.json` and `project.json` have been added to the list of well-known files.
 
-- [#6720](https://github.com/biomejs/biome/pull/6720) [`52e36ae`](https://github.com/biomejs/biome/commit/52e36ae827d2c9f02520298d6518a00b22db38b8) Thanks [@minht11](https://github.com/minht11)! - Added `$` symbol to [organizeImports](https://biomejs.dev/assist/actions/organize-imports) `:ALIAS:` group.
+- [#6720](https://github.com/manfromexistence/blazing-fast-rust/pull/6720) [`52e36ae`](https://github.com/manfromexistence/blazing-fast-rust/commit/52e36ae827d2c9f02520298d6518a00b22db38b8) Thanks [@minht11](https://github.com/minht11)! - Added `$` symbol to [organizeImports](https://manfromexistence.vercel.app/assist/actions/organize-imports) `:ALIAS:` group.
 
   `import { action } from '$lib'` will be treated as alias import.
 
 ### Patch Changes
 
-- [#6712](https://github.com/biomejs/biome/pull/6712) [`2649ac6`](https://github.com/biomejs/biome/commit/2649ac625de963bf7411368cdd06142bda362322) Thanks [@sterliakov](https://github.com/sterliakov)! - Fixed [#6595](https://github.com/biomejs/biome/issues/6595): Biome now supports `// biome-ignore-all` file-level suppressions in files that start with a shebang (`#!`).
+- [#6712](https://github.com/manfromexistence/blazing-fast-rust/pull/6712) [`2649ac6`](https://github.com/manfromexistence/blazing-fast-rust/commit/2649ac625de963bf7411368cdd06142bda362322) Thanks [@sterliakov](https://github.com/sterliakov)! - Fixed [#6595](https://github.com/manfromexistence/blazing-fast-rust/issues/6595): blazing-fast-rust now supports `// blazing-fast-rust-ignore-all` file-level suppressions in files that start with a shebang (`#!`).
 
-- [#6758](https://github.com/biomejs/biome/pull/6758) [`28dc49e`](https://github.com/biomejs/biome/commit/28dc49eacb9da1073d56070eb70b10ed636a1799) Thanks [@arendjr](https://github.com/arendjr)! - Fixed [#6573](https://github.com/biomejs/biome/issues/6573): Grit plugins can now match bare imports.
+- [#6758](https://github.com/manfromexistence/blazing-fast-rust/pull/6758) [`28dc49e`](https://github.com/manfromexistence/blazing-fast-rust/commit/28dc49eacb9da1073d56070eb70b10ed636a1799) Thanks [@arendjr](https://github.com/arendjr)! - Fixed [#6573](https://github.com/manfromexistence/blazing-fast-rust/issues/6573): Grit plugins can now match bare imports.
 
   **Example**
 
@@ -338,7 +338,7 @@
   import "main.css";
   ```
 
-- [#6550](https://github.com/biomejs/biome/pull/6550) [`b424f46`](https://github.com/biomejs/biome/commit/b424f4682cdcba5bf4cd6eb4b34486b631ddfbdc) Thanks [@arendjr](https://github.com/arendjr)! - Type inference is now able to handle logical expressions: `&&`, `||`, and `??`.
+- [#6550](https://github.com/manfromexistence/blazing-fast-rust/pull/6550) [`b424f46`](https://github.com/manfromexistence/blazing-fast-rust/commit/b424f4682cdcba5bf4cd6eb4b34486b631ddfbdc) Thanks [@arendjr](https://github.com/arendjr)! - Type inference is now able to handle logical expressions: `&&`, `||`, and `??`.
 
   **Examples**
 
@@ -368,13 +368,13 @@
   }
   ```
 
-- [#6413](https://github.com/biomejs/biome/pull/6413) [`4aa0e50`](https://github.com/biomejs/biome/commit/4aa0e50a91f457a059b225f140d9fa44ea08a8fb) Thanks [@wojtekmaj](https://github.com/wojtekmaj)! - Improved error message in [`useDateNow`](https://biomejs.dev/linter/rules/use-date-now/) rule.
+- [#6413](https://github.com/manfromexistence/blazing-fast-rust/pull/6413) [`4aa0e50`](https://github.com/manfromexistence/blazing-fast-rust/commit/4aa0e50a91f457a059b225f140d9fa44ea08a8fb) Thanks [@wojtekmaj](https://github.com/wojtekmaj)! - Improved error message in [`useDateNow`](https://manfromexistence.vercel.app/linter/rules/use-date-now/) rule.
 
-- [#6673](https://github.com/biomejs/biome/pull/6673) [`341e062`](https://github.com/biomejs/biome/commit/341e062bc28f32adc2ee44c26ab4fb0574750319) Thanks [@dyc3](https://github.com/dyc3)! - Fixed a case where the HTML formatter would mangle embedded language tags if `whitespaceSensitivity` was set to `strict`
+- [#6673](https://github.com/manfromexistence/blazing-fast-rust/pull/6673) [`341e062`](https://github.com/manfromexistence/blazing-fast-rust/commit/341e062bc28f32adc2ee44c26ab4fb0574750319) Thanks [@dyc3](https://github.com/dyc3)! - Fixed a case where the HTML formatter would mangle embedded language tags if `whitespaceSensitivity` was set to `strict`
 
-- [#6642](https://github.com/biomejs/biome/pull/6642) [`a991229`](https://github.com/biomejs/biome/commit/a99122902eb01907f03565d2c7e56186d01764d3) Thanks [@unvalley](https://github.com/unvalley)! - Fixed [#4494](https://github.com/biomejs/biome/issues/4494): The `noSecrets` rule now correctly uses the `entropyThreshold` option to detect secret like strings.
+- [#6642](https://github.com/manfromexistence/blazing-fast-rust/pull/6642) [`a991229`](https://github.com/manfromexistence/blazing-fast-rust/commit/a99122902eb01907f03565d2c7e56186d01764d3) Thanks [@unvalley](https://github.com/unvalley)! - Fixed [#4494](https://github.com/manfromexistence/blazing-fast-rust/issues/4494): The `noSecrets` rule now correctly uses the `entropyThreshold` option to detect secret like strings.
 
-- [#6520](https://github.com/biomejs/biome/pull/6520) [`0c43545`](https://github.com/biomejs/biome/commit/0c43545934ba50ca0dbb0581f274e0e41a7e26e7) Thanks [@arendjr](https://github.com/arendjr)! - Type inference is now able to handle ternary conditions in type aliases.
+- [#6520](https://github.com/manfromexistence/blazing-fast-rust/pull/6520) [`0c43545`](https://github.com/manfromexistence/blazing-fast-rust/commit/0c43545934ba50ca0dbb0581f274e0e41a7e26e7) Thanks [@arendjr](https://github.com/arendjr)! - Type inference is now able to handle ternary conditions in type aliases.
 
   Note that we don't attempt to evaluate the condition itself. The resulting type is simply a union of both conditional outcomes.
 
@@ -389,19 +389,19 @@
   }
   ```
 
-- [#6711](https://github.com/biomejs/biome/pull/6711) [`1937691`](https://github.com/biomejs/biome/commit/1937691bb7041026475e2f9fc88a2841c5bfacc4) Thanks [@sterliakov](https://github.com/sterliakov)! - Fixed [#6654](https://github.com/biomejs/biome/issues/6654): Fixed range highlighting of `<explanation>` placeholder in inline suppression block comments.
+- [#6711](https://github.com/manfromexistence/blazing-fast-rust/pull/6711) [`1937691`](https://github.com/manfromexistence/blazing-fast-rust/commit/1937691bb7041026475e2f9fc88a2841c5bfacc4) Thanks [@sterliakov](https://github.com/sterliakov)! - Fixed [#6654](https://github.com/manfromexistence/blazing-fast-rust/issues/6654): Fixed range highlighting of `<explanation>` placeholder in inline suppression block comments.
 
-- [#6756](https://github.com/biomejs/biome/pull/6756) [`d12b26f`](https://github.com/biomejs/biome/commit/d12b26f60865e910a3d300e04f216a36ffc63f8e) Thanks [@dyc3](https://github.com/dyc3)! - Fixed [#6669](https://github.com/biomejs/biome/issues/6669): Added an exception to `noUnusedImports` to allow type augmentation imports.
+- [#6756](https://github.com/manfromexistence/blazing-fast-rust/pull/6756) [`d12b26f`](https://github.com/manfromexistence/blazing-fast-rust/commit/d12b26f60865e910a3d300e04f216a36ffc63f8e) Thanks [@dyc3](https://github.com/dyc3)! - Fixed [#6669](https://github.com/manfromexistence/blazing-fast-rust/issues/6669): Added an exception to `noUnusedImports` to allow type augmentation imports.
 
   ```ts
   import type {} from "@mui/lab/themeAugmentation";
   ```
 
-- [#6643](https://github.com/biomejs/biome/pull/6643) [`df15ad6`](https://github.com/biomejs/biome/commit/df15ad6e9a99ec3dba17cc4e6e4081736c93b3a7) Thanks [@skewb1k](https://github.com/skewb1k)!
+- [#6643](https://github.com/manfromexistence/blazing-fast-rust/pull/6643) [`df15ad6`](https://github.com/manfromexistence/blazing-fast-rust/commit/df15ad6e9a99ec3dba17cc4e6e4081736c93b3a7) Thanks [@skewb1k](https://github.com/skewb1k)!
 
-- Fixed [#4994](https://github.com/biomejs/biome/discussions/4994): LSP server registered some capabilities even when the client did not support dynamic registration.
+- Fixed [#4994](https://github.com/manfromexistence/blazing-fast-rust/discussions/4994): LSP server registered some capabilities even when the client did not support dynamic registration.
 
-- [#6599](https://github.com/biomejs/biome/pull/6599) [`5e611fa`](https://github.com/biomejs/biome/commit/5e611fae93c794cdbd290f88cc1676bc6aea090d) Thanks [@vladimir-ivanov](https://github.com/vladimir-ivanov)! - Fixed [#6380](https://github.com/biomejs/biome/issues/6380): The `noFocusedTests` rule now correctly displays the function name in the diagnostic message when a test is focused.
+- [#6599](https://github.com/manfromexistence/blazing-fast-rust/pull/6599) [`5e611fa`](https://github.com/manfromexistence/blazing-fast-rust/commit/5e611fae93c794cdbd290f88cc1676bc6aea090d) Thanks [@vladimir-ivanov](https://github.com/vladimir-ivanov)! - Fixed [#6380](https://github.com/manfromexistence/blazing-fast-rust/issues/6380): The `noFocusedTests` rule now correctly displays the function name in the diagnostic message when a test is focused.
 
   Every instance of a focused test function (like `fdescribe`, `fit`, `ftest` and `only`) had the word 'only' hardcoded. This has been updated to use the actual function name, so the message is now more accurate and specific.
 
@@ -413,7 +413,7 @@
     i Consider removing 'f' prefix from 'fdescribe' to ensure all tests are executed.
   ```
 
-- [#6671](https://github.com/biomejs/biome/pull/6671) [`0c9ab43`](https://github.com/biomejs/biome/commit/0c9ab43bea6ed4005c96ac6e4e7c5553cae16192) Thanks [@vladimir-ivanov](https://github.com/vladimir-ivanov)! - Fixed [#6634](https://github.com/biomejs/biome/issues/6634): The `useReadonlyClassProperties` rule now correctly flags mutations in class getters and in arrow functions within class properties.
+- [#6671](https://github.com/manfromexistence/blazing-fast-rust/pull/6671) [`0c9ab43`](https://github.com/manfromexistence/blazing-fast-rust/commit/0c9ab43bea6ed4005c96ac6e4e7c5553cae16192) Thanks [@vladimir-ivanov](https://github.com/vladimir-ivanov)! - Fixed [#6634](https://github.com/manfromexistence/blazing-fast-rust/issues/6634): The `useReadonlyClassProperties` rule now correctly flags mutations in class getters and in arrow functions within class properties.
 
   Examples:
 
@@ -441,9 +441,9 @@
   }
   ```
 
-- [#6682](https://github.com/biomejs/biome/pull/6682) [`ca04cea`](https://github.com/biomejs/biome/commit/ca04ceab45ceb445522ebf95fdb90a6117995ea5) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6668](https://github.com/biomejs/biome/issues/6668): Biome Assist is now enabled by default for CSS files.
+- [#6682](https://github.com/manfromexistence/blazing-fast-rust/pull/6682) [`ca04cea`](https://github.com/manfromexistence/blazing-fast-rust/commit/ca04ceab45ceb445522ebf95fdb90a6117995ea5) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6668](https://github.com/manfromexistence/blazing-fast-rust/issues/6668): blazing-fast-rust Assist is now enabled by default for CSS files.
 
-- [#6525](https://github.com/biomejs/biome/pull/6525) [`66b089c`](https://github.com/biomejs/biome/commit/66b089c9031bf02808426c1cd67b53d75663cca7) Thanks [@arendjr](https://github.com/arendjr)! - Type inference can now infer the return types of functions and methods without annotations.
+- [#6525](https://github.com/manfromexistence/blazing-fast-rust/pull/6525) [`66b089c`](https://github.com/manfromexistence/blazing-fast-rust/commit/66b089c9031bf02808426c1cd67b53d75663cca7) Thanks [@arendjr](https://github.com/arendjr)! - Type inference can now infer the return types of functions and methods without annotations.
 
   **Examples**
 
@@ -458,7 +458,7 @@
   sneakyObject.doSomething();
   ```
 
-- [#6531](https://github.com/biomejs/biome/pull/6531) [`c06df79`](https://github.com/biomejs/biome/commit/c06df798908d7e624b03edc3be2a06ca249ad520) Thanks [@arendjr](https://github.com/arendjr)! - Biome's type inference now detects the type of properties with getters.
+- [#6531](https://github.com/manfromexistence/blazing-fast-rust/pull/6531) [`c06df79`](https://github.com/manfromexistence/blazing-fast-rust/commit/c06df798908d7e624b03edc3be2a06ca249ad520) Thanks [@arendjr](https://github.com/arendjr)! - blazing-fast-rust's type inference now detects the type of properties with getters.
 
   **Examples**
 
@@ -472,41 +472,41 @@
   sneakyObject2.something;
   ```
 
-- [#6587](https://github.com/biomejs/biome/pull/6587) [`a330fcc`](https://github.com/biomejs/biome/commit/a330fcc9ad6901d82b6f460d4bf50d7bdca7efbd) Thanks [@Conaclos](https://github.com/Conaclos)! - `organizeImports` is now able to sort named specifiers and import attributes with bogus nodes.
+- [#6587](https://github.com/manfromexistence/blazing-fast-rust/pull/6587) [`a330fcc`](https://github.com/manfromexistence/blazing-fast-rust/commit/a330fcc9ad6901d82b6f460d4bf50d7bdca7efbd) Thanks [@Conaclos](https://github.com/Conaclos)! - `organizeImports` is now able to sort named specifiers and import attributes with bogus nodes.
 
-- [#6618](https://github.com/biomejs/biome/pull/6618) [`6174869`](https://github.com/biomejs/biome/commit/6174869dc0b6df82cda3fc5c1b7603157371a069) Thanks [@Shinyaigeek](https://github.com/Shinyaigeek)! - Fixed [#6610](https://github.com/biomejs/biome/issues/6610): JSON import attributes are now correctly detected when they contain extra whitespace.
+- [#6618](https://github.com/manfromexistence/blazing-fast-rust/pull/6618) [`6174869`](https://github.com/manfromexistence/blazing-fast-rust/commit/6174869dc0b6df82cda3fc5c1b7603157371a069) Thanks [@Shinyaigeek](https://github.com/Shinyaigeek)! - Fixed [#6610](https://github.com/manfromexistence/blazing-fast-rust/issues/6610): JSON import attributes are now correctly detected when they contain extra whitespace.
 
-- [#6753](https://github.com/biomejs/biome/pull/6753) [`fce5d2c`](https://github.com/biomejs/biome/commit/fce5d2cd3708e3010e0a9acdef184c01a79929bb) Thanks [@dyc3](https://github.com/dyc3)! - Improved the error messages when Biome is provided incompatible arguments on the CLI.
+- [#6753](https://github.com/manfromexistence/blazing-fast-rust/pull/6753) [`fce5d2c`](https://github.com/manfromexistence/blazing-fast-rust/commit/fce5d2cd3708e3010e0a9acdef184c01a79929bb) Thanks [@dyc3](https://github.com/dyc3)! - Improved the error messages when blazing-fast-rust is provided incompatible arguments on the CLI.
 
-- [#6587](https://github.com/biomejs/biome/pull/6587) [`a330fcc`](https://github.com/biomejs/biome/commit/a330fcc9ad6901d82b6f460d4bf50d7bdca7efbd) Thanks [@Conaclos](https://github.com/Conaclos)! - Fixed [#6491](https://github.com/biomejs/biome/issues/6491): The action of `useSortedKeys` removed comments or wrongly transferred them to distinct nodes.
+- [#6587](https://github.com/manfromexistence/blazing-fast-rust/pull/6587) [`a330fcc`](https://github.com/manfromexistence/blazing-fast-rust/commit/a330fcc9ad6901d82b6f460d4bf50d7bdca7efbd) Thanks [@Conaclos](https://github.com/Conaclos)! - Fixed [#6491](https://github.com/manfromexistence/blazing-fast-rust/issues/6491): The action of `useSortedKeys` removed comments or wrongly transferred them to distinct nodes.
 
-- [#6696](https://github.com/biomejs/biome/pull/6696) [`92964a7`](https://github.com/biomejs/biome/commit/92964a7ae076b9b08b83da329e2b8a5825e30da9) Thanks [@unvalley](https://github.com/unvalley)! - Fixed [#6633](https://github.com/biomejs/biome/6633): The `noImplicitCoercion` rule no longer reports diagnostics for `1 / value` expressions.
+- [#6696](https://github.com/manfromexistence/blazing-fast-rust/pull/6696) [`92964a7`](https://github.com/manfromexistence/blazing-fast-rust/commit/92964a7ae076b9b08b83da329e2b8a5825e30da9) Thanks [@unvalley](https://github.com/unvalley)! - Fixed [#6633](https://github.com/manfromexistence/blazing-fast-rust/6633): The `noImplicitCoercion` rule no longer reports diagnostics for `1 / value` expressions.
 
   ```js
   1 / value; // no error
   ```
 
-- [#6683](https://github.com/biomejs/biome/pull/6683) [`43d871e`](https://github.com/biomejs/biome/commit/43d871e0f8b331dfece2b1671152e6336e673ec8) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6537](https://github.com/biomejs/biome/issues/6537): Biome no longer removes the trailing comma from JSON files when `formatter.json.trailingCommas` is explicitly set to `"all"`.
+- [#6683](https://github.com/manfromexistence/blazing-fast-rust/pull/6683) [`43d871e`](https://github.com/manfromexistence/blazing-fast-rust/commit/43d871e0f8b331dfece2b1671152e6336e673ec8) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6537](https://github.com/manfromexistence/blazing-fast-rust/issues/6537): blazing-fast-rust no longer removes the trailing comma from JSON files when `formatter.json.trailingCommas` is explicitly set to `"all"`.
 
-- [#6693](https://github.com/biomejs/biome/pull/6693) [`bfdce0b`](https://github.com/biomejs/biome/commit/bfdce0be416db38ab18e68a41ddd0ab82177c14b) Thanks [@dyc3](https://github.com/dyc3)! - Fixed [#6691](https://github.com/biomejs/biome/issues/6691): The HTML parser will now consider `.` to be a valid character for tag names.
+- [#6693](https://github.com/manfromexistence/blazing-fast-rust/pull/6693) [`bfdce0b`](https://github.com/manfromexistence/blazing-fast-rust/commit/bfdce0be416db38ab18e68a41ddd0ab82177c14b) Thanks [@dyc3](https://github.com/dyc3)! - Fixed [#6691](https://github.com/manfromexistence/blazing-fast-rust/issues/6691): The HTML parser will now consider `.` to be a valid character for tag names.
 
-- [#6716](https://github.com/biomejs/biome/pull/6716) [`ead03d1`](https://github.com/biomejs/biome/commit/ead03d1089dd2e7a11a926008fd2b66b12e1f36c) Thanks [@siketyan](https://github.com/siketyan)! - The Biome LSP server no longer responds with an error for a `textDocument/codeActions` request when Biome doesn't support a feature for the file (e.g. Code actions aren't supported in GritQL files).
+- [#6716](https://github.com/manfromexistence/blazing-fast-rust/pull/6716) [`ead03d1`](https://github.com/manfromexistence/blazing-fast-rust/commit/ead03d1089dd2e7a11a926008fd2b66b12e1f36c) Thanks [@siketyan](https://github.com/siketyan)! - The blazing-fast-rust LSP server no longer responds with an error for a `textDocument/codeActions` request when blazing-fast-rust doesn't support a feature for the file (e.g. Code actions aren't supported in GritQL files).
 
-- [#6679](https://github.com/biomejs/biome/pull/6679) [`7bf9a60`](https://github.com/biomejs/biome/commit/7bf9a608e1592fd595f658f5f800e12d51835d34) Thanks [@marko-hologram](https://github.com/marko-hologram)! - Fixed [#6638](https://github.com/biomejs/biome/issues/6638): JavaScript formatter `overrides` options now correctly override `expand` option. JSON formatter `overrides` options now correctly override `bracketSpacing` and `expand` options.
+- [#6679](https://github.com/manfromexistence/blazing-fast-rust/pull/6679) [`7bf9a60`](https://github.com/manfromexistence/blazing-fast-rust/commit/7bf9a608e1592fd595f658f5f800e12d51835d34) Thanks [@marko-hologram](https://github.com/marko-hologram)! - Fixed [#6638](https://github.com/manfromexistence/blazing-fast-rust/issues/6638): JavaScript formatter `overrides` options now correctly override `expand` option. JSON formatter `overrides` options now correctly override `bracketSpacing` and `expand` options.
 
-- [#6717](https://github.com/biomejs/biome/pull/6717) [`7f5b541`](https://github.com/biomejs/biome/commit/7f5b5410613c5f1e0b26fdca5fa7c67b70f1fdb9) Thanks [@siketyan](https://github.com/siketyan)! - Fixed [#6688](https://github.com/biomejs/biome/issues/6688): the `noUselessFragments` no longer reports `<Fragment />` elements that includes HTML character entities.
+- [#6717](https://github.com/manfromexistence/blazing-fast-rust/pull/6717) [`7f5b541`](https://github.com/manfromexistence/blazing-fast-rust/commit/7f5b5410613c5f1e0b26fdca5fa7c67b70f1fdb9) Thanks [@siketyan](https://github.com/siketyan)! - Fixed [#6688](https://github.com/manfromexistence/blazing-fast-rust/issues/6688): the `noUselessFragments` no longer reports `<Fragment />` elements that includes HTML character entities.
 
-- [#6600](https://github.com/biomejs/biome/pull/6600) [`853e1b5`](https://github.com/biomejs/biome/commit/853e1b54c365c18d8065499797ba172596b614cb) Thanks [@daivinhtran](https://github.com/daivinhtran)! - Fixed [#4677](https://github.com/biomejs/biome/issues/4677): The `noUnusedImports` rule won't produce diagnostics for types used in comments of static members anymore.
+- [#6600](https://github.com/manfromexistence/blazing-fast-rust/pull/6600) [`853e1b5`](https://github.com/manfromexistence/blazing-fast-rust/commit/853e1b54c365c18d8065499797ba172596b614cb) Thanks [@daivinhtran](https://github.com/daivinhtran)! - Fixed [#4677](https://github.com/manfromexistence/blazing-fast-rust/issues/4677): The `noUnusedImports` rule won't produce diagnostics for types used in comments of static members anymore.
 
-- [#6662](https://github.com/biomejs/biome/pull/6662) [`3afc804`](https://github.com/biomejs/biome/commit/3afc8040e6fa3f60addb0ad06ea86babbdd712e9) Thanks [@arendjr](https://github.com/arendjr)! - If a nested configuration file is ignored by the root configuration, it will now actually be ignored.
+- [#6662](https://github.com/manfromexistence/blazing-fast-rust/pull/6662) [`3afc804`](https://github.com/manfromexistence/blazing-fast-rust/commit/3afc8040e6fa3f60addb0ad06ea86babbdd712e9) Thanks [@arendjr](https://github.com/arendjr)! - If a nested configuration file is ignored by the root configuration, it will now actually be ignored.
 
-  Biome has an exception in place for configuration files so they cannot be ignored, because the configuration files are vital to Biome itself. But this exception was incorrectly applied to nested configurations as well. Now only the root configuration is exempt from being ignored.
+  blazing-fast-rust has an exception in place for configuration files so they cannot be ignored, because the configuration files are vital to blazing-fast-rust itself. But this exception was incorrectly applied to nested configurations as well. Now only the root configuration is exempt from being ignored.
 
-- [#6596](https://github.com/biomejs/biome/pull/6596) [`c0718ca`](https://github.com/biomejs/biome/commit/c0718ca610a655e675182ac6c0424301aa64c325) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6566](https://github.com/biomejs/biome/issues/6566): Biome no longer errors when using the option `--files-ignore-unknown=true` in `stdin` mode.
+- [#6596](https://github.com/manfromexistence/blazing-fast-rust/pull/6596) [`c0718ca`](https://github.com/manfromexistence/blazing-fast-rust/commit/c0718ca610a655e675182ac6c0424301aa64c325) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6566](https://github.com/manfromexistence/blazing-fast-rust/issues/6566): blazing-fast-rust no longer errors when using the option `--files-ignore-unknown=true` in `stdin` mode.
 
-  Biome has also become less strict when using `--stdin-file-path` in `stdin` mode. It will no longer error if the file path doesn't contain an extension, but instead it will return the original content.
+  blazing-fast-rust has also become less strict when using `--stdin-file-path` in `stdin` mode. It will no longer error if the file path doesn't contain an extension, but instead it will return the original content.
 
-- [#6562](https://github.com/biomejs/biome/pull/6562) [`153eda7`](https://github.com/biomejs/biome/commit/153eda75003d01e1b1c4c120b9516eee47e5692e) Thanks [@vladimir-ivanov](https://github.com/vladimir-ivanov)! - Added the nursery rule [noMagicNumbers](https://github.com/biomejs/biome/issues/4333). The rule detects and reports the use of "magic numbers" — numeric literals that are used directly in code without being assigned to a named constant.
+- [#6562](https://github.com/manfromexistence/blazing-fast-rust/pull/6562) [`153eda7`](https://github.com/manfromexistence/blazing-fast-rust/commit/153eda75003d01e1b1c4c120b9516eee47e5692e) Thanks [@vladimir-ivanov](https://github.com/vladimir-ivanov)! - Added the nursery rule [noMagicNumbers](https://github.com/manfromexistence/blazing-fast-rust/issues/4333). The rule detects and reports the use of "magic numbers" — numeric literals that are used directly in code without being assigned to a named constant.
 
   **Example**
 
@@ -514,29 +514,29 @@
   let total = price * 1.23; // Magic number for tax rate will highlight 1.23 as magic number
   ```
 
-- [#6663](https://github.com/biomejs/biome/pull/6663) [`af78d6d`](https://github.com/biomejs/biome/commit/af78d6d00f61a118d6b178bc2238c63bd83a0299) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6656](https://github.com/biomejs/biome/issues/6656): Biome now correctly formats HTML void elements such as `<meta>` when they contain a self-closing slash.
+- [#6663](https://github.com/manfromexistence/blazing-fast-rust/pull/6663) [`af78d6d`](https://github.com/manfromexistence/blazing-fast-rust/commit/af78d6d00f61a118d6b178bc2238c63bd83a0299) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6656](https://github.com/manfromexistence/blazing-fast-rust/issues/6656): blazing-fast-rust now correctly formats HTML void elements such as `<meta>` when they contain a self-closing slash.
 
   ```diff
   - <meta foo="bar" />
   + <meta foo="bar">
   ```
 
-- [#6732](https://github.com/biomejs/biome/pull/6732) [`31e4396`](https://github.com/biomejs/biome/commit/31e439674493da76e0ce213e5660be3d903efbef) Thanks [@vladimir-ivanov](https://github.com/vladimir-ivanov)! - Resolved [#6281](https://github.com/biomejs/biome/issues/6281): Improved performance of handling `package.json` files in the scanner.
+- [#6732](https://github.com/manfromexistence/blazing-fast-rust/pull/6732) [`31e4396`](https://github.com/manfromexistence/blazing-fast-rust/commit/31e439674493da76e0ce213e5660be3d903efbef) Thanks [@vladimir-ivanov](https://github.com/vladimir-ivanov)! - Resolved [#6281](https://github.com/manfromexistence/blazing-fast-rust/issues/6281): Improved performance of handling `package.json` files in the scanner.
 
-- [#6625](https://github.com/biomejs/biome/pull/6625) [`19cb475`](https://github.com/biomejs/biome/commit/19cb4750a1181f1e5c6c58fa169a94e812f10d25) Thanks [@arendjr](https://github.com/arendjr)! - Fixed [#6616](https://github.com/biomejs/biome/issues/6616): Fixed an issue with extending configurations that contained an explicit `root` field while the configuration in the project did not.
+- [#6625](https://github.com/manfromexistence/blazing-fast-rust/pull/6625) [`19cb475`](https://github.com/manfromexistence/blazing-fast-rust/commit/19cb4750a1181f1e5c6c58fa169a94e812f10d25) Thanks [@arendjr](https://github.com/arendjr)! - Fixed [#6616](https://github.com/manfromexistence/blazing-fast-rust/issues/6616): Fixed an issue with extending configurations that contained an explicit `root` field while the configuration in the project did not.
 
-- [#6650](https://github.com/biomejs/biome/pull/6650) [`19aab18`](https://github.com/biomejs/biome/commit/19aab181dc6405ff48a1010d0a82aa731fb588b3) Thanks [@sterliakov](https://github.com/sterliakov)! - Fixed [#6621](https://github.com/biomejs/biome/issues/6621): Improved handling of multiple adjacent line suppressions. Biome now handles such suppressions separately, tracking whether each one is used.
+- [#6650](https://github.com/manfromexistence/blazing-fast-rust/pull/6650) [`19aab18`](https://github.com/manfromexistence/blazing-fast-rust/commit/19aab181dc6405ff48a1010d0a82aa731fb588b3) Thanks [@sterliakov](https://github.com/sterliakov)! - Fixed [#6621](https://github.com/manfromexistence/blazing-fast-rust/issues/6621): Improved handling of multiple adjacent line suppressions. blazing-fast-rust now handles such suppressions separately, tracking whether each one is used.
 
-- [#6700](https://github.com/biomejs/biome/pull/6700) [`cdd6e17`](https://github.com/biomejs/biome/commit/cdd6e179b0d90f27cfdd73da1e56157bf3dd9d73) Thanks [@denbezrukov](https://github.com/denbezrukov)! - Fixed [#6680](https://github.com/biomejs/biome/issues/6680): Biome incorrectly formatted container-style queries by inserting misplaced spaces.
+- [#6700](https://github.com/manfromexistence/blazing-fast-rust/pull/6700) [`cdd6e17`](https://github.com/manfromexistence/blazing-fast-rust/commit/cdd6e179b0d90f27cfdd73da1e56157bf3dd9d73) Thanks [@denbezrukov](https://github.com/denbezrukov)! - Fixed [#6680](https://github.com/manfromexistence/blazing-fast-rust/issues/6680): blazing-fast-rust incorrectly formatted container-style queries by inserting misplaced spaces.
 
   ```diff
   - @container style (--responsive: true) {}
   + @container style(--responsive: true) {}
   ```
 
-- [#6709](https://github.com/biomejs/biome/pull/6709) [`ecf3954`](https://github.com/biomejs/biome/commit/ecf39549cd7c72c1811ba4dda6051e8622a19cf2) Thanks [@dyc3](https://github.com/dyc3)! - Fixed [#6038](https://github.com/biomejs/biome/issues/6038): Fixed a false positive in `noShadow` where a function parameter in a type definition was erroneously flagged as a violation.
+- [#6709](https://github.com/manfromexistence/blazing-fast-rust/pull/6709) [`ecf3954`](https://github.com/manfromexistence/blazing-fast-rust/commit/ecf39549cd7c72c1811ba4dda6051e8622a19cf2) Thanks [@dyc3](https://github.com/dyc3)! - Fixed [#6038](https://github.com/manfromexistence/blazing-fast-rust/issues/6038): Fixed a false positive in `noShadow` where a function parameter in a type definition was erroneously flagged as a violation.
 
-- [#6593](https://github.com/biomejs/biome/pull/6593) [`a4acbb7`](https://github.com/biomejs/biome/commit/a4acbb7d02eab2b1d1d7de5ff67c131b92388540) Thanks [@arendjr](https://github.com/arendjr)! - Type inference is now able to handle ternary conditions in expressions.
+- [#6593](https://github.com/manfromexistence/blazing-fast-rust/pull/6593) [`a4acbb7`](https://github.com/manfromexistence/blazing-fast-rust/commit/a4acbb7d02eab2b1d1d7de5ff67c131b92388540) Thanks [@arendjr](https://github.com/arendjr)! - Type inference is now able to handle ternary conditions in expressions.
 
   **Examples**
 
@@ -551,12 +551,12 @@
   alwaysFalsy ? Promise.reject("ternary bypass") : null;
   ```
 
-- [#6428](https://github.com/biomejs/biome/pull/6428) [`4b501d3`](https://github.com/biomejs/biome/commit/4b501d3ac6214fd1331548260ccaf9db83e18de4) Thanks [@siketyan](https://github.com/siketyan)! - Added `MemoryFileSystem` to the WASM API.
+- [#6428](https://github.com/manfromexistence/blazing-fast-rust/pull/6428) [`4b501d3`](https://github.com/manfromexistence/blazing-fast-rust/commit/4b501d3ac6214fd1331548260ccaf9db83e18de4) Thanks [@siketyan](https://github.com/siketyan)! - Added `MemoryFileSystem` to the WASM API.
 
   You can now insert a file from your JS code:
 
   ```js
-  import { MemoryFileSystem, Workspace } from "@biomejs/wasm-web";
+  import { MemoryFileSystem, Workspace } from "@blazing-fast-rust/wasm-web";
 
   const fs = new MemoryFileSystem();
   const workspace = Workspace.withFileSystem(fs);
@@ -565,28 +565,28 @@
   fs.remove("/index.js");
   ```
 
-- [#6594](https://github.com/biomejs/biome/pull/6594) [`626d4a1`](https://github.com/biomejs/biome/commit/626d4a1462794dbd67e2f503812f62c6d40b3aa6) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6528](https://github.com/biomejs/biome/issues/6528): Biome didn't return the correct output when applying `source.fixAll.biome` inside Astro/Vue/Svelte files that contained safe fixed.
+- [#6594](https://github.com/manfromexistence/blazing-fast-rust/pull/6594) [`626d4a1`](https://github.com/manfromexistence/blazing-fast-rust/commit/626d4a1462794dbd67e2f503812f62c6d40b3aa6) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6528](https://github.com/manfromexistence/blazing-fast-rust/issues/6528): blazing-fast-rust didn't return the correct output when applying `source.fixAll.blazing-fast-rust` inside Astro/Vue/Svelte files that contained safe fixed.
 
 ## 2.0.6
 
 ### Patch Changes
 
-- [#6557](https://github.com/biomejs/biome/pull/6557) [`fd68458`](https://github.com/biomejs/biome/commit/fd68458f40767cb1aeb9eb444a03c5dd6f3f7c0d) Thanks [@ematipico](https://github.com/ematipico)! - Fixed a bug where Biome didn't provide all the available code actions when requested by the editor.
+- [#6557](https://github.com/manfromexistence/blazing-fast-rust/pull/6557) [`fd68458`](https://github.com/manfromexistence/blazing-fast-rust/commit/fd68458f40767cb1aeb9eb444a03c5dd6f3f7c0d) Thanks [@ematipico](https://github.com/ematipico)! - Fixed a bug where blazing-fast-rust didn't provide all the available code actions when requested by the editor.
 
-- [#6511](https://github.com/biomejs/biome/pull/6511) [`72623fa`](https://github.com/biomejs/biome/commit/72623fa30470bbb97bae24514233d4d8a39507ec) Thanks [@Conaclos](https://github.com/Conaclos)! - Fixed [#6492](https://github.com/biomejs/biome/issues/6492). The
+- [#6511](https://github.com/manfromexistence/blazing-fast-rust/pull/6511) [`72623fa`](https://github.com/manfromexistence/blazing-fast-rust/commit/72623fa30470bbb97bae24514233d4d8a39507ec) Thanks [@Conaclos](https://github.com/Conaclos)! - Fixed [#6492](https://github.com/manfromexistence/blazing-fast-rust/issues/6492). The
   `organizeImports` assist action no longer duplicates a comment at the start of
   the file when `:BLANK_LINE:` precedes the first import group.
 
-- [#6557](https://github.com/biomejs/biome/pull/6557) [`fd68458`](https://github.com/biomejs/biome/commit/fd68458f40767cb1aeb9eb444a03c5dd6f3f7c0d) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6287](https://github.com/biomejs/biome/issues/6287) where Biome Language Server didn't adhere to the `settings.requireConfiguration` option when pulling diagnostics and code actions.
+- [#6557](https://github.com/manfromexistence/blazing-fast-rust/pull/6557) [`fd68458`](https://github.com/manfromexistence/blazing-fast-rust/commit/fd68458f40767cb1aeb9eb444a03c5dd6f3f7c0d) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6287](https://github.com/manfromexistence/blazing-fast-rust/issues/6287) where blazing-fast-rust Language Server didn't adhere to the `settings.requireConfiguration` option when pulling diagnostics and code actions.
   Note that for this configuration be correctly applied, your editor must support dynamic registration capabilities.
 
-- [#6551](https://github.com/biomejs/biome/pull/6551) [`0b63b1d`](https://github.com/biomejs/biome/commit/0b63b1d95c32ba61b2dcda4195d860397de3b589) Thanks [@Conaclos](https://github.com/Conaclos)! - Fixed [#6536](https://github.com/biomejs/biome/issues/6536). `useSortedKeys` no longer panics in some edge cases where object spreads are involved.
+- [#6551](https://github.com/manfromexistence/blazing-fast-rust/pull/6551) [`0b63b1d`](https://github.com/manfromexistence/blazing-fast-rust/commit/0b63b1d95c32ba61b2dcda4195d860397de3b589) Thanks [@Conaclos](https://github.com/Conaclos)! - Fixed [#6536](https://github.com/manfromexistence/blazing-fast-rust/issues/6536). `useSortedKeys` no longer panics in some edge cases where object spreads are involved.
 
-- [#6503](https://github.com/biomejs/biome/pull/6503) [`9a8fe0f`](https://github.com/biomejs/biome/commit/9a8fe0f9313b2df93df56b3446340cc04a0e1958) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6482](https://github.com/biomejs/biome/issues/6482) where nursery rules that belonged to a domain were incorrectly enabled.
+- [#6503](https://github.com/manfromexistence/blazing-fast-rust/pull/6503) [`9a8fe0f`](https://github.com/manfromexistence/blazing-fast-rust/commit/9a8fe0f9313b2df93df56b3446340cc04a0e1958) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6482](https://github.com/manfromexistence/blazing-fast-rust/issues/6482) where nursery rules that belonged to a domain were incorrectly enabled.
 
-- [#6565](https://github.com/biomejs/biome/pull/6565) [`e85761c`](https://github.com/biomejs/biome/commit/e85761c72058e2c039ff16707781f7e0aa19d2a9) Thanks [@daivinhtran](https://github.com/daivinhtran)! - Fixed [#4677](https://github.com/biomejs/biome/issues/4677): Now the `noUnusedImports` rule won't produce diagnostics for types used in JSDoc comment of exports.
+- [#6565](https://github.com/manfromexistence/blazing-fast-rust/pull/6565) [`e85761c`](https://github.com/manfromexistence/blazing-fast-rust/commit/e85761c72058e2c039ff16707781f7e0aa19d2a9) Thanks [@daivinhtran](https://github.com/daivinhtran)! - Fixed [#4677](https://github.com/manfromexistence/blazing-fast-rust/issues/4677): Now the `noUnusedImports` rule won't produce diagnostics for types used in JSDoc comment of exports.
 
-- [#6166](https://github.com/biomejs/biome/pull/6166) [`b8cbd83`](https://github.com/biomejs/biome/commit/b8cbd839935fd0e672cb0fc2051df0e2fb9e5d1a) Thanks [@mehm8128](https://github.com/mehm8128)! - Added the nursery rule [noExcessiveLinesPerFunction](https://biomejs.dev/linter/rules/no-excessive-lines-per-function/).
+- [#6166](https://github.com/manfromexistence/blazing-fast-rust/pull/6166) [`b8cbd83`](https://github.com/manfromexistence/blazing-fast-rust/commit/b8cbd839935fd0e672cb0fc2051df0e2fb9e5d1a) Thanks [@mehm8128](https://github.com/mehm8128)! - Added the nursery rule [noExcessiveLinesPerFunction](https://manfromexistence.vercel.app/linter/rules/no-excessive-lines-per-function/).
   This rule restrict a maximum number of lines of code in a function body.
 
   The following code is now reported as invalid when the limit of maximum lines is set to 2:
@@ -608,7 +608,7 @@
   };
   ```
 
-- [#6553](https://github.com/biomejs/biome/pull/6553) [`5f42630`](https://github.com/biomejs/biome/commit/5f42630f7b457070c7c1ad17cee28eae2e9951cc) Thanks [@denbezrukov](https://github.com/denbezrukov)! - Fixed [#6547](https://github.com/biomejs/biome/issues/6547). Now the Biome CSS parser correctly parses `@starting-style` when it's used inside other at-rules. The following example doesn't raise an error anymore:
+- [#6553](https://github.com/manfromexistence/blazing-fast-rust/pull/6553) [`5f42630`](https://github.com/manfromexistence/blazing-fast-rust/commit/5f42630f7b457070c7c1ad17cee28eae2e9951cc) Thanks [@denbezrukov](https://github.com/denbezrukov)! - Fixed [#6547](https://github.com/manfromexistence/blazing-fast-rust/issues/6547). Now the blazing-fast-rust CSS parser correctly parses `@starting-style` when it's used inside other at-rules. The following example doesn't raise an error anymore:
 
   ```css
   @layer my-demo-layer {
@@ -620,17 +620,17 @@
   }
   ```
 
-- [#6458](https://github.com/biomejs/biome/pull/6458) [`05402e3`](https://github.com/biomejs/biome/commit/05402e395f6e356b690e1cad740294183fafeb84) Thanks [@ematipico](https://github.com/ematipico)! - Fixed an issue where the rule `useSemanticElements` used the incorrect range when positioning suppression comments.
+- [#6458](https://github.com/manfromexistence/blazing-fast-rust/pull/6458) [`05402e3`](https://github.com/manfromexistence/blazing-fast-rust/commit/05402e395f6e356b690e1cad740294183fafeb84) Thanks [@ematipico](https://github.com/ematipico)! - Fixed an issue where the rule `useSemanticElements` used the incorrect range when positioning suppression comments.
 
-- [#6560](https://github.com/biomejs/biome/pull/6560) [`6d8a6b9`](https://github.com/biomejs/biome/commit/6d8a6b9a31788565455d6a6138ef6c1fe67421d5) Thanks [@siketyan](https://github.com/siketyan)! - Fixed [#6559](https://github.com/biomejs/biome/issues/6559): the error message on detected a large file was outdated and referred a removed configuration option `files.ignore`.
+- [#6560](https://github.com/manfromexistence/blazing-fast-rust/pull/6560) [`6d8a6b9`](https://github.com/manfromexistence/blazing-fast-rust/commit/6d8a6b9a31788565455d6a6138ef6c1fe67421d5) Thanks [@siketyan](https://github.com/siketyan)! - Fixed [#6559](https://github.com/manfromexistence/blazing-fast-rust/issues/6559): the error message on detected a large file was outdated and referred a removed configuration option `files.ignore`.
 
-- [#6458](https://github.com/biomejs/biome/pull/6458) [`05402e3`](https://github.com/biomejs/biome/commit/05402e395f6e356b690e1cad740294183fafeb84) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6384](https://github.com/biomejs/biome/issues/6384). The rule [`useAltText`](https://biomejs/dev/linter/rules/no-alt-text) now emits a diagnostic with a correct range, so suppression comments can work correctly.
+- [#6458](https://github.com/manfromexistence/blazing-fast-rust/pull/6458) [`05402e3`](https://github.com/manfromexistence/blazing-fast-rust/commit/05402e395f6e356b690e1cad740294183fafeb84) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6384](https://github.com/manfromexistence/blazing-fast-rust/issues/6384). The rule [`useAltText`](https://blazing-fast-rustjs/dev/linter/rules/no-alt-text) now emits a diagnostic with a correct range, so suppression comments can work correctly.
 
-- [#6518](https://github.com/biomejs/biome/pull/6518) [`7a56288`](https://github.com/biomejs/biome/commit/7a56288e0c7f366d6aa30100432227f3501afb61) Thanks [@wojtekmaj](https://github.com/wojtekmaj)! - Fixed #6508, where the rule `noUselessFragments` incorrectly flagged Fragments containing HTML entities as unnecessary.
+- [#6518](https://github.com/manfromexistence/blazing-fast-rust/pull/6518) [`7a56288`](https://github.com/manfromexistence/blazing-fast-rust/commit/7a56288e0c7f366d6aa30100432227f3501afb61) Thanks [@wojtekmaj](https://github.com/wojtekmaj)! - Fixed #6508, where the rule `noUselessFragments` incorrectly flagged Fragments containing HTML entities as unnecessary.
 
-- [#6517](https://github.com/biomejs/biome/pull/6517) [`c5217cf`](https://github.com/biomejs/biome/commit/c5217cfb21653add3d3add930102bea8fb7b5833) Thanks [@arendjr](https://github.com/arendjr)! - Fixed [#6515](https://github.com/biomejs/biome/issues/6515). When using the
+- [#6517](https://github.com/manfromexistence/blazing-fast-rust/pull/6517) [`c5217cf`](https://github.com/manfromexistence/blazing-fast-rust/commit/c5217cfb21653add3d3add930102bea8fb7b5833) Thanks [@arendjr](https://github.com/arendjr)! - Fixed [#6515](https://github.com/manfromexistence/blazing-fast-rust/issues/6515). When using the
   `extends` field to extend a configuration from an NPM package, we now accept the
-  _condition names_ `"biome"` and `"default"` for exporting the configuration in
+  _condition names_ `"blazing-fast-rust"` and `"default"` for exporting the configuration in
   the `package.json`.
 
   This means that where previously your `package.json` had to contain an export
@@ -639,7 +639,7 @@
   ```json
   {
     "exports": {
-      ".": "./biome.json"
+      ".": "./blazing-fast-rust.json"
     }
   }
   ```
@@ -650,7 +650,7 @@
   {
     "exports": {
       ".": {
-        "biome": "./biome.json"
+        "blazing-fast-rust": "./blazing-fast-rust.json"
       }
     }
   }
@@ -662,13 +662,13 @@
   {
     "exports": {
       ".": {
-        "default": "./biome.json"
+        "default": "./blazing-fast-rust.json"
       }
     }
   }
   ```
 
-- [#6219](https://github.com/biomejs/biome/pull/6219) [`a3a3715`](https://github.com/biomejs/biome/commit/a3a371552a84eaaf24ce1bd8e63e3c1243b285a9) Thanks [@huangtiandi1999](https://github.com/huangtiandi1999)! - Added new nursery rule [`noUnassignedVariables`](https://biomejs.dev/linter/rules/no-unassigned-variables/), which disallows `let` or `var` variables that are read but never assigned.
+- [#6219](https://github.com/manfromexistence/blazing-fast-rust/pull/6219) [`a3a3715`](https://github.com/manfromexistence/blazing-fast-rust/commit/a3a371552a84eaaf24ce1bd8e63e3c1243b285a9) Thanks [@huangtiandi1999](https://github.com/huangtiandi1999)! - Added new nursery rule [`noUnassignedVariables`](https://manfromexistence.vercel.app/linter/rules/no-unassigned-variables/), which disallows `let` or `var` variables that are read but never assigned.
 
   The following code is now reported as invalid:
 
@@ -688,7 +688,7 @@
   }
   ```
 
-- [#6395](https://github.com/biomejs/biome/pull/6395) [`f62e748`](https://github.com/biomejs/biome/commit/f62e7481c2a94271869651d2b32bde5d54adbc73) Thanks [@mdevils](https://github.com/mdevils)! - Added the new nursery rule [`noImplicitCoercion`](https://biomejs.dev/linter/rules/no-implicit-coercion), which disallows shorthand type conversions in favor of explicit type conversion functions.
+- [#6395](https://github.com/manfromexistence/blazing-fast-rust/pull/6395) [`f62e748`](https://github.com/manfromexistence/blazing-fast-rust/commit/f62e7481c2a94271869651d2b32bde5d54adbc73) Thanks [@mdevils](https://github.com/mdevils)! - Added the new nursery rule [`noImplicitCoercion`](https://manfromexistence.vercel.app/linter/rules/no-implicit-coercion), which disallows shorthand type conversions in favor of explicit type conversion functions.
 
   **Example (Invalid): Boolean conversion using double negation:**
 
@@ -732,9 +732,9 @@
   foo.indexOf(1) !== -1;
   ```
 
-- [#6544](https://github.com/biomejs/biome/pull/6544) [`f28b075`](https://github.com/biomejs/biome/commit/f28b075b4fd28e49f18ae131878f67ce9a831c5a) Thanks [@daivinhtran](https://github.com/daivinhtran)! - Fixed [#6536](https://github.com/biomejs/biome/issues/6530). Now the rule `noUselessFragments` produces diagnostics for a top-level useless fragment that is in a return statement.
+- [#6544](https://github.com/manfromexistence/blazing-fast-rust/pull/6544) [`f28b075`](https://github.com/manfromexistence/blazing-fast-rust/commit/f28b075b4fd28e49f18ae131878f67ce9a831c5a) Thanks [@daivinhtran](https://github.com/daivinhtran)! - Fixed [#6536](https://github.com/manfromexistence/blazing-fast-rust/issues/6530). Now the rule `noUselessFragments` produces diagnostics for a top-level useless fragment that is in a return statement.
 
-- [#6320](https://github.com/biomejs/biome/pull/6320) [`5705f1a`](https://github.com/biomejs/biome/commit/5705f1aa9e41bfaea53edf255a18167b52a5fd9b) Thanks [@mdevils](https://github.com/mdevils)! - Added the new nursery rule [`useUnifiedTypeSignature`](https://biomejs.dev/linter/rules/use-unified-type-signature), which disallows overload signatures that can be unified into a single signature.
+- [#6320](https://github.com/manfromexistence/blazing-fast-rust/pull/6320) [`5705f1a`](https://github.com/manfromexistence/blazing-fast-rust/commit/5705f1aa9e41bfaea53edf255a18167b52a5fd9b) Thanks [@mdevils](https://github.com/mdevils)! - Added the new nursery rule [`useUnifiedTypeSignature`](https://manfromexistence.vercel.app/linter/rules/use-unified-type-signature), which disallows overload signatures that can be unified into a single signature.
 
   Overload signatures that can be merged into a single signature are redundant and should be avoided. This rule helps simplify function signatures by combining overloads by making parameters optional and/or using type unions.
 
@@ -773,10 +773,10 @@
   }
   ```
 
-- [#6545](https://github.com/biomejs/biome/pull/6545) [`2782175`](https://github.com/biomejs/biome/commit/2782175c445d4e5f979497ea76beda0276783909) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6529](https://github.com/biomejs/biome/issues/6529), where the Biome Language Server would emit an error when the user would open a file that isn't part of its workspace (`node_modules` or external files).
+- [#6545](https://github.com/manfromexistence/blazing-fast-rust/pull/6545) [`2782175`](https://github.com/manfromexistence/blazing-fast-rust/commit/2782175c445d4e5f979497ea76beda0276783909) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6529](https://github.com/manfromexistence/blazing-fast-rust/issues/6529), where the blazing-fast-rust Language Server would emit an error when the user would open a file that isn't part of its workspace (`node_modules` or external files).
   Now the language server doesn't emit any errors and it exits gracefully.
 
-- [#6524](https://github.com/biomejs/biome/pull/6524) [`a27b825`](https://github.com/biomejs/biome/commit/a27b8253b2f0d5e5618e9b26eebaaa5da55ed69a) Thanks [@vladimir-ivanov](https://github.com/vladimir-ivanov)! - Fixed [#6500](https://github.com/biomejs/biome/issues/6500): The `useReadonlyClassProperties` rule now correctly marks class properties as `readonly` when they are assigned in a constructor, setter or method,
+- [#6524](https://github.com/manfromexistence/blazing-fast-rust/pull/6524) [`a27b825`](https://github.com/manfromexistence/blazing-fast-rust/commit/a27b8253b2f0d5e5618e9b26eebaaa5da55ed69a) Thanks [@vladimir-ivanov](https://github.com/vladimir-ivanov)! - Fixed [#6500](https://github.com/manfromexistence/blazing-fast-rust/issues/6500): The `useReadonlyClassProperties` rule now correctly marks class properties as `readonly` when they are assigned in a constructor, setter or method,
   even if the assignment occurs inside an if or else block.
 
   The following code is now correctly detected by the rule:
@@ -802,7 +802,7 @@
   }
   ```
 
-- [#6355](https://github.com/biomejs/biome/pull/6355) [`e128ea9`](https://github.com/biomejs/biome/commit/e128ea9eb44bcf5558ab6b08214884d1c087686d) Thanks [@anthonyshew](https://github.com/anthonyshew)! - Added a new nursery rule `noAlert` that disallows the use of `alert`, `confirm` and `prompt`.
+- [#6355](https://github.com/manfromexistence/blazing-fast-rust/pull/6355) [`e128ea9`](https://github.com/manfromexistence/blazing-fast-rust/commit/e128ea9eb44bcf5558ab6b08214884d1c087686d) Thanks [@anthonyshew](https://github.com/anthonyshew)! - Added a new nursery rule `noAlert` that disallows the use of `alert`, `confirm` and `prompt`.
 
   The following code is deemed incorrect:
 
@@ -810,20 +810,20 @@
   alert("here!");
   ```
 
-- [#6548](https://github.com/biomejs/biome/pull/6548) [`37e9799`](https://github.com/biomejs/biome/commit/37e979978b406c3e132fd5093bfb21e811c93d2d) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6459](https://github.com/biomejs/biome/issues/6459), where the Biome LSP was not taking into account the correct settings when applying `source.fixAll.biome` code action.
+- [#6548](https://github.com/manfromexistence/blazing-fast-rust/pull/6548) [`37e9799`](https://github.com/manfromexistence/blazing-fast-rust/commit/37e979978b406c3e132fd5093bfb21e811c93d2d) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6459](https://github.com/manfromexistence/blazing-fast-rust/issues/6459), where the blazing-fast-rust LSP was not taking into account the correct settings when applying `source.fixAll.blazing-fast-rust` code action.
 
 ## 2.0.5
 
 ### Patch Changes
 
-- [#6461](https://github.com/biomejs/biome/pull/6461) [`38862e6`](https://github.com/biomejs/biome/commit/38862e645c07935f2daf52799dce38656d589d40) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6419](https://github.com/biomejs/biome/issues/6419), a regression where stdin mode would create a temporary new file instead of using the one provided by the user. This was an intended regression.
+- [#6461](https://github.com/manfromexistence/blazing-fast-rust/pull/6461) [`38862e6`](https://github.com/manfromexistence/blazing-fast-rust/commit/38862e645c07935f2daf52799dce38656d589d40) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6419](https://github.com/manfromexistence/blazing-fast-rust/issues/6419), a regression where stdin mode would create a temporary new file instead of using the one provided by the user. This was an intended regression.
 
-  Now Biome will use the file path passed via `--std-file-path`, and apply the configuration that matches it.
+  Now blazing-fast-rust will use the file path passed via `--std-file-path`, and apply the configuration that matches it.
 
-- [#6480](https://github.com/biomejs/biome/pull/6480) [`050047f`](https://github.com/biomejs/biome/commit/050047f4a3c1379abcf3cf57f1bfecd20bb7d8c1) Thanks [@Conaclos](https://github.com/Conaclos)! - Fixed [#6371](https://github.com/biomejs/biome/issues/6371).
-  [useNamingConvention](https://biomejs.dev/linter/rules/use-naming-convention/) now checks the string case of objects' property shorthand.
+- [#6480](https://github.com/manfromexistence/blazing-fast-rust/pull/6480) [`050047f`](https://github.com/manfromexistence/blazing-fast-rust/commit/050047f4a3c1379abcf3cf57f1bfecd20bb7d8c1) Thanks [@Conaclos](https://github.com/Conaclos)! - Fixed [#6371](https://github.com/manfromexistence/blazing-fast-rust/issues/6371).
+  [useNamingConvention](https://manfromexistence.vercel.app/linter/rules/use-naming-convention/) now checks the string case of objects' property shorthand.
 
-- [#6477](https://github.com/biomejs/biome/pull/6477) [`b98379d`](https://github.com/biomejs/biome/commit/b98379d42d97540c3bd911263a0af1eb7bc4803e) Thanks [@ematipico](https://github.com/ematipico)! - Fixed an issue where Biome formatter didn't format consistently CSS value separated by commas.
+- [#6477](https://github.com/manfromexistence/blazing-fast-rust/pull/6477) [`b98379d`](https://github.com/manfromexistence/blazing-fast-rust/commit/b98379d42d97540c3bd911263a0af1eb7bc4803e) Thanks [@ematipico](https://github.com/ematipico)! - Fixed an issue where blazing-fast-rust formatter didn't format consistently CSS value separated by commas.
 
   ```diff
   .font-heading {
@@ -838,7 +838,7 @@
 
   ```
 
-- [#6248](https://github.com/biomejs/biome/pull/6248) [`ec7126c`](https://github.com/biomejs/biome/commit/ec7126ca3d6777344191f3463b430a44fce02489) Thanks [@fireairforce](https://github.com/fireairforce)! - Fixed grit pattern matching for different kinds of import statements.
+- [#6248](https://github.com/manfromexistence/blazing-fast-rust/pull/6248) [`ec7126c`](https://github.com/manfromexistence/blazing-fast-rust/commit/ec7126ca3d6777344191f3463b430a44fce02489) Thanks [@fireairforce](https://github.com/fireairforce)! - Fixed grit pattern matching for different kinds of import statements.
 
   The grit pattern `import $imports from "foo"` will match the following code:
 
@@ -852,15 +852,15 @@
 
 ### Patch Changes
 
-- [#6450](https://github.com/biomejs/biome/pull/6450) [`7472d9e`](https://github.com/biomejs/biome/commit/7472d9e07fd6e8afab385276678f3d39c7497bab) Thanks [@ematipico](https://github.com/ematipico)! - Fixed an issue where the binary wasn't correctly mapped.
+- [#6450](https://github.com/manfromexistence/blazing-fast-rust/pull/6450) [`7472d9e`](https://github.com/manfromexistence/blazing-fast-rust/commit/7472d9e07fd6e8afab385276678f3d39c7497bab) Thanks [@ematipico](https://github.com/ematipico)! - Fixed an issue where the binary wasn't correctly mapped.
 
 ## 2.0.3
 
 ### Patch Changes
 
-- [#6439](https://github.com/biomejs/biome/pull/6439) [`7e4da4e`](https://github.com/biomejs/biome/commit/7e4da4edb811f9598e446c77fd26bc3802b6d3dd) Thanks [@ematipico](https://github.com/ematipico)! - Fixed an issue where the correct rights aren't added to the binary during publishing
+- [#6439](https://github.com/manfromexistence/blazing-fast-rust/pull/6439) [`7e4da4e`](https://github.com/manfromexistence/blazing-fast-rust/commit/7e4da4edb811f9598e446c77fd26bc3802b6d3dd) Thanks [@ematipico](https://github.com/ematipico)! - Fixed an issue where the correct rights aren't added to the binary during publishing
 
-- [#6297](https://github.com/biomejs/biome/pull/6297) [`cc4b8c9`](https://github.com/biomejs/biome/commit/cc4b8c90017f9c04eab393abc60b3f94a35e3cfa) Thanks [@vladimir-ivanov](https://github.com/vladimir-ivanov)! - Added a new lint `useReadonlyClassProperties` rule.
+- [#6297](https://github.com/manfromexistence/blazing-fast-rust/pull/6297) [`cc4b8c9`](https://github.com/manfromexistence/blazing-fast-rust/commit/cc4b8c90017f9c04eab393abc60b3f94a35e3cfa) Thanks [@vladimir-ivanov](https://github.com/vladimir-ivanov)! - Added a new lint `useReadonlyClassProperties` rule.
   This rule is a port of ESLint's [prefer-readonly](https://typescript-eslint.io/rules/prefer-readonly/) rule.
 
   Example:
@@ -882,62 +882,62 @@
 
 ### Patch Changes
 
-- [#6436](https://github.com/biomejs/biome/pull/6436) [`ec7c63d`](https://github.com/biomejs/biome/commit/ec7c63df520103b5d8ea0090c59486574e7370dd) Thanks [@ematipico](https://github.com/ematipico)! - Fixed an issue where binaries weren't copied anymore inside the `@biomejs/cli-*` packages.
+- [#6436](https://github.com/manfromexistence/blazing-fast-rust/pull/6436) [`ec7c63d`](https://github.com/manfromexistence/blazing-fast-rust/commit/ec7c63df520103b5d8ea0090c59486574e7370dd) Thanks [@ematipico](https://github.com/ematipico)! - Fixed an issue where binaries weren't copied anymore inside the `@blazing-fast-rust/cli-*` packages.
 
 ## 2.0.1
 
 ### Patch Changes
 
-- [#6425](https://github.com/biomejs/biome/pull/6425) [`00e97ad`](https://github.com/biomejs/biome/commit/00e97aded825e72e63db7827de20dc84ac8a123b) Thanks [@siketyan](https://github.com/siketyan)! - Fixed [#6391](https://github.com/biomejs/biome/issues/6391): the rule [`noUselessFragments`](https://biomejs.dev/linter/rules/no-useless-fragments/) no longer reports a fragment that contains whitespaces which aren't trimmed by the runtime.
+- [#6425](https://github.com/manfromexistence/blazing-fast-rust/pull/6425) [`00e97ad`](https://github.com/manfromexistence/blazing-fast-rust/commit/00e97aded825e72e63db7827de20dc84ac8a123b) Thanks [@siketyan](https://github.com/siketyan)! - Fixed [#6391](https://github.com/manfromexistence/blazing-fast-rust/issues/6391): the rule [`noUselessFragments`](https://manfromexistence.vercel.app/linter/rules/no-useless-fragments/) no longer reports a fragment that contains whitespaces which aren't trimmed by the runtime.
 
-- [#6417](https://github.com/biomejs/biome/pull/6417) [`dd88565`](https://github.com/biomejs/biome/commit/dd885655b576869eb624d4a31d2d09bcb6c623a4) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6360](https://github.com/biomejs/biome/issues/6360): The following pseudo classes and elements are no longer reported by `noUnknownPseudoClass` or `noUnknownPseudoElement` rules.
+- [#6417](https://github.com/manfromexistence/blazing-fast-rust/pull/6417) [`dd88565`](https://github.com/manfromexistence/blazing-fast-rust/commit/dd885655b576869eb624d4a31d2d09bcb6c623a4) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6360](https://github.com/manfromexistence/blazing-fast-rust/issues/6360): The following pseudo classes and elements are no longer reported by `noUnknownPseudoClass` or `noUnknownPseudoElement` rules.
   - `:open`
   - `::details-content`
   - `::prefix`
   - `::search-text`
   - `::suffix`
 
-- [#6417](https://github.com/biomejs/biome/pull/6417) [`dd88565`](https://github.com/biomejs/biome/commit/dd885655b576869eb624d4a31d2d09bcb6c623a4) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6357](https://github.com/biomejs/biome/issues/6357), where the boolean values weren't correctly merged when using the `extends` functionality. Now Biome correctly merges the values.
+- [#6417](https://github.com/manfromexistence/blazing-fast-rust/pull/6417) [`dd88565`](https://github.com/manfromexistence/blazing-fast-rust/commit/dd885655b576869eb624d4a31d2d09bcb6c623a4) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6357](https://github.com/manfromexistence/blazing-fast-rust/issues/6357), where the boolean values weren't correctly merged when using the `extends` functionality. Now blazing-fast-rust correctly merges the values.
 
-- [#6417](https://github.com/biomejs/biome/pull/6417) [`dd88565`](https://github.com/biomejs/biome/commit/dd885655b576869eb624d4a31d2d09bcb6c623a4) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6341](https://github.com/biomejs/biome/issues/6341): Fixed an issue where Biome would throw an error for the language tags `nb` and `nn`.
+- [#6417](https://github.com/manfromexistence/blazing-fast-rust/pull/6417) [`dd88565`](https://github.com/manfromexistence/blazing-fast-rust/commit/dd885655b576869eb624d4a31d2d09bcb6c623a4) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6341](https://github.com/manfromexistence/blazing-fast-rust/issues/6341): Fixed an issue where blazing-fast-rust would throw an error for the language tags `nb` and `nn`.
 
-- [#6385](https://github.com/biomejs/biome/pull/6385) [`94142dd`](https://github.com/biomejs/biome/commit/94142dd84b3a4b680c08007cd4947ca7d44273a8) Thanks [@siketyan](https://github.com/siketyan)! - Fixed [#6377](https://github.com/biomejs/biome/issues/6377): The rule [noSelfCompare](https://biomejs.dev/linter/rules/no-self-compare/) now correctly compares two function calls with different arguments.
+- [#6385](https://github.com/manfromexistence/blazing-fast-rust/pull/6385) [`94142dd`](https://github.com/manfromexistence/blazing-fast-rust/commit/94142dd84b3a4b680c08007cd4947ca7d44273a8) Thanks [@siketyan](https://github.com/siketyan)! - Fixed [#6377](https://github.com/manfromexistence/blazing-fast-rust/issues/6377): The rule [noSelfCompare](https://manfromexistence.vercel.app/linter/rules/no-self-compare/) now correctly compares two function calls with different arguments.
 
-- [#6417](https://github.com/biomejs/biome/pull/6417) [`dd88565`](https://github.com/biomejs/biome/commit/dd885655b576869eb624d4a31d2d09bcb6c623a4) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6278](https://github.com/biomejs/biome/issues/6278): `useExhaustiveDependencies` no longer adds duplicated dependencies into the list.
+- [#6417](https://github.com/manfromexistence/blazing-fast-rust/pull/6417) [`dd88565`](https://github.com/manfromexistence/blazing-fast-rust/commit/dd885655b576869eb624d4a31d2d09bcb6c623a4) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6278](https://github.com/manfromexistence/blazing-fast-rust/issues/6278): `useExhaustiveDependencies` no longer adds duplicated dependencies into the list.
 
-- [#6417](https://github.com/biomejs/biome/pull/6417) [`dd88565`](https://github.com/biomejs/biome/commit/dd885655b576869eb624d4a31d2d09bcb6c623a4) Thanks [@ematipico](https://github.com/ematipico)! - Fix #6396, where `vi.useFakeTimers()` and `vi.useRealTimers()` incorrectly triggered React Hooks-related rules
+- [#6417](https://github.com/manfromexistence/blazing-fast-rust/pull/6417) [`dd88565`](https://github.com/manfromexistence/blazing-fast-rust/commit/dd885655b576869eb624d4a31d2d09bcb6c623a4) Thanks [@ematipico](https://github.com/ematipico)! - Fix #6396, where `vi.useFakeTimers()` and `vi.useRealTimers()` incorrectly triggered React Hooks-related rules
 
-- [#6417](https://github.com/biomejs/biome/pull/6417) [`dd88565`](https://github.com/biomejs/biome/commit/dd885655b576869eb624d4a31d2d09bcb6c623a4) Thanks [@ematipico](https://github.com/ematipico)! - Fixed a bug where Biome didn't correctly discover nested configuration files when using the `lint` command and the linter is disabled in the root configuration.
+- [#6417](https://github.com/manfromexistence/blazing-fast-rust/pull/6417) [`dd88565`](https://github.com/manfromexistence/blazing-fast-rust/commit/dd885655b576869eb624d4a31d2d09bcb6c623a4) Thanks [@ematipico](https://github.com/ematipico)! - Fixed a bug where blazing-fast-rust didn't correctly discover nested configuration files when using the `lint` command and the linter is disabled in the root configuration.
 
-- [#6422](https://github.com/biomejs/biome/pull/6422) [`594ec50`](https://github.com/biomejs/biome/commit/594ec5008761c6263a43f72f1cbb7e9aafaf8a46) Thanks [@ematipico](https://github.com/ematipico)! - Removed the experimental rename feature from Biome LSP, which caused some issues inside existing editors such as Zed.
+- [#6422](https://github.com/manfromexistence/blazing-fast-rust/pull/6422) [`594ec50`](https://github.com/manfromexistence/blazing-fast-rust/commit/594ec5008761c6263a43f72f1cbb7e9aafaf8a46) Thanks [@ematipico](https://github.com/ematipico)! - Removed the experimental rename feature from blazing-fast-rust LSP, which caused some issues inside existing editors such as Zed.
 
-- [#6388](https://github.com/biomejs/biome/pull/6388) [`c6942d2`](https://github.com/biomejs/biome/commit/c6942d291297322234f9f145fc2fbf8506dc7673) Thanks [@siketyan](https://github.com/siketyan)! - Fixed [#6375](https://github.com/biomejs/biome/issues/6375): the formatter no longer inserts an extra empty line before a semicolon when it has leading comments.
+- [#6388](https://github.com/manfromexistence/blazing-fast-rust/pull/6388) [`c6942d2`](https://github.com/manfromexistence/blazing-fast-rust/commit/c6942d291297322234f9f145fc2fbf8506dc7673) Thanks [@siketyan](https://github.com/siketyan)! - Fixed [#6375](https://github.com/manfromexistence/blazing-fast-rust/issues/6375): the formatter no longer inserts an extra empty line before a semicolon when it has leading comments.
 
 ## 2.0.0
 
 ### Major Changes
 
-- Biome now resolves globs and paths from the configuration. Before, paths and globs were resolved from the working directory.
+- blazing-fast-rust now resolves globs and paths from the configuration. Before, paths and globs were resolved from the working directory.
 
-- Biome now raises a **warning** diagnostic for suppression comments that have `<explanation>` as reason.
+- blazing-fast-rust now raises a **warning** diagnostic for suppression comments that have `<explanation>` as reason.
 
   `<explanation>` is provided as a placeholder when applying the suppression code fix from LSP editors.
 
-- Removed the `--config-path` argument from the `biome lsp-proxy` and `biome start` commands.
+- Removed the `--config-path` argument from the `blazing-fast-rust lsp-proxy` and `blazing-fast-rust start` commands.
 
-  The option was overriding the configuration path for all workspaces opened in the Biome daemon, which led to a configuration mismatch problem when multiple projects are opened in some editors or IDEs.
+  The option was overriding the configuration path for all workspaces opened in the blazing-fast-rust daemon, which led to a configuration mismatch problem when multiple projects are opened in some editors or IDEs.
 
   If you are using one of our official plugins for IDEs or editors, it is recommended to update it to the latest version of the plugin, or you will get unexpected behavior.
 
-  If you are a developer of a plugin, please update your plugin to use the `workspace/configuration` response instead of using the `--config-path` argument. Biome's LSP will resolve a configuration in the workspace automatically, so it is recommended to keep it empty unless you are using a custom configuration path.
+  If you are a developer of a plugin, please update your plugin to use the `workspace/configuration` response instead of using the `--config-path` argument. blazing-fast-rust's LSP will resolve a configuration in the workspace automatically, so it is recommended to keep it empty unless you are using a custom configuration path.
 
 - Downgraded some code fixes to unsafe which were previously safe.
 
   The following rules have now a unsafe fix:
-  - [`noFlatMapIdentity`](https://biomejs.dev/linter/rules/no-flat-map-identity)
-  - [`noUnusedImports`](https://biomejs.dev/linter/rules/no-unused-imports)
+  - [`noFlatMapIdentity`](https://manfromexistence.vercel.app/linter/rules/no-flat-map-identity)
+  - [`noUnusedImports`](https://manfromexistence.vercel.app/linter/rules/no-unused-imports)
 
-  If you want to keep applying these fixes automatically, [configure the rule fix](https://next.biomejs.dev/linter/#configure-the-code-fix) as safe:
+  If you want to keep applying these fixes automatically, [configure the rule fix](https://next.blazing-fast-rustjs.dev/linter/#configure-the-code-fix) as safe:
 
   ```json
   {
@@ -967,7 +967,7 @@
 
   Now the lint rules `noControlCharactersInRegex` and `noMisleadingCharacterClass` only check literals of regular expressions.
 
-- The lint rule [`noRestrictedGlobals`](https://biomejs.dev/linter/rules/no-restricted-globals/) now supports customizing message for each global name.
+- The lint rule [`noRestrictedGlobals`](https://manfromexistence.vercel.app/linter/rules/no-restricted-globals/) now supports customizing message for each global name.
 
   For example, the following configuration:
 
@@ -995,16 +995,16 @@
     ℹ jQuery is not allowed. Use native DOM manipulation instead.
   ```
 
-  Breaking Change: The option `deniedGlobals` is now a record instead of an array. Run `biome migrate` to migrate the configuration automatically.
+  Breaking Change: The option `deniedGlobals` is now a record instead of an array. Run `blazing-fast-rust migrate` to migrate the configuration automatically.
 
 - Removed `include` and `ignore` fields in favor of the new field `includes`.
 
-  The Biome configuration file allows users to specify which files should be processed using [glob patterns](<https://en.wikipedia.org/wiki/Glob_(programming)>).
-  Prior to Biome 2.0, this was done using the `include` and `ignore` fields.
-  In Biome 2.0, `include` and `ignore` are removed and replaced by `includes`.
-  You can run `biome migrate` to convert `include` and `ignore` into `includes` automatically.
+  The blazing-fast-rust configuration file allows users to specify which files should be processed using [glob patterns](<https://en.wikipedia.org/wiki/Glob_(programming)>).
+  Prior to blazing-fast-rust 2.0, this was done using the `include` and `ignore` fields.
+  In blazing-fast-rust 2.0, `include` and `ignore` are removed and replaced by `includes`.
+  You can run `blazing-fast-rust migrate` to convert `include` and `ignore` into `includes` automatically.
 
-  `includes` uses a different glob pattern format that fixes [many](https://github.com/biomejs/biome/issues/2421) [issues](https://github.com/biomejs/biome/issues/3345) and many other limitations that Biome users reported.
+  `includes` uses a different glob pattern format that fixes [many](https://github.com/manfromexistence/blazing-fast-rust/issues/2421) [issues](https://github.com/manfromexistence/blazing-fast-rust/issues/3345) and many other limitations that blazing-fast-rust users reported.
 
   `includes` accepts an array of glob patterns.
   A glob pattern starting with a `!` is a negated pattern also called exception.
@@ -1022,7 +1022,7 @@
   Given the following file hierarchy of a project...
 
   ```
-  ├── biome.json
+  ├── blazing-fast-rust.json
   ├── src
   │   ├── file.js
   │   ├── file.ts
@@ -1041,7 +1041,7 @@
      The `src` directory is located at the root of the project.
   4. Enable the `noDefaultExport` lint rule on files ending with `.ts`.
 
-  Prior to Biome 2.0, the configuration might look like:
+  Prior to blazing-fast-rust 2.0, the configuration might look like:
 
   ```json
   {
@@ -1100,13 +1100,13 @@
 - `noUndeclaredVariables` no longer reports TypeScript types.
 
   In TypeScript projects, developers often use global declaration files to declare global types.
-  Biome is currently unable to detect these global types.
+  blazing-fast-rust is currently unable to detect these global types.
   This creates many false positives for `noUndeclaredVariables`.
 
   TypeScript is better suited to perform this kind of check.
   As proof of this, TypeScript ESLint doesn't provide any rule that extends the `no-undef` ESLint rule.
 
-  This is why Biome 1.9 introduced a new option `checkTypes` which, when it is set to false, ignores undeclared type references.
+  This is why blazing-fast-rust 1.9 introduced a new option `checkTypes` which, when it is set to false, ignores undeclared type references.
   The option was set to `true` by default.
 
   This option is now set to `false` by default.
@@ -1127,14 +1127,14 @@
   }
   ```
 
-- The rule `noUnusedVariables` no longer reports unused function parameters. Use [`noUnusedFunctionParameters`](https://biomejs.dev/linter/rules/no-unused-function-parameters/).
+- The rule `noUnusedVariables` no longer reports unused function parameters. Use [`noUnusedFunctionParameters`](https://manfromexistence.vercel.app/linter/rules/no-unused-function-parameters/).
 
-- Fixed [#5564](https://github.com/biomejs/biome/issues/5564). `noTypeOnlyImportAttributes` now ignores files ending with the extension `.ts` when the type field of `package.json` is set to `commonjs`.
+- Fixed [#5564](https://github.com/manfromexistence/blazing-fast-rust/issues/5564). `noTypeOnlyImportAttributes` now ignores files ending with the extension `.ts` when the type field of `package.json` is set to `commonjs`.
 
-- The Biome formatter no longer adds a trailing comma in `.json` files, even when `json.formatter.trailingCommas` is set to `true`.
+- The blazing-fast-rust formatter no longer adds a trailing comma in `.json` files, even when `json.formatter.trailingCommas` is set to `true`.
 
 - [Prettier 3.4](https://prettier.io/blog/2024/11/26/3.4.0.html) introduced a change in their normalization process of string literals: it no longer unescapes useless escape sequences.
-  Biome now matches the new behavior of Prettier when formatting code.
+  blazing-fast-rust now matches the new behavior of Prettier when formatting code.
   This affects the JSON and JavaScript formatters.
 
 - Reduced accepted values for formatter options:
@@ -1193,13 +1193,13 @@
   }
   ```
 
-  Run `biome migrate --write` to turn `enumMemberCase` into `conventions` automatically.
+  Run `blazing-fast-rust migrate --write` to turn `enumMemberCase` into `conventions` automatically.
 
-- Removed support for `BIOME_LOG_DIR`.
+- Removed support for `blazing-fast-rust_LOG_DIR`.
 
-  The environment variable `BIOME_LOG_DIR` isn't supported anymore.
+  The environment variable `blazing-fast-rust_LOG_DIR` isn't supported anymore.
 
-  Use `BIOME_LOG_PATH` instead.
+  Use `blazing-fast-rust_LOG_PATH` instead.
 
 - Remove deprecated rules.
 
@@ -1210,7 +1210,7 @@
   - `useSingleCaseStatement`
   - `noConsoleLog`
 
-  Run the command `biome migrate --write` to update the configuration.
+  Run the command `blazing-fast-rust migrate --write` to update the configuration.
 
 - Removed the deprecated `indentSize` option.
 
@@ -1224,14 +1224,14 @@
 
   Use `indentWidth` and its relative CLI options instead.
 
-- Removed `ROME_BINARY`. Use `BIOME_BINARY` instead.
+- Removed `ROME_BINARY`. Use `blazing-fast-rust_BINARY` instead.
 
 - Removed support for legacy suppressions.
 
-  Biome used to support "legacy suppressions" that looked like this:
+  blazing-fast-rust used to support "legacy suppressions" that looked like this:
 
   ```js
-  // biome-ignore lint(complexity/useWhile): reason
+  // blazing-fast-rust-ignore lint(complexity/useWhile): reason
   ```
 
   This format is no longer supported.
@@ -1240,24 +1240,24 @@
 
 - Removed support for `rome-ignore` suppression comments.
 
-  Use `biome-ignore` suppression comments instead.
+  Use `blazing-fast-rust-ignore` suppression comments instead.
 
 - Removed support for `rome.json`.
 
-  Use `biome.json` or `biome.jsonc` instead.
+  Use `blazing-fast-rust.json` or `blazing-fast-rust.jsonc` instead.
 
 - Removed the option `all` from the linter.
 
   The options `linter.rules.all` and `linter.rules.<group>.all` has been removed.
 
-  The number of rules in Biome have increased in scope and use cases, and sometimes some of them can conflict with each other.
+  The number of rules in blazing-fast-rust have increased in scope and use cases, and sometimes some of them can conflict with each other.
 
   The option was useful at the beginning, but now it's deemed harmful, because it can unexpected behaviours in users projects.
 
   To automatically remove it, run the following command:
 
   ```shell
-  biome migrate --write
+  blazing-fast-rust migrate --write
   ```
 
 - Removed the option `trailingComma` from the configuration and the CLI. Use the option `trailingCommas` instead:
@@ -1274,8 +1274,8 @@
   ```
 
   ```diff
-  -biome format --trailing-comma=es5
-  +biome format --trailing-commas=es5
+  -blazing-fast-rust format --trailing-comma=es5
+  +blazing-fast-rust format --trailing-commas=es5
   ```
 
 - Removed `--apply` and `--apply-unsafe`.
@@ -1283,18 +1283,18 @@
   The CLI options `--apply` and `--apply-unasfe` aren't accepted anymore. Use `--write` and `--write --unafe` instead:
 
   ```diff
-  -biome check --apply-unsafe
-  +biome check --write --unsafe
+  -blazing-fast-rust check --apply-unsafe
+  +blazing-fast-rust check --write --unsafe
   ```
 
   ```diff
-  -biome check --apply
-  +biome check --write
+  -blazing-fast-rust check --apply
+  +blazing-fast-rust check --write
   ```
 
 - Removed support for `assert` syntax.
 
-  Biome now longer supports the `assert` syntax, use the new `with` syntax instead
+  blazing-fast-rust now longer supports the `assert` syntax, use the new `with` syntax instead
 
   ```diff
   -import {test} from "foo.json" assert { for: "for" }
@@ -1303,15 +1303,15 @@
   +export * from "mod" with { type: "json" }
   ```
 
-- Fixed [#5495](https://github.com/biomejs/biome/issues/5495): The rule
-  [`noBlankTarget`](https://biomejs.dev/linter/rules/no-blank-target/) has been
+- Fixed [#5495](https://github.com/manfromexistence/blazing-fast-rust/issues/5495): The rule
+  [`noBlankTarget`](https://manfromexistence.vercel.app/linter/rules/no-blank-target/) has been
   updated to accept the `rel="noopener"` in addition to `rel="noreferrer"`.
   In addition, an option has been added that allows `rel="noreferrer"` to be
   disabled.
 
   The rule has been moved from the `a11y` group to the `security` group.
 
-- The rule `useImportRestrictions` has been renamed to [`noPrivateImports`](https://biomejs.dev/linter/rules/no-private-imports), and its
+- The rule `useImportRestrictions` has been renamed to [`noPrivateImports`](https://manfromexistence.vercel.app/linter/rules/no-private-imports), and its
   functionality has been significantly upgraded.
 
   Previously, the rule would assume that any direct imports from modules inside
@@ -1320,19 +1320,19 @@
   The updated rule allows configuring the default visibility of exports, and
   recognises JSDoc comments to override this visibility. The default visibility
   is now `**public**`, but can be set to `**package**`, or even `**private**`.
-  Refer to the [documentation of the rule](https://biomejs.dev/linter/rules/no-private-imports) to understand how to leverage the JSDoc comments.
+  Refer to the [documentation of the rule](https://manfromexistence.vercel.app/linter/rules/no-private-imports) to understand how to leverage the JSDoc comments.
 
   `noPrivateImports` is now recommended by default.
 
-- The Biome daemon now reuses its workspace across connections. This allows multiple clients to
+- The blazing-fast-rust daemon now reuses its workspace across connections. This allows multiple clients to
   reuse the same documents and other cached data that we extract from them.
 
   This primarily affects our IDE extensions: If you open multiple IDEs/windows for the same project,
   they'll connect to the same daemon and reuse each other's workspace.
 
-  The Biome CLI is unaffected unless you opt in with the `--use-server` argument.
+  The blazing-fast-rust CLI is unaffected unless you opt in with the `--use-server` argument.
 
-- Biome no longer treats too large files as errors.
+- blazing-fast-rust no longer treats too large files as errors.
 
   Previously, files that exceed the configured size limit would throw an error, and the CLI would exit with an error code.
 
@@ -1341,94 +1341,94 @@
 - Change the group of some rules, promote nursery rules and update the recommended rule set.
 
   The following rules have been moved to a new group:
-  - [complexity/noArguments](https://biomejs.dev/linter/rules/no-arguments)
-  - [complexity/noCommaOperator](https://biomejs.dev/linter/rules/no-comma-operator)
-  - [complexity/noFlatMapIdentity](https://biomejs.dev/linter/rules/no-flat-map-identity)
-  - [complexity/noUselessContinue](https://biomejs.dev/linter/rules/no-useless-continue)
-  - [complexity/useNumericLiterals](https://biomejs.dev/linter/rules/use-numeric-literals)
-  - [correctness/useValidTypeof](https://biomejs.dev/linter/rules/use-valid-typeof)
-  - [performance/noNamespaceImport](https://biomejs.dev/linter/rules/no-namespace-import/)
-  - [style/useArrayLiterals](https://biomejs.dev/linter/rules/use-array-literals)
-  - [suspicious/noWith](https://biomejs.dev/linter/rules/no-with)
+  - [complexity/noArguments](https://manfromexistence.vercel.app/linter/rules/no-arguments)
+  - [complexity/noCommaOperator](https://manfromexistence.vercel.app/linter/rules/no-comma-operator)
+  - [complexity/noFlatMapIdentity](https://manfromexistence.vercel.app/linter/rules/no-flat-map-identity)
+  - [complexity/noUselessContinue](https://manfromexistence.vercel.app/linter/rules/no-useless-continue)
+  - [complexity/useNumericLiterals](https://manfromexistence.vercel.app/linter/rules/use-numeric-literals)
+  - [correctness/useValidTypeof](https://manfromexistence.vercel.app/linter/rules/use-valid-typeof)
+  - [performance/noNamespaceImport](https://manfromexistence.vercel.app/linter/rules/no-namespace-import/)
+  - [style/useArrayLiterals](https://manfromexistence.vercel.app/linter/rules/use-array-literals)
+  - [suspicious/noWith](https://manfromexistence.vercel.app/linter/rules/no-with)
 
   New rules are incubated in the nursery group.
   Once stable, we promote them to a stable group.
-  Use the `biome migrate` command to automatically migrate nursery rules that have been promoted.
+  Use the `blazing-fast-rust migrate` command to automatically migrate nursery rules that have been promoted.
 
   The following CSS rules have been promoted:
-  - [correctness/noMissingVarFunction](https://biomejs.dev/linter/rules/no-missing-var-function)
-  - [correctness/noUnknownPseudoClass](https://biomejs.dev/linter/rules/no-unknown-pseudo-class)
-  - [correctness/noUnknownPseudoElement](https://biomejs.dev/linter/rules/no-unknown-pseudo-element)
-  - [correctness/noUnknownTypeSelector](https://biomejs.dev/linter/rules/no-unknown-type-selector)
-  - [style/noDescendingSpecificity](https://biomejs.dev/linter/rules/no-descending-specificity)
-  - [style/noValueAtRule](https://biomejs.dev/linter/rules/no-value-at-rule)
-  - [suspcious/noDuplicateCustomProperties](https://biomejs.dev/linter/rules/no-duplicate-custom-properties)
-  - [suspcious/noDuplicateProperties](https://biomejs.dev/linter/rules/no-duplicate-properties)
+  - [correctness/noMissingVarFunction](https://manfromexistence.vercel.app/linter/rules/no-missing-var-function)
+  - [correctness/noUnknownPseudoClass](https://manfromexistence.vercel.app/linter/rules/no-unknown-pseudo-class)
+  - [correctness/noUnknownPseudoElement](https://manfromexistence.vercel.app/linter/rules/no-unknown-pseudo-element)
+  - [correctness/noUnknownTypeSelector](https://manfromexistence.vercel.app/linter/rules/no-unknown-type-selector)
+  - [style/noDescendingSpecificity](https://manfromexistence.vercel.app/linter/rules/no-descending-specificity)
+  - [style/noValueAtRule](https://manfromexistence.vercel.app/linter/rules/no-value-at-rule)
+  - [suspcious/noDuplicateCustomProperties](https://manfromexistence.vercel.app/linter/rules/no-duplicate-custom-properties)
+  - [suspcious/noDuplicateProperties](https://manfromexistence.vercel.app/linter/rules/no-duplicate-properties)
 
   The following GraphQL rules have been promoted:
-  - [style/useDeprecatedReason](https://biomejs.dev/linter/rules/use-deprecated-reason)
-  - [suspicious/noDuplicatedFields](https://biomejs.dev/linter/rules/no-duplicated-fields)
+  - [style/useDeprecatedReason](https://manfromexistence.vercel.app/linter/rules/use-deprecated-reason)
+  - [suspicious/noDuplicatedFields](https://manfromexistence.vercel.app/linter/rules/no-duplicated-fields)
 
   The following JavaScript rules have been promoted:
-  - [a11y/noStaticElementInteractions](https://biomejs.dev/linter/rules/no-static-element-interactions)
-  - [a11y/useAriaPropsSupportedByRole](https://biomejs.dev/linter/rules/use-aria-props-supported-by-role)(recommended)
-  - [a11y/useValidAutocomplete](https://biomejs.dev/linter/rules/use-valid-autocomplete)
-  - [complexity/noUselessEscapeInRegex](https://biomejs.dev/linter/rules/no-useless-escape-in-regex)
-  - [complexity/noUselessStringRaw](https://biomejs.dev/linter/rules/no-useless-string-raw)
-  - [performance/noDynamicNamespaceImportAccess](https://biomejs.dev/linter/rules/no-dynamic-namespace-import-access)
-  - [performance/noImgElement](https://biomejs.dev/linter/rules/no-img-element)
-  - [style/noCommonJs](https://biomejs.dev/linter/rules/no-common-js)
-  - [style/noEnum](https://biomejs.dev/linter/rules/no-enum)
-  - [style/noExportedImports](https://biomejs.dev/linter/rules/no-exported-imports)
-  - [style/noHeadElement](https://biomejs.dev/linter/rules/no-head-element)
-  - [style/noNestedTernary](https://biomejs.dev/linter/rules/no-nested-ternary)
-  - [style/noProcessEnv](https://biomejs.dev/linter/rules/no-process-env)
-  - [style/noRestrictedImports](https://biomejs.dev/linter/rules/no-restricted-imports)
-  - [style/noRestrictedTypes](https://biomejs.dev/linter/rules/no-restricted-types)
-  - [style/noSubstr](https://biomejs.dev/linter/rules/no-substr)
-  - [style/useAtIndex](https://biomejs.dev/linter/rules/use-at-index)
-  - [style/useCollapsedIf](https://biomejs.dev/linter/rules/use-collapsed-if)
-  - [style/useComponentExportOnlyModules](https://biomejs.dev/linter/rules/use-component-export-only-modules)
-  - [style/useConsistentCurlyBraces](https://biomejs.dev/linter/rules/use-consistent-curly-braces)
-  - [style/useConsistentMemberAccessibility](https://biomejs.dev/linter/rules/use-consistent-member-accessibility)
-  - [style/useTrimStartEnd](https://biomejs.dev/linter/rules/use-trim-start-end)
-  - [suspicious/noDocumentCookie](https://biomejs.dev/linter/rules/no-document-cookie)
-  - [suspicious/noDocumentImportInPage](https://biomejs.dev/linter/rules/no-document-import-in-page)
-  - [suspicious/noDuplicateElseIf](https://biomejs.dev/linter/rules/no-duplicate-else-if)
-  - [suspicious/noHeadImportInDocument](https://biomejs.dev/linter/rules/no-head-import-in-document)
-  - [suspicious/noIrregularWhitespace](https://biomejs.dev/linter/rules/no-irregular-whitespace)
-  - [suspicious/noOctalEscape](https://biomejs.dev/linter/rules/no-octal-escape)
-  - [suspicious/noTemplateCurlyInString](https://biomejs.dev/linter/rules/no-template-curly-in-string)
-  - [suspicious/useAdjacentOverloadSignatures](https://biomejs.dev/linter/rules/use-adjacent-overload-signatures)
-  - [suspicious/useGoogleFontDisplay](https://biomejs.dev/linter/rules/use-google-font-display)
-  - [suspicious/useGuardForIn](https://biomejs.dev/linter/rules/use-guard-for-in)
-  - [suspicious/useStrictMode](https://biomejs.dev/linter/rules/use-strict-mode)
+  - [a11y/noStaticElementInteractions](https://manfromexistence.vercel.app/linter/rules/no-static-element-interactions)
+  - [a11y/useAriaPropsSupportedByRole](https://manfromexistence.vercel.app/linter/rules/use-aria-props-supported-by-role)(recommended)
+  - [a11y/useValidAutocomplete](https://manfromexistence.vercel.app/linter/rules/use-valid-autocomplete)
+  - [complexity/noUselessEscapeInRegex](https://manfromexistence.vercel.app/linter/rules/no-useless-escape-in-regex)
+  - [complexity/noUselessStringRaw](https://manfromexistence.vercel.app/linter/rules/no-useless-string-raw)
+  - [performance/noDynamicNamespaceImportAccess](https://manfromexistence.vercel.app/linter/rules/no-dynamic-namespace-import-access)
+  - [performance/noImgElement](https://manfromexistence.vercel.app/linter/rules/no-img-element)
+  - [style/noCommonJs](https://manfromexistence.vercel.app/linter/rules/no-common-js)
+  - [style/noEnum](https://manfromexistence.vercel.app/linter/rules/no-enum)
+  - [style/noExportedImports](https://manfromexistence.vercel.app/linter/rules/no-exported-imports)
+  - [style/noHeadElement](https://manfromexistence.vercel.app/linter/rules/no-head-element)
+  - [style/noNestedTernary](https://manfromexistence.vercel.app/linter/rules/no-nested-ternary)
+  - [style/noProcessEnv](https://manfromexistence.vercel.app/linter/rules/no-process-env)
+  - [style/noRestrictedImports](https://manfromexistence.vercel.app/linter/rules/no-restricted-imports)
+  - [style/noRestrictedTypes](https://manfromexistence.vercel.app/linter/rules/no-restricted-types)
+  - [style/noSubstr](https://manfromexistence.vercel.app/linter/rules/no-substr)
+  - [style/useAtIndex](https://manfromexistence.vercel.app/linter/rules/use-at-index)
+  - [style/useCollapsedIf](https://manfromexistence.vercel.app/linter/rules/use-collapsed-if)
+  - [style/useComponentExportOnlyModules](https://manfromexistence.vercel.app/linter/rules/use-component-export-only-modules)
+  - [style/useConsistentCurlyBraces](https://manfromexistence.vercel.app/linter/rules/use-consistent-curly-braces)
+  - [style/useConsistentMemberAccessibility](https://manfromexistence.vercel.app/linter/rules/use-consistent-member-accessibility)
+  - [style/useTrimStartEnd](https://manfromexistence.vercel.app/linter/rules/use-trim-start-end)
+  - [suspicious/noDocumentCookie](https://manfromexistence.vercel.app/linter/rules/no-document-cookie)
+  - [suspicious/noDocumentImportInPage](https://manfromexistence.vercel.app/linter/rules/no-document-import-in-page)
+  - [suspicious/noDuplicateElseIf](https://manfromexistence.vercel.app/linter/rules/no-duplicate-else-if)
+  - [suspicious/noHeadImportInDocument](https://manfromexistence.vercel.app/linter/rules/no-head-import-in-document)
+  - [suspicious/noIrregularWhitespace](https://manfromexistence.vercel.app/linter/rules/no-irregular-whitespace)
+  - [suspicious/noOctalEscape](https://manfromexistence.vercel.app/linter/rules/no-octal-escape)
+  - [suspicious/noTemplateCurlyInString](https://manfromexistence.vercel.app/linter/rules/no-template-curly-in-string)
+  - [suspicious/useAdjacentOverloadSignatures](https://manfromexistence.vercel.app/linter/rules/use-adjacent-overload-signatures)
+  - [suspicious/useGoogleFontDisplay](https://manfromexistence.vercel.app/linter/rules/use-google-font-display)
+  - [suspicious/useGuardForIn](https://manfromexistence.vercel.app/linter/rules/use-guard-for-in)
+  - [suspicious/useStrictMode](https://manfromexistence.vercel.app/linter/rules/use-strict-mode)
 
   Moreover, the following JavaScript rules are now recommended:
-  - [complexity/noUselessUndefinedInitialization](https://biomejs.dev/linter/rules/no-useless-undefined-initialization)
-  - [complexity/useArrayLiterals](https://biomejs.dev/linter/rules/use-array-literals)
-  - [correctness/noConstantMathMinMaxClamp](https://biomejs.dev/linter/rules/no-constant-math-min-max-clamp)
-  - [correctness/noUnusedFunctionParameters](https://biomejs.dev/linter/rules/no-unused-function-parameters) (recommended by ESLint)
-  - [correctness/noUnusedImports](https://biomejs.dev/linter/rules/no-unused-imports)
-  - [correctness/noUnusedPrivateClassMembers](https://biomejs.dev/linter/rules/no-unused-private-class-members) (recommended by ESLint)
-  - [correctness/noUnusedVariables](https://biomejs.dev/linter/rules/no-unused-variables) (recommended by ESLint)
-  - [complexity/useDateNow](https://biomejs.dev/linter/rules/use-date-now)
+  - [complexity/noUselessUndefinedInitialization](https://manfromexistence.vercel.app/linter/rules/no-useless-undefined-initialization)
+  - [complexity/useArrayLiterals](https://manfromexistence.vercel.app/linter/rules/use-array-literals)
+  - [correctness/noConstantMathMinMaxClamp](https://manfromexistence.vercel.app/linter/rules/no-constant-math-min-max-clamp)
+  - [correctness/noUnusedFunctionParameters](https://manfromexistence.vercel.app/linter/rules/no-unused-function-parameters) (recommended by ESLint)
+  - [correctness/noUnusedImports](https://manfromexistence.vercel.app/linter/rules/no-unused-imports)
+  - [correctness/noUnusedPrivateClassMembers](https://manfromexistence.vercel.app/linter/rules/no-unused-private-class-members) (recommended by ESLint)
+  - [correctness/noUnusedVariables](https://manfromexistence.vercel.app/linter/rules/no-unused-variables) (recommended by ESLint)
+  - [complexity/useDateNow](https://manfromexistence.vercel.app/linter/rules/use-date-now)
 
   And the following style rules are no longer recommended:
-  - [style/useNumberNamespace](https://biomejs.dev/linter/rules/use-number-namespace)
-  - [style/useAsConstAssertion](https://biomejs.dev/linter/rules/use-as-const-assertion)
-  - [style/noParameterAssign](https://biomejs.dev/linter/rules/no-parameter-assign)
-  - [style/noInferrableTypes](https://biomejs.dev/linter/rules/no-inferrable-types)
-  - [style/useDefaultParameterLast](https://biomejs.dev/linter/rules/use-default-parameter-last)
-  - [style/noUnusedTemplateLiteral](https://biomejs.dev/linter/rules/no-unused-template-literal)
-  - [style/useEnumInitializers](https://biomejs.dev/linter/rules/use-enum-initializers)
-  - [style/noUselessElse](https://biomejs.dev/linter/rules/no-useless-else)
-  - [style/useSelfClosingElements](https://biomejs.dev/linter/rules/use-self-closing-elements)
-  - [style/useSingleVarDeclarator](https://biomejs.dev/linter/rules/use-single-var-declarator)
+  - [style/useNumberNamespace](https://manfromexistence.vercel.app/linter/rules/use-number-namespace)
+  - [style/useAsConstAssertion](https://manfromexistence.vercel.app/linter/rules/use-as-const-assertion)
+  - [style/noParameterAssign](https://manfromexistence.vercel.app/linter/rules/no-parameter-assign)
+  - [style/noInferrableTypes](https://manfromexistence.vercel.app/linter/rules/no-inferrable-types)
+  - [style/useDefaultParameterLast](https://manfromexistence.vercel.app/linter/rules/use-default-parameter-last)
+  - [style/noUnusedTemplateLiteral](https://manfromexistence.vercel.app/linter/rules/no-unused-template-literal)
+  - [style/useEnumInitializers](https://manfromexistence.vercel.app/linter/rules/use-enum-initializers)
+  - [style/noUselessElse](https://manfromexistence.vercel.app/linter/rules/no-useless-else)
+  - [style/useSelfClosingElements](https://manfromexistence.vercel.app/linter/rules/use-self-closing-elements)
+  - [style/useSingleVarDeclarator](https://manfromexistence.vercel.app/linter/rules/use-single-var-declarator)
 
 - Update the default severity level of lint rules.
 
-  Every diagnostic emitted by Biome has a severity level set to `error`, `warn`, or `info`.
+  Every diagnostic emitted by blazing-fast-rust has a severity level set to `error`, `warn`, or `info`.
   Previously, all recommended lint rules had a default severity level set to `error`.
   All other lint rules had a default severity level set to `warn`.
 
@@ -1476,8 +1476,8 @@
 - Remove the code action `quickfix.suppressRule`.
 
   The code action `quickfix.suppressRule` was removed in favour of two new code actions:
-  - `quickfix.suppressRule.inline.biome`: a code action that adds a suppression comment for each violation.
-  - `quickfix.suppressRule.topLevel.biome`: a code action that adds a suppression comment at the top of the file which suppresses a rule for the whole file.
+  - `quickfix.suppressRule.inline.blazing-fast-rust`: a code action that adds a suppression comment for each violation.
+  - `quickfix.suppressRule.topLevel.blazing-fast-rust`: a code action that adds a suppression comment at the top of the file which suppresses a rule for the whole file.
 
   Given the following code
 
@@ -1486,20 +1486,20 @@
   debugger;
   ```
 
-  The code action `quickfix.suppressRule.inline.biome` will result in the following code:
+  The code action `quickfix.suppressRule.inline.blazing-fast-rust` will result in the following code:
 
   ```js
-  // biome-ignore lint/style/useConst: <explanation>
+  // blazing-fast-rust-ignore lint/style/useConst: <explanation>
   let foo = "one";
-  // biome-ignore lint/suspicious/noDebugger: <explanation>
+  // blazing-fast-rust-ignore lint/suspicious/noDebugger: <explanation>
   debugger;
   ```
 
-  The code action `quickfix.suppressRule.topLevel.biome`, instead, will result in the following code:
+  The code action `quickfix.suppressRule.topLevel.blazing-fast-rust`, instead, will result in the following code:
 
   ```js
-  /** biome-ignore lint/suspicious/noDebugger: <explanation> */
-  /** biome-ignore lint/style/useConst: <explanation> */
+  /** blazing-fast-rust-ignore lint/suspicious/noDebugger: <explanation> */
+  /** blazing-fast-rust-ignore lint/style/useConst: <explanation> */
 
   let foo = "one";
   debugger;
@@ -1507,7 +1507,7 @@
 
 - Changed default formatting of `package.json`.
 
-  When Biome encounters a file called `package.json`, by default it will format the file with all objects and arrays expanded.
+  When blazing-fast-rust encounters a file called `package.json`, by default it will format the file with all objects and arrays expanded.
 
   ```diff
   - { "name": "project", "dependencies": { "foo": "latest" } }
@@ -1519,13 +1519,13 @@
   + }
   ```
 
-- The `organizeImports` is now part of Biome Assist.
+- The `organizeImports` is now part of blazing-fast-rust Assist.
 
-- The rule [`noVar`](https://biomejs.dev/linter/rules/no-var/) now belongs to the `suspicious` group
+- The rule [`noVar`](https://manfromexistence.vercel.app/linter/rules/no-var/) now belongs to the `suspicious` group
 
-- The rule [`useWhile`](https://biomejs.dev/linter/rules/use-while/) now belongs to the `complexity` group.
+- The rule [`useWhile`](https://manfromexistence.vercel.app/linter/rules/use-while/) now belongs to the `complexity` group.
 
-- The rule [`useImportExtensions`](https://biomejs.dev/linter/rules/use-import-extensions/) has been updated to suggest actual file extensions instead of guesses based on heuristics.
+- The rule [`useImportExtensions`](https://manfromexistence.vercel.app/linter/rules/use-import-extensions/) has been updated to suggest actual file extensions instead of guesses based on heuristics.
 
   As part of this, the `suggestedExtensions` option has been removed. A simpler,
   new option called `forceJsExtensions` has been introduced for those who use
@@ -1534,7 +1534,7 @@
   The rule also no longer reports diagnostics to add an extension when the path
   doesn't exist at all, with or without extension.
 
-- Fixed [#4545](https://github.com/biomejs/biome/issues/4545): [`useNamingConvention`](https://biomejs.dev/linter/rules/use-naming-convention/) now correctly ignores declarations inside TypeScript's external modules.
+- Fixed [#4545](https://github.com/manfromexistence/blazing-fast-rust/issues/4545): [`useNamingConvention`](https://manfromexistence.vercel.app/linter/rules/use-naming-convention/) now correctly ignores declarations inside TypeScript's external modules.
 
   The following interface name is no longer reported by the rule:
 
@@ -1544,7 +1544,7 @@
   }
   ```
 
-- The rule [`useAltText`](https://biomejs.dev/linter/rules/use-alt-text/) no longer checks the element's attributes containing object spread.
+- The rule [`useAltText`](https://manfromexistence.vercel.app/linter/rules/use-alt-text/) no longer checks the element's attributes containing object spread.
 
   The following code doesn't trigger the rule anymore:
 
@@ -1552,9 +1552,9 @@
   <img src="test.png" alt={alt} {...restProps}></img>
   ```
 
-- The rule [`useNamingConvention`](https://biomejs.dev/linter/rules/use-naming-convention/) no longer accepts non-ASCII characters by default.
+- The rule [`useNamingConvention`](https://manfromexistence.vercel.app/linter/rules/use-naming-convention/) no longer accepts non-ASCII characters by default.
 
-  Prior to Biome 2.0, non-ASCII names were accepted by default. They are now rejected.
+  Prior to blazing-fast-rust 2.0, non-ASCII names were accepted by default. They are now rejected.
 
   For example, the following code is now reported as invalid by the `useNamingConvention` rule.
 
@@ -1562,7 +1562,7 @@
   let johnCafé;
   ```
 
-  If you want to allow non ASCII filenames and non-ASCII identifiers, you need to set the `requireAscii` options in your Biome configuration file to `false`:
+  If you want to allow non ASCII filenames and non-ASCII identifiers, you need to set the `requireAscii` options in your blazing-fast-rust configuration file to `false`:
 
   ```json
   {
@@ -1587,14 +1587,14 @@
   }
   ```
 
-- Renamed the rule `noUnnecessaryContinue` to `noUselessContinue`. Run the command `biome migrate` to update your configuration.
+- Renamed the rule `noUnnecessaryContinue` to `noUselessContinue`. Run the command `blazing-fast-rust migrate` to update your configuration.
 
-- Renamed the rule `noMultipleSpacesInRegularExpressionLiterals` to `noAdjacentSpacesInRegex`. Run the command `biome migrate` to update your configuration.
+- Renamed the rule `noMultipleSpacesInRegularExpressionLiterals` to `noAdjacentSpacesInRegex`. Run the command `blazing-fast-rust migrate` to update your configuration.
 
 ### Minor Changes
 
 - An option called `allowNoReferrer` has been added to the
-  [`noBlankTarget`](https://biomejs.dev/linter/rules/no-blank-target/) rule.
+  [`noBlankTarget`](https://manfromexistence.vercel.app/linter/rules/no-blank-target/) rule.
 
   By default, `noBlankTarget` accepts both `rel="noopener"` and `rel="noreferrer"`
   with links that have `target="_blank"`. This is because the latter _implies_ the
@@ -1604,7 +1604,7 @@
   break tracking, which may be an undesirable side-effect. As such, you can set
   `allowNoReferrer: false` to _only_ accept `rel="noopener"`.
 
-- Added new option `javascript.parser.jsxEverywhere`. This new option allows to control whether Biome should expect JSX syntax in `.js`/`.mjs`/`.cjs` files.
+- Added new option `javascript.parser.jsxEverywhere`. This new option allows to control whether blazing-fast-rust should expect JSX syntax in `.js`/`.mjs`/`.cjs` files.
 
   When `jsxEverywhere` is set to `false`, having JSX syntax like `<div></div>` inside `.js`/`.mjs`/`.cjs` files will result in a **parsing error**.
 
@@ -1660,13 +1660,13 @@
   };
   ```
 
-- Added the new rule [`noFloatingPromises`](https://biomejs.dev/linter/rules/no-floating-promises).
+- Added the new rule [`noFloatingPromises`](https://manfromexistence.vercel.app/linter/rules/no-floating-promises).
 
-- Added the new rule [`noImportCycles`](https://biomejs.dev/linter/rules/no-import-cycles).
+- Added the new rule [`noImportCycles`](https://manfromexistence.vercel.app/linter/rules/no-import-cycles).
 
-- Added the new rule [`noTsIgnore`](https://biomejs.dev/linter/rules/no-ts-ignore).
+- Added the new rule [`noTsIgnore`](https://manfromexistence.vercel.app/linter/rules/no-ts-ignore).
 
-- Added the new rule [`noUnwantedPolyfillio`](https://biomejs.dev/linter/rules/no-unwanted-polyfillio).
+- Added the new rule [`noUnwantedPolyfillio`](https://manfromexistence.vercel.app/linter/rules/no-unwanted-polyfillio).
 
 - Added a format option `expand` for Javascript and JSON formatters.
   The option allows to enforce the formatting of arrays and objects on multiple lines, regardless of their length.
@@ -1691,15 +1691,15 @@
   When set to `never`, objects and arrays are never expanded when they fit in a single line.
   It is equivalent to Prettier's [Object Wrap](https://prettier.io/docs/options#object-wrap) option with `collapse`.
 
-- The nursery rule [`noUnresolvedImports`](https://biomejs.dev/linter/rules/no-unresolved-imports/) has been added.
+- The nursery rule [`noUnresolvedImports`](https://manfromexistence.vercel.app/linter/rules/no-unresolved-imports/) has been added.
 
   Importing a non-existing export is an error at runtime or build time. With this
-  rule, Biome can detect such incorrect imports and report errors for them.
+  rule, blazing-fast-rust can detect such incorrect imports and report errors for them.
 
   Note that if you use TypeScript, you probably don't want to use this rule, since
   TypeScript already performs such checks for you.
 
-- The rule [`noFocusedTests`](https://biomejs.dev/linter/rules/no-focused-tests/) can now detect the usage of focused tests inside loops.
+- The rule [`noFocusedTests`](https://manfromexistence.vercel.app/linter/rules/no-focused-tests/) can now detect the usage of focused tests inside loops.
 
   ```js
   // invalid
@@ -1740,7 +1740,7 @@
   }
   ```
 
-- Biome assist is a new feature of the Biome analyzer. The assist is meant to provide **actions**. Actions differ from linter rules in that they aren't meant to signal errors.
+- blazing-fast-rust assist is a new feature of the blazing-fast-rust analyzer. The assist is meant to provide **actions**. Actions differ from linter rules in that they aren't meant to signal errors.
 
   The assist will provide code actions that users can opt into via configuration or via IDEs/editors, using the Language Server Protocol.
 
@@ -1775,7 +1775,7 @@
   ```json
   {
     "editor.codeActionsOnSave": {
-      "source.biome.useSortedKeys": "explicit"
+      "source.blazing-fast-rust.useSortedKeys": "explicit"
     }
   }
   ```
@@ -1785,18 +1785,18 @@
   ```json
   {
     "code_actions_on_format": {
-      "source.biome.useSortedKeys": true
+      "source.blazing-fast-rust.useSortedKeys": true
     }
   }
   ```
 
-- Biome migrate eslint outputs a better overriding behavior.
+- blazing-fast-rust migrate eslint outputs a better overriding behavior.
 
-  A Biome rule can have multiple ESLint equivalent rules.
-  For example, [useLiteralKeys](https://biomejs.dev/linter/rules/use-literal-keys/) has two ESLint equivalent rules: [dot-notation](https://eslint.org/docs/latest/rules/dot-notation) and [@typescript-eslint/dot-notation](https://typescript-eslint.io/rules/dot-notation/).
+  A blazing-fast-rust rule can have multiple ESLint equivalent rules.
+  For example, [useLiteralKeys](https://manfromexistence.vercel.app/linter/rules/use-literal-keys/) has two ESLint equivalent rules: [dot-notation](https://eslint.org/docs/latest/rules/dot-notation) and [@typescript-eslint/dot-notation](https://typescript-eslint.io/rules/dot-notation/).
 
-  Previously, Biome wouldn't always enable a Biome rule even if one of its equivalent rules was enabled.
-  Now Biome uses the higher severity level of all the equivalent ESLint rules to set the severity level of the Biome rule.
+  Previously, blazing-fast-rust wouldn't always enable a blazing-fast-rust rule even if one of its equivalent rules was enabled.
+  Now blazing-fast-rust uses the higher severity level of all the equivalent ESLint rules to set the severity level of the blazing-fast-rust rule.
 
   The following ESLint configuration...
 
@@ -1825,7 +1825,7 @@
 
   ...because `error` is higher than `off`.
 
-- Add [useSymbolDescription](https://biomejs.dev/linter/rules/use-symbol-description/).
+- Add [useSymbolDescription](https://manfromexistence.vercel.app/linter/rules/use-symbol-description/).
 
 - Enhanced the command `migrate eslint`. Now the command shows which ESLint rules were migrated,
   and which rules aren't supported yet.
@@ -1861,23 +1861,23 @@
 
     ℹ Migration results:
 
-    - ./biome.json: configuration successfully migrated.
+    - ./blazing-fast-rust.json: configuration successfully migrated.
   ```
 
 - Suppression of syntax rules
 
   Added support for suppressing syntax rules. Syntax rules are particular rules meant **to complement the parser**, hence they can't be configured.
 
-  Biome now allows to suppress those rules. This can, for example, be useful in case the rule is affected by a bug. However, this is more an escape hatch, so if a syntax rule requires a suppression, please file an issue.
+  blazing-fast-rust now allows to suppress those rules. This can, for example, be useful in case the rule is affected by a bug. However, this is more an escape hatch, so if a syntax rule requires a suppression, please file an issue.
 
   Example:
 
   ```typescript
-  // biome-ignore syntax/correctness/noTypeOnlyImportAttributes: bug
+  // blazing-fast-rust-ignore syntax/correctness/noTypeOnlyImportAttributes: bug
   import type { MyType } from "my-esm-pkg" with { "resolution-mode": "import" };
   ```
 
-  Biome now requires all `biome-ignore-start` suppressions to have an equivalent `biome-ignore-end` comment.
+  blazing-fast-rust now requires all `blazing-fast-rust-ignore-start` suppressions to have an equivalent `blazing-fast-rust-ignore-end` comment.
 
 - Add a new lint rule `noConstantBinaryExpression`.
   This rule is inspired from ESLint's [no-constant-binary-expression](https://eslint.org/docs/latest/rules/no-constant-binary-expression) rule.
@@ -1887,7 +1887,7 @@
   Previously `--only=noDebugger` was rejected.
   You had to add the group name: `--only=suspicious/noDebugger`.
 
-- Fixed [#3574](https://github.com/biomejs/biome/issues/3574): `noUnusedImports` now reports empty named imports and suggests their removal.
+- Fixed [#3574](https://github.com/manfromexistence/blazing-fast-rust/issues/3574): `noUnusedImports` now reports empty named imports and suggests their removal.
 
   The rule now suggests the removal of empty named imports such as:
 
@@ -1895,7 +1895,7 @@
   - import {} from "mod";
   ```
 
-- Added the new rule [`useAdjacentGetterSetter`](https://biomejs.dev/linter/rules/use-adjacent-getter-setter), which enforces getters and setters for the same property
+- Added the new rule [`useAdjacentGetterSetter`](https://manfromexistence.vercel.app/linter/rules/use-adjacent-getter-setter), which enforces getters and setters for the same property
   to be adjacent in class and object definitions.
 
   **Example (Invalid): Name getter and setter are not adjacent:**
@@ -1944,7 +1944,7 @@
   }
   ```
 
-- Added new rule [useConsistentResponse](https://biomejs.dev/linter/rules/use-consistent-response) which suggests to use static [Response.json()](https://developer.mozilla.org/en-US/docs/Web/API/Response/json) and [Response.redirect()](https://developer.mozilla.org/en-US/docs/Web/API/Response/redirect_static) methods instead of `new Response` when possible.
+- Added new rule [useConsistentResponse](https://manfromexistence.vercel.app/linter/rules/use-consistent-response) which suggests to use static [Response.json()](https://developer.mozilla.org/en-US/docs/Web/API/Response/json) and [Response.redirect()](https://developer.mozilla.org/en-US/docs/Web/API/Response/redirect_static) methods instead of `new Response` when possible.
 
   Example:
 
@@ -1953,9 +1953,9 @@
   Response.json({ value: 1 });
   ```
 
-- Biome users can now configure code actions from linter rules as well as assist actions directly in the settings of their IDE/editor.
+- blazing-fast-rust users can now configure code actions from linter rules as well as assist actions directly in the settings of their IDE/editor.
 
-  For example, let's consider the lint rule [`noSwitchDeclarations`](https://biomejs.dev/linter/rules/no-switch-declarations/), which has an unsafe fix.
+  For example, let's consider the lint rule [`noSwitchDeclarations`](https://manfromexistence.vercel.app/linter/rules/no-switch-declarations/), which has an unsafe fix.
   Previously, if you wanted to use this rule, you were "forced" to enable it via configuration, and if you wanted to apply its fix when you saved a file, you were forced to mark the fix as safe:
 
   ```json
@@ -1978,14 +1978,14 @@
   ```json
   {
     "editor.codeActionsOnSave": {
-      "quickfix.biome.correctness.noSwitchDeclarations": "explicit"
+      "quickfix.blazing-fast-rust.correctness.noSwitchDeclarations": "explicit"
     }
   }
   ```
 
-  Upon save, Biome will inform the editor the apply the code action of the rule `noSwitchDeclarations`.
+  Upon save, blazing-fast-rust will inform the editor the apply the code action of the rule `noSwitchDeclarations`.
 
-- Fixed [#3401](https://github.com/biomejs/biome/issues/3401): `noUnusedImports` now keeps comments separated from the import with a blank line.
+- Fixed [#3401](https://github.com/manfromexistence/blazing-fast-rust/issues/3401): `noUnusedImports` now keeps comments separated from the import with a blank line.
 
   For example:
 
@@ -2013,7 +2013,7 @@
   }
   ```
 
-- Added the new rule [`noNestedComponentDefinitions`](https://biomejs.dev/linter/rules/no-nested-component-definitions),
+- Added the new rule [`noNestedComponentDefinitions`](https://manfromexistence.vercel.app/linter/rules/no-nested-component-definitions),
   which disallows nested component definitions in React components.
 
   This rule is useful for preventing potential performance issues and improving code readability by ensuring that components are defined at the top level.
@@ -2040,9 +2040,9 @@
   }
   ```
 
-- Added the new rule [`noDestructuredProps`](https://biomejs.dev/linter/rules/no-destructured-props/), which disallow the use of destructured props in Solid projects.
+- Added the new rule [`noDestructuredProps`](https://manfromexistence.vercel.app/linter/rules/no-destructured-props/), which disallow the use of destructured props in Solid projects.
 
-- You can now enable lint rules using the default severity suggested by Biome using the new variant `"on"`, when enabling a rule.
+- You can now enable lint rules using the default severity suggested by blazing-fast-rust using the new variant `"on"`, when enabling a rule.
 
   For example, the default severity of the rule `style.noVar` is `error`, so you would use `"on"`, and then linting a code that uses `var`, will result in an error:
 
@@ -2064,19 +2064,19 @@
   var name = "tobias";
   ```
 
-  The command `biome lint main.js` will result in an error due to the default severity assigned to `noVar`.
+  The command `blazing-fast-rust lint main.js` will result in an error due to the default severity assigned to `noVar`.
 
-  Refer to the documentation page of each rule to know their suggested diagnostic severity, or use the command `biome explain <RULE_NAME>`:
+  Refer to the documentation page of each rule to know their suggested diagnostic severity, or use the command `blazing-fast-rust explain <RULE_NAME>`:
 
   ```shell
-  biome explain noVar
+  blazing-fast-rust explain noVar
   ```
 
-- Biome VCS integration now supports nested ignore files.
+- blazing-fast-rust VCS integration now supports nested ignore files.
 
   For `git`, if a `.gitignore` is found in a nested folder `root/packages/foo/`, and it contains the pattern `dist/`, only files and directories inside `root/packages/foo/dist` are matched.
 
-- Added the rule [useUniqueElementIds](https://biomejs.dev/linter/rules/use-unique-element-ids/).
+- Added the rule [useUniqueElementIds](https://manfromexistence.vercel.app/linter/rules/use-unique-element-ids/).
   This rule disallows the use of static IDs in React components. It encourages to generate unique IDs for accessibility purposes using [`useId`](https://react.dev/reference/react/useId).
 
   The following code is now reported as invalid:
@@ -2097,7 +2097,7 @@
   }
   ```
 
-- Added the new JavaScript rule [`useConsistentObjectDefinition`](https://biomejs.dev/linter/rules/use-consistent-object-definition/) rule. The rule enforces a consistent style for the definition of objects:
+- Added the new JavaScript rule [`useConsistentObjectDefinition`](https://manfromexistence.vercel.app/linter/rules/use-consistent-object-definition/) rule. The rule enforces a consistent style for the definition of objects:
 
   By default, the rule enforces a shorthand style:
 
@@ -2129,23 +2129,23 @@
 
 - Introduced more advanced logging capabilities:
 
-  Every Biome CLI command can now be passed a `--log-file=<path>` argument, which
+  Every blazing-fast-rust CLI command can now be passed a `--log-file=<path>` argument, which
   will write all log messages for that invocation to the given path instead of
   `stdout`.
 
   In addition, the `--log-level` parameter now also accepts a `tracing` value.
-  When `--log-level=tracing` is used, Biome also prints timing information from
+  When `--log-level=tracing` is used, blazing-fast-rust also prints timing information from
   tracing spans to the log.
 
-  Combined with Biome's ability to print logs in JSON format, and the `jq` command
-  line utility, this allows you to perform advanced analysis on Biome's internal
+  Combined with blazing-fast-rust's ability to print logs in JSON format, and the `jq` command
+  line utility, this allows you to perform advanced analysis on blazing-fast-rust's internal
   performance.
 
   For example, if you want to figure out which paths take the longest when
   building the module graph, you can use the following commands:
 
   ```sh
-  biome lint --log-level=tracing --log-kind=json --log-file=tracing.json
+  blazing-fast-rust lint --log-level=tracing --log-kind=json --log-file=tracing.json
   cat tracing.json | jq '. | select(.span.name == "update_module_graph") | { path: .span.path, time_busy: .["time.busy"], time_idle: .["time.idle"] }' > filtered.json
   ```
 
@@ -2154,7 +2154,7 @@
 
 - Added options to `suspicious/noConfusingLabels` to allow specific labels.
 
-- Fixed [#4549](https://github.com/biomejs/biome/issues/4549): [noUnknownProperty](https://biomejs.dev/linter/rules/no-unknown-property/) now accepts more known CSS properties.
+- Fixed [#4549](https://github.com/manfromexistence/blazing-fast-rust/issues/4549): [noUnknownProperty](https://manfromexistence.vercel.app/linter/rules/no-unknown-property/) now accepts more known CSS properties.
 
   ```diff
   - ['anchor-default', 'anchor-scroll', 'inset-area', 'position-animation', 'position-fallback', 'position-fallback-bounds', 'position-try-options']
@@ -2166,16 +2166,16 @@
 - LSP clients can now override the configuration path for each workspace, by responding to
   `workspace/configuration` requests.
 
-- Added the new CSS rule [`noImportantStyles`](https://biomejs.dev/linter/rules/no-important-styles), which prevents the use of `!important` inside CSS declarations.
+- Added the new CSS rule [`noImportantStyles`](https://manfromexistence.vercel.app/linter/rules/no-important-styles), which prevents the use of `!important` inside CSS declarations.
 
-- Biome now emits a warning diagnostic if the configuration contains an out-of-sync schema URL.
+- blazing-fast-rust now emits a warning diagnostic if the configuration contains an out-of-sync schema URL.
 
 - Introduced a new configuration setting `files.experimentalScannerIgnores`.
 
   This setting may be used to configure a set of file and folder names that should
-  be unconditionally ignored by Biome's scanner.
+  be unconditionally ignored by blazing-fast-rust's scanner.
 
-  Biome maintains an internal list of default ignore entries, which is based on
+  blazing-fast-rust maintains an internal list of default ignore entries, which is based on
   user feedback and which may change in any release. This setting allows
   overriding this internal list completely.
 
@@ -2212,7 +2212,7 @@
   information may be negatively affected if dependencies of your project aren't
   (fully) scanned.
 
-- Added the new rule [useSingleJsDocAsterisk](https://biomejs.dev/linter/rules/use-single-js-doc-asterisk/) which enforces JSDoc comment lines to start with a single asterisk.
+- Added the new rule [useSingleJsDocAsterisk](https://manfromexistence.vercel.app/linter/rules/use-single-js-doc-asterisk/) which enforces JSDoc comment lines to start with a single asterisk.
 
   ```js
   // Invalid
@@ -2228,14 +2228,14 @@
 
 - The CLI flag `--javascript-attribute-position` was renamed to `--javascript-formatter-attribute-position` for consistency.
 
-- Introduced the `domains` linter feature. The Biome linter now has a new way to opt-in rules, with a concept called `domains`.
+- Introduced the `domains` linter feature. The blazing-fast-rust linter now has a new way to opt-in rules, with a concept called `domains`.
 
   Domains can be seen as concepts shared by different rules.
 
-  You can enable and disable multiple rules that belong to a domain. When you assign `"all"`, Biome will enable all the rules, when you assign `"none"`, Biome will disable the rules, when you assign "recommended", Biome will enable all rules of the domain that are recommended.
+  You can enable and disable multiple rules that belong to a domain. When you assign `"all"`, blazing-fast-rust will enable all the rules, when you assign `"none"`, blazing-fast-rust will disable the rules, when you assign "recommended", blazing-fast-rust will enable all rules of the domain that are recommended.
 
   ```json5
-  // biome.jsonc
+  // blazing-fast-rust.jsonc
   {
     linter: {
       domains: {
@@ -2276,16 +2276,16 @@
   - `solid`: it will enable rules for Solid projects:
     - `noReactSpecificProps`
 
-  For more information regarding how Biome enables rules via domains, please refer to the documentation page of each rule.
+  For more information regarding how blazing-fast-rust enables rules via domains, please refer to the documentation page of each rule.
 
-- Biome now prints diagnostics sorted by their severity. The order is the following:
+- blazing-fast-rust now prints diagnostics sorted by their severity. The order is the following:
   1. information
   2. warning
   3. error
 
   This means that _error_ diagnostics are printed **last**, so users can see them first.
 
-- Added the new rule [`useIterableCallbackReturn`](https://biomejs.dev/linter/rules/use-iterable-callback-return), which enforces consistent return values in iterable callbacks.
+- Added the new rule [`useIterableCallbackReturn`](https://manfromexistence.vercel.app/linter/rules/use-iterable-callback-return), which enforces consistent return values in iterable callbacks.
 
   The following methods require a return value in their callback:
   - `every`
@@ -2319,7 +2319,7 @@
   });
   ```
 
-- Added the new rule [`noReactPropAssign`](https://biomejs.dev/linter/rules/no-react-prop-assign), based on the react-hooks rule [react-hooks/react-compiler](https://www.npmjs.com/package/eslint-plugin-react-hooks)
+- Added the new rule [`noReactPropAssign`](https://manfromexistence.vercel.app/linter/rules/no-react-prop-assign), based on the react-hooks rule [react-hooks/react-compiler](https://www.npmjs.com/package/eslint-plugin-react-hooks)
 
   The following code is now reported as invalid:
 
@@ -2339,9 +2339,9 @@
   }
   ```
 
-- Added new rule [`noBitwiseOperators`](https://biomejs.dev/linter/rules/no-bitwise-operators/), which disallows bitwise operators.
+- Added new rule [`noBitwiseOperators`](https://manfromexistence.vercel.app/linter/rules/no-bitwise-operators/), which disallows bitwise operators.
 
-- The Biome analyzer now supports a new top-level suppression. These suppression have to be placed at the top of the file, and they must be followed by two newlines (`\n\n\`).
+- The blazing-fast-rust analyzer now supports a new top-level suppression. These suppression have to be placed at the top of the file, and they must be followed by two newlines (`\n\n\`).
 
   The analyzer rules specified inside the block comment will be suppressed for the whole file.
 
@@ -2350,8 +2350,8 @@
   ```js
   // main.js
   /**
-   * biome-ignore-all lint/style/useConst: i like let
-   * biome-ignore-all lint/suspicious/noDebugger: needed now
+   * blazing-fast-rust-ignore-all lint/style/useConst: i like let
+   * blazing-fast-rust-ignore-all lint/suspicious/noDebugger: needed now
    */
 
   let path = "/path";
@@ -2363,7 +2363,7 @@
 
   ```css
   /**
-  /* biome-ignore-all lint/suspicious/noEmptyBlock: it's fine to have empty blocks
+  /* blazing-fast-rust-ignore-all lint/suspicious/noEmptyBlock: it's fine to have empty blocks
   */
 
   a {
@@ -2372,7 +2372,7 @@
   }
   ```
 
-  A new diagnostic is emitted if `biome-ignore-all` suppression isn't placed at the top of the file:
+  A new diagnostic is emitted if `blazing-fast-rust-ignore-all` suppression isn't placed at the top of the file:
 
   ```block
   file.js:3:1 suppressions/incorrect ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -2382,16 +2382,16 @@
       2 │ let foo = 2;
     > 3 │ /**
         │ ^^^
-    > 4 │ * biome-ignore-all lint/style/useConst: reason
+    > 4 │ * blazing-fast-rust-ignore-all lint/style/useConst: reason
     > 5 │ */
         │ ^^
       6 │ let bar = 33;
 
-    i Rename this to biome-ignore
+    i Rename this to blazing-fast-rust-ignore
 
       2 │ let foo = 2;
       3 │ /**
-    > 4 │ * biome-ignore-all lint/style/useConst: reason
+    > 4 │ * blazing-fast-rust-ignore-all lint/style/useConst: reason
         │   ^^^^^^^^^^^^^^^^
       5 │ */
       6 │ let bar = 33;
@@ -2399,9 +2399,9 @@
 
   ```
 
-- Added the new rule [`useNumericSeparators`](https://biomejs.dev/linter/rules/use-numeric-separators), which encourages the use of numeric separators to improve readability.
+- Added the new rule [`useNumericSeparators`](https://manfromexistence.vercel.app/linter/rules/use-numeric-separators), which encourages the use of numeric separators to improve readability.
 
-- [useImportExtensions](https://biomejs.dev/linter/rules/use-import-extensions/) now checks imports with sub extensions.
+- [useImportExtensions](https://manfromexistence.vercel.app/linter/rules/use-import-extensions/) now checks imports with sub extensions.
 
   ```js
   - import 'styles.css'
@@ -2421,18 +2421,18 @@
   }
   ```
 
-- Added the new CLI option called `--threads` to the `ci` command. It allows to control the numbers of threads that can be used when using the Biome CLI.
+- Added the new CLI option called `--threads` to the `ci` command. It allows to control the numbers of threads that can be used when using the blazing-fast-rust CLI.
 
-  It's possible to use the environment variable `BIOME_THREADS` as an alternatives.
+  It's possible to use the environment variable `blazing-fast-rust_THREADS` as an alternatives.
 
   This feature is useful when running the CLI in environments that have limited resources, for example CI/CD.
 
   ```shell
-  biome ci --threads=1
-  BIOME_THREADS=1 biome ci
+  blazing-fast-rust ci --threads=1
+  blazing-fast-rust_THREADS=1 blazing-fast-rust ci
   ```
 
-- Added the new rule [`useObjectSpread`](https://biomejs.dev/linter/rules/use-object-spread), which prefers object spread syntax over `Object.assign()` when constructing new objects.
+- Added the new rule [`useObjectSpread`](https://manfromexistence.vercel.app/linter/rules/use-object-spread), which prefers object spread syntax over `Object.assign()` when constructing new objects.
 
   **Example (Invalid): Using Object.assign with an empty object:**
 
@@ -2467,7 +2467,7 @@
   When running the following command, it will add the suppression comment:
 
   ```shell
-  biome lint --write --suppress="Migration to Biome"
+  blazing-fast-rust lint --write --suppress="Migration to blazing-fast-rust"
   ```
 
   ```js
@@ -2476,13 +2476,13 @@
   ```
 
   ```diff
-  + // biome-ignore lint/suspicious/noDebugger: Migration to Biome
+  + // blazing-fast-rust-ignore lint/suspicious/noDebugger: Migration to blazing-fast-rust
   debugger;
-  + // biome-ignore lint/suspicious/noDoubleEquals: Migration to Biome
+  + // blazing-fast-rust-ignore lint/suspicious/noDoubleEquals: Migration to blazing-fast-rust
   foo == bar;
   ```
 
-- Add an `ignoreRestSiblings` option into [`noUnusedVariables`](https://biomejs.dev/linter/rules/no-unused-variables).
+- Add an `ignoreRestSiblings` option into [`noUnusedVariables`](https://manfromexistence.vercel.app/linter/rules/no-unused-variables).
 
   When this option is set to `false`, the rule will **not** ignore variables that created using the rest pattern:
 
@@ -2511,24 +2511,24 @@
 - Upgraded some unsafe fixes to safe fixes.
 
   The following rules have now a safe fix:
-  - [noExtraBooleanCast](https://biomejs.dev/linter/rules/no-extra-boolean-cast)
-  - [noNonoctalDecimalEscape](https://biomejs.dev/linter/rules/no-nonoctal-decimal-escape)
-  - [noSwitchDeclarations](https://biomejs.dev/linter/rules/no-switch-declarations)
-  - [noThisInStatic](https://biomejs.dev/linter/rules/no-this-in-static)
-  - [noUnusedTemplateLiteral](https://biomejs.dev/linter/rules/no-unused-template-literal)
-  - [noUselessContinue](https://biomejs.dev/linter/rules/no-useless-continue)
-  - [noUselessElse](https://biomejs.dev/linter/rules/no-useless-else)
-  - [noUselessStringConcat](https://biomejs.dev/linter/rules/no-useless-string-concat)
-  - [useArrayLiterals](https://biomejs.dev/linter/rules/use-array-literals)
-  - [useExponentiationOperator](https://biomejs.dev/linter/rules/use-exponentiation-operator)
-  - [useNumberToFixedDigitsArgument](https://biomejs.dev/linter/rules/use-number-to-fixed-digits-argument)
-  - [useNumericLiterals](https://biomejs.dev/linter/rules/use-numeric-literals)
-  - [useSimplifiedLogicExpression](https://biomejs.dev/linter/rules/use-simplified-logic-expression)
+  - [noExtraBooleanCast](https://manfromexistence.vercel.app/linter/rules/no-extra-boolean-cast)
+  - [noNonoctalDecimalEscape](https://manfromexistence.vercel.app/linter/rules/no-nonoctal-decimal-escape)
+  - [noSwitchDeclarations](https://manfromexistence.vercel.app/linter/rules/no-switch-declarations)
+  - [noThisInStatic](https://manfromexistence.vercel.app/linter/rules/no-this-in-static)
+  - [noUnusedTemplateLiteral](https://manfromexistence.vercel.app/linter/rules/no-unused-template-literal)
+  - [noUselessContinue](https://manfromexistence.vercel.app/linter/rules/no-useless-continue)
+  - [noUselessElse](https://manfromexistence.vercel.app/linter/rules/no-useless-else)
+  - [noUselessStringConcat](https://manfromexistence.vercel.app/linter/rules/no-useless-string-concat)
+  - [useArrayLiterals](https://manfromexistence.vercel.app/linter/rules/use-array-literals)
+  - [useExponentiationOperator](https://manfromexistence.vercel.app/linter/rules/use-exponentiation-operator)
+  - [useNumberToFixedDigitsArgument](https://manfromexistence.vercel.app/linter/rules/use-number-to-fixed-digits-argument)
+  - [useNumericLiterals](https://manfromexistence.vercel.app/linter/rules/use-numeric-literals)
+  - [useSimplifiedLogicExpression](https://manfromexistence.vercel.app/linter/rules/use-simplified-logic-expression)
 
 - Added support for monorepos. The feature will work _out of the box_ for the majority of the users. If your project
-  has **nested configuration** files, use the command `biome migrate` from the _root of the project_.
+  has **nested configuration** files, use the command `blazing-fast-rust migrate` from the _root of the project_.
 
-  Monorepo support in Biome is done in a single way. Create a `biome.json` at the root of the project. This configuration
+  Monorepo support in blazing-fast-rust is done in a single way. Create a `blazing-fast-rust.json` at the root of the project. This configuration
   file is now called the root configuration. Then, each nested configuration file must specify the new field `"root": false`.
 
   We also introduced a new microsyntax for _extending a nested configuration from the root configuration_, which is `"extends": "//"`. This new syntax means “this config _extends_ from the root config”. When using this microsyntax, you **may omit** the `"root": false` field as it is implied.
@@ -2547,11 +2547,11 @@
   }
   ```
 
-  Biome formatter attempts to format as Prettier, however some default options might differ.
+  blazing-fast-rust formatter attempts to format as Prettier, however some default options might differ.
 
   An option `html.formatter.selfCloseVoidElements` allows to control whether the trailing `/` of [void elements](https://html.spec.whatwg.org/#void-elements) should be printed.
 
-  **By default**, Biome formatter will _remove_ the `/`:
+  **By default**, blazing-fast-rust formatter will _remove_ the `/`:
 
   ```diff
   - <input />
@@ -2575,9 +2575,9 @@
   + <input />
   ```
 
-  Use to the command `biome migrate prettier` to apply this change automatically.
+  Use to the command `blazing-fast-rust migrate prettier` to apply this change automatically.
 
-- Added an **unsafe** fix to the rule [`useExhaustiveDependencies`](https://biomejs.dev/linter/rules/use-exhaustive-dependencies).
+- Added an **unsafe** fix to the rule [`useExhaustiveDependencies`](https://manfromexistence.vercel.app/linter/rules/use-exhaustive-dependencies).
 
   For example, this violation will provide the following code fix:
 
@@ -2617,9 +2617,9 @@
 
 - The rule `useExhaustiveDependencies` now reports a diagnostic when the dependency list is not an array literal.
 
-- Added the new rule [`useIndexOf`](https://biomejs.dev/linter/rules/use-index-of), based on the unicorn rule [prefer-array-index-of](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-array-index-of.md)
+- Added the new rule [`useIndexOf`](https://manfromexistence.vercel.app/linter/rules/use-index-of), based on the unicorn rule [prefer-array-index-of](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-array-index-of.md)
 
-- Added a new rule [`useExhaustiveSwitchCases`](https://biomejs.dev/linter/rules/use-exhaustive-switch-cases/), which detects any missing cases for switch statements.
+- Added a new rule [`useExhaustiveSwitchCases`](https://manfromexistence.vercel.app/linter/rules/use-exhaustive-switch-cases/), which detects any missing cases for switch statements.
   Currently, it supports only literal union types.
 
   For example:
@@ -2648,13 +2648,13 @@
   The switch statement is missing other cases than `'Monday'`, which will cause a runtime error.
   To fix this issue, add missing cases or a default case to the statement.
 
-- Fixed [#4416](https://github.com/biomejs/biome/pull/4416): The rules [`useExportType`](https://biomejs.dev/linter/rules/use-export-type/) and [`useImportType`](https://biomejs.dev/linter/rules/use-import-type/) now ignore TypeScript declaration files.
+- Fixed [#4416](https://github.com/manfromexistence/blazing-fast-rust/pull/4416): The rules [`useExportType`](https://manfromexistence.vercel.app/linter/rules/use-export-type/) and [`useImportType`](https://manfromexistence.vercel.app/linter/rules/use-import-type/) now ignore TypeScript declaration files.
 
-- Added the new rule [`useForComponent`](https://biomejs.dev/linter/rules/use-for-component/).
+- Added the new rule [`useForComponent`](https://manfromexistence.vercel.app/linter/rules/use-for-component/).
 
   This rule enforces usage of Solid's `<For />` component for mapping an array to JSX elements.
 
-- Added new lint rule [`noShadow`](http://biomejs.dev/linter/rules/no-shadow), a port of eslint's `no-shadow`.
+- Added new lint rule [`noShadow`](http://blazing-fast-rustjs.dev/linter/rules/no-shadow), a port of eslint's `no-shadow`.
 
   This rule disallows variable declarations from shadowing variables declared in an outer scope. For example:
 
@@ -2666,12 +2666,12 @@
   }
   ```
 
-- Add `style` option for the [useImportType](https://biomejs.dev/linter/rules/use-import-type/) rule.
+- Add `style` option for the [useImportType](https://manfromexistence.vercel.app/linter/rules/use-import-type/) rule.
 
   The rule now allows enforcing an import style for importing types.
   See the rule documentation for more details.
 
-- Added the new rule [`useJsonImportAttribute`](https://biomejs.dev/linter/rules/use-json-import-attribute) to enforce the use of import attributes for JSON modules.
+- Added the new rule [`useJsonImportAttribute`](https://manfromexistence.vercel.app/linter/rules/use-json-import-attribute) to enforce the use of import attributes for JSON modules.
 
   This rule ensures that all imports of `.json` files include the `with { type: "json" }` assertion, which is required to inform the JavaScript runtime that the imported file should be parsed as JSON.
 
@@ -2685,9 +2685,9 @@
   + import jsonData from './data.json' with { type: "json", someOtherAttribute: "value" };
   ```
 
-  This rule is based on the proposal in issue [#6043](https://github.com/biomejs/biome/issues/6043).
+  This rule is based on the proposal in issue [#6043](https://github.com/manfromexistence/blazing-fast-rust/issues/6043).
 
-- [useLiteralKeys](https://biomejs.dev/linter/rules/use-literal-keys/) now handles numeric keys and is declared as being the same rule as the ESLint [no-useless-computed-key](https://eslint.org/docs/latest/rules/no-useless-computed-key) rule.
+- [useLiteralKeys](https://manfromexistence.vercel.app/linter/rules/use-literal-keys/) now handles numeric keys and is declared as being the same rule as the ESLint [no-useless-computed-key](https://eslint.org/docs/latest/rules/no-useless-computed-key) rule.
 
 - `useNamingConmvention` now ignores unused variables prefixed with an underscore `_`.
 
@@ -2700,7 +2700,7 @@
 
 - The package now requires `v2` of the WebAssembly packages. The internal APIs of Workspace are now `camelCase`.
 
-- The rule [useArrayLiterals](https://biomejs.dev/linter/rules/use-array-literals/) now provides a code fix.
+- The rule [useArrayLiterals](https://manfromexistence.vercel.app/linter/rules/use-array-literals/) now provides a code fix.
 
   ```diff
   - const xs = new Array();
@@ -2708,29 +2708,29 @@
   ```
 
   The code fix is currently marked as unsafe.
-  We plan to make it safe in a future release of Biome.
+  We plan to make it safe in a future release of blazing-fast-rust.
 
 - The command `migrate` is now able to migrate nested configuration files.
 
-- Added the new rule [`noRestrictedElements`](https://biomejs.dev/linter/rules/no-restricted-elements), which prevents use of the specified HTML elements and components.
+- Added the new rule [`noRestrictedElements`](https://manfromexistence.vercel.app/linter/rules/no-restricted-elements), which prevents use of the specified HTML elements and components.
 
-- Added the new lint rule [`noAwaitInLoop`](https://biomejs.dev/linter/rules/no-await-in-loop).
+- Added the new lint rule [`noAwaitInLoop`](https://manfromexistence.vercel.app/linter/rules/no-await-in-loop).
 
 ### Patch Changes
 
-- Fix [#5001](https://github.com/biomejs/biome/issues/5001), where the CSS formatter removes whitespace from selector preceded by a comment
+- Fix [#5001](https://github.com/manfromexistence/blazing-fast-rust/issues/5001), where the CSS formatter removes whitespace from selector preceded by a comment
 
-- Fixed [noUnusedVariables](https://biomejs.dev/linter/rules/no-unused-variables/) rule to suggest unsafe fix for unused function declarations.
+- Fixed [noUnusedVariables](https://manfromexistence.vercel.app/linter/rules/no-unused-variables/) rule to suggest unsafe fix for unused function declarations.
 
 - Fixed a false positive of `noUselessEscapeInRegex` where `\k` was reported as useless in non-Unicode regular expressions.
 
 - Fixed an issue where the ordering of the diagnostics wasn't predictable.
 
-- Fixed a bug where the environment variable `BIOME_CONFIG_PATH` wasn't correctly picked up.
+- Fixed a bug where the environment variable `blazing-fast-rust_CONFIG_PATH` wasn't correctly picked up.
 
-- Biome logs a warning in case a folder contains `biome.json` and `biome.jsonc`, and it will use `biome.json` by default.
+- blazing-fast-rust logs a warning in case a folder contains `blazing-fast-rust.json` and `blazing-fast-rust.jsonc`, and it will use `blazing-fast-rust.json` by default.
 
-- [noUndeclaredVariables](https://biomejs.dev/linter/rules/no-undeclared-variables/) is now able to bind read of value to a type-only import in ambient contexts ([#4526](https://github.com/biomejs/biome/issues/4526)).
+- [noUndeclaredVariables](https://manfromexistence.vercel.app/linter/rules/no-undeclared-variables/) is now able to bind read of value to a type-only import in ambient contexts ([#4526](https://github.com/manfromexistence/blazing-fast-rust/issues/4526)).
 
   In the following code, `A` is now correctly bound to the type-only import.
   Previously, `A` was reported as an undeclared variable.
@@ -2741,7 +2741,7 @@
   declare class B extends A {}
   ```
 
-- Fix [#4317](https://github.com/biomejs/biome/issues/4317), setter parameter can contain a trailing comma, the following example will now parsed correctly:
+- Fix [#4317](https://github.com/manfromexistence/blazing-fast-rust/issues/4317), setter parameter can contain a trailing comma, the following example will now parsed correctly:
 
   ```ts
   export class DummyClass {
@@ -2749,18 +2749,18 @@
   }
   ```
 
-- Fix [#4575](https://github.com/biomejs/biome/issues/4575), don't wrap selector indentation after css comments.
+- Fix [#4575](https://github.com/manfromexistence/blazing-fast-rust/issues/4575), don't wrap selector indentation after css comments.
 
-- Fix [#4258](https://github.com/biomejs/biome/issues/4258), where fixed css parse error with @-moz-document url-prefix().
+- Fix [#4258](https://github.com/manfromexistence/blazing-fast-rust/issues/4258), where fixed css parse error with @-moz-document url-prefix().
 
-- Fixed [#4391](https://github.com/biomejs/biome/issues/4391): Some files from the `.vscode` directory are no longer incorrectly parsed as JSON.
+- Fixed [#4391](https://github.com/manfromexistence/blazing-fast-rust/issues/4391): Some files from the `.vscode` directory are no longer incorrectly parsed as JSON.
 
-- The `biome format` command now correctly handles the `--skip-errors` option, allowing it to skip files with syntax errors and continue formatting the remaining valid files.
+- The `blazing-fast-rust format` command now correctly handles the `--skip-errors` option, allowing it to skip files with syntax errors and continue formatting the remaining valid files.
   When this option is used, skipped syntax errors are reported as information, since the user is already aware of them.
 
-- `biome migrate eslint` now correctly resolves the scoped package named `eslint-config`.
+- `blazing-fast-rust migrate eslint` now correctly resolves the scoped package named `eslint-config`.
 
-- Fixed [#3836](https://github.com/biomejs/biome/issues/3836): The CSS parser will now correctly parse the following:
+- Fixed [#3836](https://github.com/manfromexistence/blazing-fast-rust/issues/3836): The CSS parser will now correctly parse the following:
 
   ```css
   .foo {
@@ -2779,7 +2779,7 @@
 
 - The `summary` reporter doesn't take `--max-diagnostics` into account anymore.
 
-- Fixed [#4553](https://github.com/biomejs/biome/issues/4553): `noUselessFragments` will now correctly fix JSX attributes:
+- Fixed [#4553](https://github.com/manfromexistence/blazing-fast-rust/issues/4553): `noUselessFragments` will now correctly fix JSX attributes:
 
   ```jsx
   <Suspense
@@ -2799,26 +2799,26 @@
   <Suspense fallback={<span>Loading...</span>}>{children}</Suspense>
   ```
 
-- Fixed [#4528](https://github.com/biomejs/biome/issues/4528): `biome migrate eslint` now correctly handles shared ESLint configuration that don't follow the ESLint naming convention.
+- Fixed [#4528](https://github.com/manfromexistence/blazing-fast-rust/issues/4528): `blazing-fast-rust migrate eslint` now correctly handles shared ESLint configuration that don't follow the ESLint naming convention.
 
   ESLint recommends that a package that exports a shared configuration be prefixed with `eslint-config-` or simply named `eslint-config`.
   This is only a recommendation.
   Packages that export shared configurations can have arbitrary names.
-  Biome is now able to load any package.
+  blazing-fast-rust is now able to load any package.
 
-- Fixed [#4993](https://github.com/biomejs/biome/issues/4993): [`useAwait`](https://biomejs.dev/linter/rules/use-await/) now correctly warn on functions with decorator with callback argument.
+- Fixed [#4993](https://github.com/manfromexistence/blazing-fast-rust/issues/4993): [`useAwait`](https://manfromexistence.vercel.app/linter/rules/use-await/) now correctly warn on functions with decorator with callback argument.
 
-- Fixed [#4756](https://github.com/biomejs/biome/issues/4756): `noDuplicateProperties` now throws lint errors properly when we use `@supports`.
+- Fixed [#4756](https://github.com/manfromexistence/blazing-fast-rust/issues/4756): `noDuplicateProperties` now throws lint errors properly when we use `@supports`.
 
-- Fixed [#5981](https://github.com/biomejs/biome/issues/5981), where `noUnknownPseudoClass` didn't take `:global` into consideration when `cssModules` is enabled.
+- Fixed [#5981](https://github.com/manfromexistence/blazing-fast-rust/issues/5981), where `noUnknownPseudoClass` didn't take `:global` into consideration when `cssModules` is enabled.
 
-- Fixed [#2406](https://github.com/biomejs/biome/issues/2406): Biome longer expands properties of object type annotations in the only function parameter to align with Prettier.
+- Fixed [#2406](https://github.com/manfromexistence/blazing-fast-rust/issues/2406): blazing-fast-rust longer expands properties of object type annotations in the only function parameter to align with Prettier.
 
-- Fixed [#4740](https://github.com/biomejs/biome/issues/4740): `biome migrate eslint` now correctly handles ESLint configuration with `null` values in file lists.
+- Fixed [#4740](https://github.com/manfromexistence/blazing-fast-rust/issues/4740): `blazing-fast-rust migrate eslint` now correctly handles ESLint configuration with `null` values in file lists.
 
-- Fixed [#4202](https://github.com/biomejs/biome/issues/4202): Align with Prettier in formatting test functions.
+- Fixed [#4202](https://github.com/manfromexistence/blazing-fast-rust/issues/4202): Align with Prettier in formatting test functions.
 
-- Fixed [#342](https://github.com/biomejs/biome/issues/342): The JavaScript parser now properly handles unterminated string literals, such as:
+- Fixed [#342](https://github.com/manfromexistence/blazing-fast-rust/issues/342): The JavaScript parser now properly handles unterminated string literals, such as:
 
   ```jsx
   function Comp() {
@@ -2830,18 +2830,18 @@
 
 - Fixed a CSS parser error: `@-moz-document url-prefix(https://example.com)` and `@-moz-document domain(example.com)` are now valid.
 
-- Fixed [#4967](https://github.com/biomejs/biome/issues/4967): The fix for `useArrowFunction` no longer breaks function bodies starting with `{`.
+- Fixed [#4967](https://github.com/manfromexistence/blazing-fast-rust/issues/4967): The fix for `useArrowFunction` no longer breaks function bodies starting with `{`.
 
-- Fixed [#5998](https://github.com/biomejs/biome/issues/5998). The rule `noUnknownPseudoElement` now correctly checks names
+- Fixed [#5998](https://github.com/manfromexistence/blazing-fast-rust/issues/5998). The rule `noUnknownPseudoElement` now correctly checks names
   of pseudo-element functions.
 
-- Fixed [#5024](https://github.com/biomejs/biome/issues/5024): Added `useJsxKeyInIterable` rule to React domain.
+- Fixed [#5024](https://github.com/manfromexistence/blazing-fast-rust/issues/5024): Added `useJsxKeyInIterable` rule to React domain.
 
-- Fixed [#5410](https://github.com/biomejs/biome/issues/5410). Biome now correctly parse an `.editorconfig` that includes character classes in glob patterns.
+- Fixed [#5410](https://github.com/manfromexistence/blazing-fast-rust/issues/5410). blazing-fast-rust now correctly parse an `.editorconfig` that includes character classes in glob patterns.
 
-- Fixed [#2260](https://github.com/biomejs/biome/2260): The LSP server now returns correct text edits for the specified range in `textDocument/rangeFormatting` and `textDocument/onTypeFormatting` requests.
+- Fixed [#2260](https://github.com/manfromexistence/blazing-fast-rust/2260): The LSP server now returns correct text edits for the specified range in `textDocument/rangeFormatting` and `textDocument/onTypeFormatting` requests.
 
-- [noUnusedVariables](https://biomejs.dev/linter/rules/no-unused-variables/) no longer reports top-level variables in a global declaration file as unused.
+- [noUnusedVariables](https://manfromexistence.vercel.app/linter/rules/no-unused-variables/) no longer reports top-level variables in a global declaration file as unused.
 
 - Type exports now support renaming types to `default`.
 
@@ -2851,28 +2851,28 @@
   export { type A as default } from "./b.ts";
   ```
 
-- Added proper support for arrow functions in the lint rule https://biomejs.dev/linter/rules/use-explicit-type/
+- Added proper support for arrow functions in the lint rule https://manfromexistence.vercel.app/linter/rules/use-explicit-type/
 
-- The rule [`useNamingConvention`](https://biomejs.dev/linter/rules/use-naming-convention/) no longer suggests renaming top-level variables in a global declaration file.
+- The rule [`useNamingConvention`](https://manfromexistence.vercel.app/linter/rules/use-naming-convention/) no longer suggests renaming top-level variables in a global declaration file.
 
 - Improved context in error messages when migrating Prettier configurations
 
 - Allowed single spaces in `useConsistentCurlyBraces` rule.
 
-- Fixed [#4413](https://github.com/biomejs/biome/issues/4413): The GraphQL formatter no longer adds a new line at the start of block comments on Windows.
+- Fixed [#4413](https://github.com/manfromexistence/blazing-fast-rust/issues/4413): The GraphQL formatter no longer adds a new line at the start of block comments on Windows.
 
-- Fixed [#5407](https://github.com/biomejs/biome/issues/5407). Now the `noUnusedImports` code fix correctly keeps top-level comments that were attached to lone imports.
+- Fixed [#5407](https://github.com/manfromexistence/blazing-fast-rust/issues/5407). Now the `noUnusedImports` code fix correctly keeps top-level comments that were attached to lone imports.
 
-- Fixed [#3859](https://github.com/biomejs/biome/issues/3859): the `--skip-parse-errors` option is now applied to commands: `lint`, `check`, and `ci`.
+- Fixed [#3859](https://github.com/manfromexistence/blazing-fast-rust/issues/3859): the `--skip-parse-errors` option is now applied to commands: `lint`, `check`, and `ci`.
 
 - The `rage` command now prints the configuration path relative to the working directory, if applicable.
 
-- Fixed [#5606](https://github.com/biomejs/biome/issues/5606): We now correctly
+- Fixed [#5606](https://github.com/manfromexistence/blazing-fast-rust/issues/5606): We now correctly
   handle `.mjs` extensions in Node.js packages with `"type": "commonjs"`.
 
-- Fixed [#1597](https://github.com/biomejs/biome/issues/1597): `useExhaustiveDependencies` no longer gets confused about the stability of dependencies by parentheses or type assertions.
+- Fixed [#1597](https://github.com/manfromexistence/blazing-fast-rust/issues/1597): `useExhaustiveDependencies` no longer gets confused about the stability of dependencies by parentheses or type assertions.
 
-- Fixed [#4751](https://github.com/biomejs/biome/issues/4751) by checking fragments inside `JSXElement` and conditional expressions.
+- Fixed [#4751](https://github.com/manfromexistence/blazing-fast-rust/issues/4751) by checking fragments inside `JSXElement` and conditional expressions.
 
   For example, the following two cases will now be reported:
 
@@ -2891,9 +2891,9 @@
 
 - The rule `noFallthroughSwitchCase` no longer panics on some incomplete code snippets.
 
-- Fixed [#5007](https://github.com/biomejs/biome/issues/5007): Resolved false positives in `noMissingVarFunction` for `container-name`.
+- Fixed [#5007](https://github.com/manfromexistence/blazing-fast-rust/issues/5007): Resolved false positives in `noMissingVarFunction` for `container-name`.
 
-- Fixed [#4841](https://github.com/biomejs/biome/issues/4841): Shebang and top leading comments in `.cjs` files are now handled correctly
+- Fixed [#4841](https://github.com/manfromexistence/blazing-fast-rust/issues/4841): Shebang and top leading comments in `.cjs` files are now handled correctly
 
   **Example: shebang only (keep it as is)**
 
@@ -2937,7 +2937,7 @@
   let some_variable = "some value";
   ```
 
-- Fixes [`useExhaustiveDependencies`](https://biomejs.dev/linter/rules/use-exhaustive-dependencies/) missing dependencies being defined after the hook itself failure.
+- Fixes [`useExhaustiveDependencies`](https://manfromexistence.vercel.app/linter/rules/use-exhaustive-dependencies/) missing dependencies being defined after the hook itself failure.
 
   Example:
 
@@ -2953,19 +2953,19 @@
   }
   ```
 
-- Fixed [#4714](https://github.com/biomejs/biome/pull/4714): Suppression comments no longer fail on functions that themselves contain suppression comments.
+- Fixed [#4714](https://github.com/manfromexistence/blazing-fast-rust/pull/4714): Suppression comments no longer fail on functions that themselves contain suppression comments.
 
   This now works correctly:
 
   ```ts
-  // biome-ignore lint/complexity/useArrowFunction: this suppression now works
+  // blazing-fast-rust-ignore lint/complexity/useArrowFunction: this suppression now works
   const foo0 = function (bar: string) {
-    // biome-ignore lint/style/noParameterAssign: even if there are other suppressions inside
+    // blazing-fast-rust-ignore lint/style/noParameterAssign: even if there are other suppressions inside
     bar = "baz";
   };
   ```
 
-- Add @vitest/eslint-plugin to list of Biome rule sources
+- Add @vitest/eslint-plugin to list of blazing-fast-rust rule sources
 
 - Fixed `useHookAtTopLevel` rule to properly detect React components wrapped in `memo` and `forwardRef`, and correctly handle property accessors in control flow analysis.
 
@@ -2996,11 +2996,11 @@
   }
   ```
 
-- [noMisleadingCharacterClass](https://biomejs.dev/linter/rules/no-misleading-character-class/) no longer panics on malformed escape sequences that end with a multi-byte character ([#4587](https://github.com/biomejs/biome/issues/4587)).
+- [noMisleadingCharacterClass](https://manfromexistence.vercel.app/linter/rules/no-misleading-character-class/) no longer panics on malformed escape sequences that end with a multi-byte character ([#4587](https://github.com/manfromexistence/blazing-fast-rust/issues/4587)).
 
 - Fixed the flag `--bracket-spacing` that was duplicated between the global configuration and the language-specific override for JavaScript.
 
-- Fixed [#4715](https://github.com/biomejs/biome/issues/4715): The `useJsxKeyInIterable` rule now reports missing keys inside `switch` and `if` statements.
+- Fixed [#4715](https://github.com/manfromexistence/blazing-fast-rust/issues/4715): The `useJsxKeyInIterable` rule now reports missing keys inside `switch` and `if` statements.
 
   ```jsx
   const data = [
@@ -3037,11 +3037,11 @@
   };
   ```
 
-- Fixed [#4121](https://github.com/biomejs/biome/issues/4326): The CSS formatter no longer indents a selector when it has leading comments.
+- Fixed [#4121](https://github.com/manfromexistence/blazing-fast-rust/issues/4326): The CSS formatter no longer indents a selector when it has leading comments.
 
-- Fixed an issue where react lint rules could panic Biome when some incorrect code was analyzed.
+- Fixed an issue where react lint rules could panic blazing-fast-rust when some incorrect code was analyzed.
 
-- Fixed [#4982](https://github.com/biomejs/biome/issues/4982): the JavaScript parser now throws a syntax error for the following code:
+- Fixed [#4982](https://github.com/manfromexistence/blazing-fast-rust/issues/4982): the JavaScript parser now throws a syntax error for the following code:
 
   ```ts
   type T = import;
@@ -3050,13 +3050,13 @@
 
 - Fixed a bug with the `--verbose` CLI flag. Now the printed paths are **relative** to the working directory.
 
-- Fixed [`noNoninteractiveElementToInteractiveRole`](https://biomejs.dev/linter/rules/no-noninteractive-element-to-interactive-role/) mistakenly flagging `<li role="treeitem">`,
+- Fixed [`noNoninteractiveElementToInteractiveRole`](https://manfromexistence.vercel.app/linter/rules/no-noninteractive-element-to-interactive-role/) mistakenly flagging `<li role="treeitem">`,
 
-- Fixed [#4622](https://github.com/biomejs/biome/issues/4622): Our JavaScript parser can now gracefully handle situations where we detect the parser to have stalled.
+- Fixed [#4622](https://github.com/manfromexistence/blazing-fast-rust/issues/4622): Our JavaScript parser can now gracefully handle situations where we detect the parser to have stalled.
 
   This means we don't fail with an assertion anymore, but invalid code can trigger a regular diagnostic in such cases.
 
-- Fixed [#342](https://github.com/biomejs/biome/issues/342): The JavaScript parser now correctly handles invalid object member names, such as:
+- Fixed [#342](https://github.com/manfromexistence/blazing-fast-rust/issues/342): The JavaScript parser now correctly handles invalid object member names, such as:
 
   ```js
   ({
@@ -3064,7 +3064,7 @@
   })
   ```
 
-- Fixed [#6211](https://github.com/biomejs/biome/issues/6211): previously the
+- Fixed [#6211](https://github.com/manfromexistence/blazing-fast-rust/issues/6211): previously the
   import organizer emitted broken code when it merged an import at the start of
   the file with another import and placed the merged result after a third import.
 
@@ -3077,19 +3077,19 @@
   + import { B, C } from "bc";
   ```
 
-- Fixed [#4334](https://github.com/biomejs/biome/issues/4334): The formatter no longer inserts trailing a comma inside dynamic `import` expressions.
+- Fixed [#4334](https://github.com/manfromexistence/blazing-fast-rust/issues/4334): The formatter no longer inserts trailing a comma inside dynamic `import` expressions.
 
-- Fixed [#5629](https://github.com/biomejs/biome/issues/5629): useHookAtTopLevel no longer report false-positives where the hook is at the top-level in a class method.
+- Fixed [#5629](https://github.com/manfromexistence/blazing-fast-rust/issues/5629): useHookAtTopLevel no longer report false-positives where the hook is at the top-level in a class method.
 
-- Fixed [#5900](https://github.com/biomejs/biome/issues/5900): `biome migrate eslint` now support a nested `files` property in ESLint flat configs.
+- Fixed [#5900](https://github.com/manfromexistence/blazing-fast-rust/issues/5900): `blazing-fast-rust migrate eslint` now support a nested `files` property in ESLint flat configs.
 
-- Fixed [#3895](https://github.com/biomejs/biome/issues/3895): [noUnusedImports](https://biomejs.dev/linter/rules/no-unused-imports/) no longer reports used values imported as types in an external module.
+- Fixed [#3895](https://github.com/manfromexistence/blazing-fast-rust/issues/3895): [noUnusedImports](https://manfromexistence.vercel.app/linter/rules/no-unused-imports/) no longer reports used values imported as types in an external module.
 
 - Fixed a case where the code fix for `noUselessFragments` would remove more than just the fragment.
 
-- Fixed [#5919](https://github.com/biomejs/biome/issues/5919). Now Biome correctly loads the configuration passed via `--config-path` when its path starts with `./` e.g. `--confi-path=./project/biome.json`
+- Fixed [#5919](https://github.com/manfromexistence/blazing-fast-rust/issues/5919). Now blazing-fast-rust correctly loads the configuration passed via `--config-path` when its path starts with `./` e.g. `--confi-path=./project/blazing-fast-rust.json`
 
-- Fixed [#5031](https://github.com/biomejs/biome/issues/5031): CSS formatting has been improved for numbers:
+- Fixed [#5031](https://github.com/manfromexistence/blazing-fast-rust/issues/5031): CSS formatting has been improved for numbers:
 
   ```diff
   .class {
@@ -3100,28 +3100,28 @@
   }
   ```
 
-- Fixed [#5989](https://github.com/biomejs/biome/issues/5989) where large octal escape sequences led to an overflow.
+- Fixed [#5989](https://github.com/manfromexistence/blazing-fast-rust/issues/5989) where large octal escape sequences led to an overflow.
 
 - Implement improved error handling for the supports at rule
 
-- Fix [#5053](https://github.com/biomejs/biome/issues/5053), now the rule correctly handles `console.log` inside arrow function expressions.
+- Fix [#5053](https://github.com/manfromexistence/blazing-fast-rust/issues/5053), now the rule correctly handles `console.log` inside arrow function expressions.
 
-- Fix [#6105](https://github.com/biomejs/biome/issues/6105): css lint rules `useSortedProperties` should skip unknown properties.
+- Fix [#6105](https://github.com/manfromexistence/blazing-fast-rust/issues/6105): css lint rules `useSortedProperties` should skip unknown properties.
 
-- Fixed [#3229](https://github.com/biomejs/biome/issues/3229): Made formatting of compound selectors more consistent.
+- Fixed [#3229](https://github.com/manfromexistence/blazing-fast-rust/issues/3229): Made formatting of compound selectors more consistent.
 
 - Fixed a bug where passing `--max-diagnostics=0` would return a zero code even when errors were emitted.
 
-- Fixed a bug where Biome didn't report any error when `--stdin-file-path` didn't have any extension.
-  Now Biome returns an error if `--stdin-file-path` doesn't have an extension.
+- Fixed a bug where blazing-fast-rust didn't report any error when `--stdin-file-path` didn't have any extension.
+  Now blazing-fast-rust returns an error if `--stdin-file-path` doesn't have an extension.
 
-- Fixed [#5601](https://github.com/biomejs/biome/issues/5601): The [`useSortedClasses`](https://biomejs.dev/linter/rules/use-sorted-classes/) rule now properly preserves the original JSX quote style when sorting utility classes, preventing syntax errors.
+- Fixed [#5601](https://github.com/manfromexistence/blazing-fast-rust/issues/5601): The [`useSortedClasses`](https://manfromexistence.vercel.app/linter/rules/use-sorted-classes/) rule now properly preserves the original JSX quote style when sorting utility classes, preventing syntax errors.
 
 - The fix for `useSelfClosingElements` was marked as safe and the error message was improved.
 
 - Fixed overrides that include language-specific settings from having an effect for some languages
 
-- Fixed [#6144](https://github.com/biomejs/biome/issues/6144): [noUnusedImports](https://biomejs.dev/linter/rules/no-unused-imports/) reported incorrectly imports that were used as the type of parameters with the same name.
+- Fixed [#6144](https://github.com/manfromexistence/blazing-fast-rust/issues/6144): [noUnusedImports](https://manfromexistence.vercel.app/linter/rules/no-unused-imports/) reported incorrectly imports that were used as the type of parameters with the same name.
   In the following code, the import `name` was reported as unused.
 
   ```ts
@@ -3129,7 +3129,7 @@
   function f(name: name.Readable): void {}
   ```
 
-- The lint rules [`useNamingConvention`](https://biomejs.dev/linter/rules/use-naming-convention/) and [`useFilenamingConvention`](https://biomejs.dev/linter/rules/use-filenaming-convention/) now accept character escapes at the start of a regex group.
+- The lint rules [`useNamingConvention`](https://manfromexistence.vercel.app/linter/rules/use-naming-convention/) and [`useFilenamingConvention`](https://manfromexistence.vercel.app/linter/rules/use-filenaming-convention/) now accept character escapes at the start of a regex group.
 
   Both these rules provide options that allow matching names against a regular expression.
   Previously, an escaped character at the start of a regex group reported an error. They are now accepted.
@@ -3160,9 +3160,9 @@
   }
   ```
 
-- Fixed [#5617](https://github.com/biomejs/biome/issues/5617): [noDuplicateObjectKeys](https://biomejs.dev/linter/rules/no-duplicate-object-keys/) now transfers the leading comments of the removed member.
+- Fixed [#5617](https://github.com/manfromexistence/blazing-fast-rust/issues/5617): [noDuplicateObjectKeys](https://manfromexistence.vercel.app/linter/rules/no-duplicate-object-keys/) now transfers the leading comments of the removed member.
 
-- Fixed [#5409](https://github.com/biomejs/biome/issues/5409): [noParameterAssign](https://biomejs.dev/linter/rules/no-parameter-assign) now reports reassigned parameter of unparenthesized arrow functions.
+- Fixed [#5409](https://github.com/manfromexistence/blazing-fast-rust/issues/5409): [noParameterAssign](https://manfromexistence.vercel.app/linter/rules/no-parameter-assign) now reports reassigned parameter of unparenthesized arrow functions.
 
   The following code is now reported as invalid.
 
@@ -3172,23 +3172,23 @@
   };
   ```
 
-- Fixed [#4875](https://github.com/biomejs/biome/issues/4875): Relative file paths are now clickable in the Jetbrains IDE terminal.
+- Fixed [#4875](https://github.com/manfromexistence/blazing-fast-rust/issues/4875): Relative file paths are now clickable in the Jetbrains IDE terminal.
 
-- Fixed [#4719](https://github.com/biomejs/biome/issues/4719): `bracketSameLine` now performs as expected when a comment is placed before the last JSX attribute.
+- Fixed [#4719](https://github.com/manfromexistence/blazing-fast-rust/issues/4719): `bracketSameLine` now performs as expected when a comment is placed before the last JSX attribute.
 
-- Fixed [#4564](https://github.com/biomejs/biome/issues/4564): Biome no longer panics when a multi-byte character is found in a unicode escape sequence.
+- Fixed [#4564](https://github.com/manfromexistence/blazing-fast-rust/issues/4564): blazing-fast-rust no longer panics when a multi-byte character is found in a unicode escape sequence.
 
-- Fixed [#4950](https://github.com/biomejs/biome/issues/4950): Resolved a false positive of character class range operators in regular expressions.
+- Fixed [#4950](https://github.com/manfromexistence/blazing-fast-rust/issues/4950): Resolved a false positive of character class range operators in regular expressions.
 
-- Fixed handling of top-level variables by `useExplicitType` rule ([#5932](https://github.com/biomejs/biome/issues/5932)). Biome now allows all variables with explicit annotations, as well as variables with trivial RHS. Biome no longer emits duplicated errors when an untyped function is assigned to an untyped variable.
+- Fixed handling of top-level variables by `useExplicitType` rule ([#5932](https://github.com/manfromexistence/blazing-fast-rust/issues/5932)). blazing-fast-rust now allows all variables with explicit annotations, as well as variables with trivial RHS. blazing-fast-rust no longer emits duplicated errors when an untyped function is assigned to an untyped variable.
 
-- Fixed [#4947](https://github.com/biomejs/biome/issues/4947): The `useTemplate` lint rule now ignores concatenated literals folded to multiple lines.
+- Fixed [#4947](https://github.com/manfromexistence/blazing-fast-rust/issues/4947): The `useTemplate` lint rule now ignores concatenated literals folded to multiple lines.
 
-- Fixed [#4568](https://github.com/biomejs/biome/issues/4568): Broken import statements no longer can cause a panic in `useExhaustiveDependencies`.
+- Fixed [#4568](https://github.com/manfromexistence/blazing-fast-rust/issues/4568): Broken import statements no longer can cause a panic in `useExhaustiveDependencies`.
 
-- Fixed [#6042](https://github.com/biomejs/biome/pull/6042): [`noUselessEscapeInString`](https://next.biomejs.dev/linter/rules/no-useless-escape-in-string/) now reports useless escapes after skipping \${ in template literals.
+- Fixed [#6042](https://github.com/manfromexistence/blazing-fast-rust/pull/6042): [`noUselessEscapeInString`](https://next.blazing-fast-rustjs.dev/linter/rules/no-useless-escape-in-string/) now reports useless escapes after skipping \${ in template literals.
 
-- Fixed [#6229](https://github.com/biomejs/biome/issues/6229) where the fix of `noUnusedImports` emitted an invalid syntax. Now the following case emits a code fix that is syntactically correct:
+- Fixed [#6229](https://github.com/manfromexistence/blazing-fast-rust/issues/6229) where the fix of `noUnusedImports` emitted an invalid syntax. Now the following case emits a code fix that is syntactically correct:
 
   ```js
   import Used, { NotUsed } from "foo";
@@ -3196,7 +3196,7 @@
   Used();
   ```
 
-- Fix [#5682](https://github.com/biomejs/biome/issues/5682): Object patterns with a nested assignment pattern no longer break properties.
+- Fix [#5682](https://github.com/manfromexistence/blazing-fast-rust/issues/5682): Object patterns with a nested assignment pattern no longer break properties.
 
   For example, the following code:
 
@@ -3212,33 +3212,33 @@
 
   , while Prettier does not expand properties in this case.
 
-- Fixed #5620, [noConsole](https://biomejs.dev/linter/rules/no-console/) rule now correctly handles indirect `console.log` calls and references.
+- Fixed #5620, [noConsole](https://manfromexistence.vercel.app/linter/rules/no-console/) rule now correctly handles indirect `console.log` calls and references.
 
 - When pulling code actions from the LSP, now the first choice suggested by the client will be the safe fix.
 
-- Fixed [#6022](https://github.com/biomejs/biome/issues/6022), now the rule `noDuplicateProperties` doesn't trigger properties defined inside the `@keyframes` at rule
+- Fixed [#6022](https://github.com/manfromexistence/blazing-fast-rust/issues/6022), now the rule `noDuplicateProperties` doesn't trigger properties defined inside the `@keyframes` at rule
 
-- Enhanced the error message of the diagnostics emitted when Biome can't parse a suppression comment.
+- Enhanced the error message of the diagnostics emitted when blazing-fast-rust can't parse a suppression comment.
 
 - Fixed link to the docs inside CLI markup
 
 - Fixed a bug where a suppression comment with an empty explanation was valid.
 
-  Now a suppression comment `// biome-ignore lint:` will raise a **warning** diagnostic.
+  Now a suppression comment `// blazing-fast-rust-ignore lint:` will raise a **warning** diagnostic.
 
-- Fixed [#4026](https://github.com/biomejs/biome/issues/4026): Comments in `grid-template` are no longer moved by the formatter.
+- Fixed [#4026](https://github.com/manfromexistence/blazing-fast-rust/issues/4026): Comments in `grid-template` are no longer moved by the formatter.
 
-- Fixed [#3394](https://github.com/biomejs/biome/issues/3394): Resolved a false positive in `useSortedClasses`.
+- Fixed [#3394](https://github.com/manfromexistence/blazing-fast-rust/issues/3394): Resolved a false positive in `useSortedClasses`.
 
-- Fixed [#342](https://github.com/biomejs/biome/issues/342) and [#4562](https://github.com/biomejs/biome/issues/4562): Biome no longer crashes when a `declare` statement is followed by an unexpected token.
+- Fixed [#342](https://github.com/manfromexistence/blazing-fast-rust/issues/342) and [#4562](https://github.com/manfromexistence/blazing-fast-rust/issues/4562): blazing-fast-rust no longer crashes when a `declare` statement is followed by an unexpected token.
 
-- Fixed false positive in the rule [`noUnknownFunction`](https://biomejs.dev/linter/rules/no-unknown-function) where the [`tech`](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/src#tech) function was incorrectly flagged as an unknown function.
+- Fixed false positive in the rule [`noUnknownFunction`](https://manfromexistence.vercel.app/linter/rules/no-unknown-function) where the [`tech`](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/src#tech) function was incorrectly flagged as an unknown function.
 
-- Fixed [#4511](https://github.com/biomejs/biome/issues/4511): [noLabelWithoutControl](https://biomejs.dev/linter/rules/no-label-without-control/) now detects `<button>` tags as input.
+- Fixed [#4511](https://github.com/manfromexistence/blazing-fast-rust/issues/4511): [noLabelWithoutControl](https://manfromexistence.vercel.app/linter/rules/no-label-without-control/) now detects `<button>` tags as input.
 
-- Fixed [#6039](https://github.com/biomejs/biome/issues/6039): [`noUselessEscapeInString`](https://next.biomejs.dev/linter/rules/no-useless-escape-in-string/) no longer reports `\${` escape in template literals.
+- Fixed [#6039](https://github.com/manfromexistence/blazing-fast-rust/issues/6039): [`noUselessEscapeInString`](https://next.blazing-fast-rustjs.dev/linter/rules/no-useless-escape-in-string/) no longer reports `\${` escape in template literals.
 
-- Fixed [#5985](https://github.com/biomejs/biome/issues/5985), which caused the import organizer to fail the merging of a default import with a named import.
+- Fixed [#5985](https://github.com/manfromexistence/blazing-fast-rust/issues/5985), which caused the import organizer to fail the merging of a default import with a named import.
   The following code is now correctly organized:
 
   ```diff
@@ -3253,9 +3253,9 @@
 
 - Added `RegExpStringIterator` to the analyzer globals.
 
-- Fixed [#4208](https://github.com/biomejs/biome/issues/4208): [noUselessFragments](https://biomejs.dev/linter/rules/no-useless-fragments/) now handles `JsxAttributeInitializerClause`, ensuring that fragments inside expressions like `<A b=<></> />` are preserved.
+- Fixed [#4208](https://github.com/manfromexistence/blazing-fast-rust/issues/4208): [noUselessFragments](https://manfromexistence.vercel.app/linter/rules/no-useless-fragments/) now handles `JsxAttributeInitializerClause`, ensuring that fragments inside expressions like `<A b=<></> />` are preserved.
 
-- Fixed [#4533](https://github.com/biomejs/biome/issues/4533): `noUnknownPseudoClass` no longer reports pseudo classes after a webkit scrollbar pseudo element.
+- Fixed [#4533](https://github.com/manfromexistence/blazing-fast-rust/issues/4533): `noUnknownPseudoClass` no longer reports pseudo classes after a webkit scrollbar pseudo element.
 
   The following code will no longer report a diagnostic:
 
@@ -3264,17 +3264,17 @@
   }
   ```
 
-- Updates the [`useJsxKeyInIterable`](https://biomejs.dev/linter/rules/use-jsx-key-in-iterable/) rule to more closely match the behavior of the ESLint plugin (e.g. mark the whole fragment as incorrect when no key is present). This also adds the option to check shorthand fragments (`<></>`)
+- Updates the [`useJsxKeyInIterable`](https://manfromexistence.vercel.app/linter/rules/use-jsx-key-in-iterable/) rule to more closely match the behavior of the ESLint plugin (e.g. mark the whole fragment as incorrect when no key is present). This also adds the option to check shorthand fragments (`<></>`)
 
-- Renamed the rule `noDuplicatedFields` to `noDuplicateFields`. Run the command `biome migrate` to update your configuration.
+- Renamed the rule `noDuplicatedFields` to `noDuplicateFields`. Run the command `blazing-fast-rust migrate` to update your configuration.
 
 - Fixed an issue where ignored files were incorrectly tracked by the Daemon.
 
-- Fixed [#5116](https://github.com/biomejs/biome/issues/5116): [noUnknownPseudoElement](https://biomejs.dev/linter/rules/no-unknown-pseudo-element/) now supports `::slotted`.
+- Fixed [#5116](https://github.com/manfromexistence/blazing-fast-rust/issues/5116): [noUnknownPseudoElement](https://manfromexistence.vercel.app/linter/rules/no-unknown-pseudo-element/) now supports `::slotted`.
 
-- Fixed [#5979](https://github.com/biomejs/biome/issues/5979): `biome search` now correctly skips files that don't match the pattern's target language.
+- Fixed [#5979](https://github.com/manfromexistence/blazing-fast-rust/issues/5979): `blazing-fast-rust search` now correctly skips files that don't match the pattern's target language.
 
-- Fixed [#4323](https://github.com/biomejs/biome/issues/4258): Fixed the case where `useSemanticElement` accidentally showed recommendations for `role="searchbox"` instead of `role="search"`.
+- Fixed [#4323](https://github.com/manfromexistence/blazing-fast-rust/issues/4258): Fixed the case where `useSemanticElement` accidentally showed recommendations for `role="searchbox"` instead of `role="search"`.
 
 - Support setting `indent_size` to `tab` in `.editorconfig`, the following config will not cause error:
 
@@ -3284,9 +3284,9 @@
   indent_size = tab
   ```
 
-- Fixed [#4565](https://github.com/biomejs/biome/issues/4565): [noControlCharactersInRegex](https://biomejs.dev/linter/rules/no-control-characters-in-regex) no longer panics when it encounters an unterminated unicode escape sequence.
+- Fixed [#4565](https://github.com/manfromexistence/blazing-fast-rust/issues/4565): [noControlCharactersInRegex](https://manfromexistence.vercel.app/linter/rules/no-control-characters-in-regex) no longer panics when it encounters an unterminated unicode escape sequence.
 
-- Fixed [#5770](https://github.com/biomejs/biome/issues/5770), Biome's configuration file is now respected by the `migrate` command during migration
+- Fixed [#5770](https://github.com/manfromexistence/blazing-fast-rust/issues/5770), blazing-fast-rust's configuration file is now respected by the `migrate` command during migration
 
 - Fixed an issue where the lexer didn't report errors for unterminated regex or string literals, such as the following cases:
 
@@ -3296,7 +3296,7 @@
   /\\217483
   ```
 
-- The [`useKeyWithClickEvents`](https://biomejs.dev/linter/rules/use-key-with-click-events/) rule has been improved with better support for ARIA roles.
+- The [`useKeyWithClickEvents`](https://manfromexistence.vercel.app/linter/rules/use-key-with-click-events/) rule has been improved with better support for ARIA roles.
 
   Key improvements:
   1. **Accessibility checks**:
@@ -3332,7 +3332,7 @@
 
      The changes shown here are meant to be closer to the original [jsx-eslint's `click-events-have-key-events` rule](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/click-events-have-key-events.md).
 
-- Fixed [#6029](https://github.com/biomejs/biome/issues/6029): A new line before the semicolon in the previous statement is now kept after formatting.
+- Fixed [#6029](https://github.com/manfromexistence/blazing-fast-rust/issues/6029): A new line before the semicolon in the previous statement is now kept after formatting.
 
   For example, the following code:
 
@@ -3352,7 +3352,7 @@
 
   when `javascript.formatter.semicolons` is `asNeeded`, the original code is considered as already formatted.
 
-- [useArrayLiterals](https://biomejs.dev/linter/rules/use-array-literals/) now reports all expressions using the `Array` constructors.
+- [useArrayLiterals](https://manfromexistence.vercel.app/linter/rules/use-array-literals/) now reports all expressions using the `Array` constructors.
 
   Previously, the rule reported only use of the `Array` constructor in expressions statements.
 
@@ -3365,17 +3365,17 @@
 
 - Improved error handling for the container at-rule.
 
-- Fixed [#4665](https://github.com/biomejs/biome/issues/4665): the LSP previously
+- Fixed [#4665](https://github.com/manfromexistence/blazing-fast-rust/issues/4665): the LSP previously
   identified `.cjs` files as ESM files, making rules like `noRedundantUseStrict`
   reports incorrectly valid `"use strict"` directives.
 
-- Fixed [#5382](https://github.com/biomejs/biome/issues/5382): `useExportType` no longer reports an identifier that bound by both a variable and a type.
+- Fixed [#5382](https://github.com/manfromexistence/blazing-fast-rust/issues/5382): `useExportType` no longer reports an identifier that bound by both a variable and a type.
 
-- Fixed [#5826](https://github.com/biomejs/biome/issues/5826): [`useNumericSeparators`](https://next.biomejs.dev/linter/rules/use-numeric-separators/) no longer reports single-digit `0`.
+- Fixed [#5826](https://github.com/manfromexistence/blazing-fast-rust/issues/5826): [`useNumericSeparators`](https://next.blazing-fast-rustjs.dev/linter/rules/use-numeric-separators/) no longer reports single-digit `0`.
 
-- Fixed [#5307](https://github.com/biomejs/biome/issues/5307), where CSS value lists were wrapped in a way that did not preserve semantic structure.
+- Fixed [#5307](https://github.com/manfromexistence/blazing-fast-rust/issues/5307), where CSS value lists were wrapped in a way that did not preserve semantic structure.
 
-  Biome now ensures that CSS value lists follow a more readable format, aligning with Prettier's behavior.
+  blazing-fast-rust now ensures that CSS value lists follow a more readable format, aligning with Prettier's behavior.
 
   Before:
 
@@ -3407,9 +3407,9 @@
 
 - The `summary` reporter now prints the files processed and the files fixed when passing the `--verbose` flag.
 
-- Fixed [#5693](https://github.com/biomejs/biome/issues/5693): [`useRegexLiterals`](https://biomejs.dev/linter/rules/use-regex-literals/) now correctly handle useless escaped character in string literals.
+- Fixed [#5693](https://github.com/manfromexistence/blazing-fast-rust/issues/5693): [`useRegexLiterals`](https://manfromexistence.vercel.app/linter/rules/use-regex-literals/) now correctly handle useless escaped character in string literals.
 
-- [useRegexLiterals](https://biomejs.dev/linter/rules/use-regex-literals) now suggests a correct fix when the pattern contains an escaped anti-slash `\/`.
+- [useRegexLiterals](https://manfromexistence.vercel.app/linter/rules/use-regex-literals) now suggests a correct fix when the pattern contains an escaped anti-slash `\/`.
 
   Previously the rule suggested the following fix that led to a syntax error:
 
@@ -3425,9 +3425,9 @@
   + /\//
   ```
 
-  Fixed [#5487](https://github.com/biomejs/biome/issues/5487).
+  Fixed [#5487](https://github.com/manfromexistence/blazing-fast-rust/issues/5487).
 
-- Fixed [`useConsistentCurlyBraces breaks react/no-unescaped-entities rule`](https://github.com/biomejs/biome/issues/5391)
+- Fixed [`useConsistentCurlyBraces breaks react/no-unescaped-entities rule`](https://github.com/manfromexistence/blazing-fast-rust/issues/5391)
 
   Added a check for forbidden characters: `>`, `"`, `'` and `}`.
   If any of these characters are detected, curly braces will be preserved.
@@ -3440,9 +3440,9 @@
   }
   ```
 
-- The rule [`useNamingConvention`](https://biomejs.dev/linter/rules/use-naming-convention/) now suggests a rename that preserves uppercase if possible.
+- The rule [`useNamingConvention`](https://manfromexistence.vercel.app/linter/rules/use-naming-convention/) now suggests a rename that preserves uppercase if possible.
 
-  For instance, Biome suggested renaming `HTMLWrapper` as `htmlWrapper`:
+  For instance, blazing-fast-rust suggested renaming `HTMLWrapper` as `htmlWrapper`:
 
   ```diff
   - import HTMLWrapper from "HTMLWrapper.tsx";
@@ -3454,7 +3454,7 @@
     }
   ```
 
-  Since both `PascalCase` and `CamelCase` are accepted, Biome now suggests renaming `HTMLWrapper` as `HtmlWrapper`:
+  Since both `PascalCase` and `CamelCase` are accepted, blazing-fast-rust now suggests renaming `HTMLWrapper` as `HtmlWrapper`:
 
   ```diff
   - import HTMLWrapper from "HTMLWrapper.tsx";
@@ -3482,9 +3482,9 @@
   }
   ```
 
-- Fixed Biome being unable to parse `insert_final_newline = unset` in EditorConfig files.
+- Fixed blazing-fast-rust being unable to parse `insert_final_newline = unset` in EditorConfig files.
 
-- Fixed [#4530](https://github.com/biomejs/biome/issues/4530): [useArrowFunction](https://biomejs.dev/linter/rules/use-arrow-function/) now preserves directives.
+- Fixed [#4530](https://github.com/manfromexistence/blazing-fast-rust/issues/4530): [useArrowFunction](https://manfromexistence.vercel.app/linter/rules/use-arrow-function/) now preserves directives.
 
   Previously the rule removed the directives when a function expression was turned into an arrow function.
   The rule now correctly keeps the directives.
@@ -3497,4 +3497,4 @@
     }
   ```
 
-- Fixed [#4855](https://github.com/biomejs/biome/issues/4855): [useSortedClasses](https://biomejs.dev/linter/rules/use-sorted-classes/) now suggests code fixes that match the JSX quote style of the formatter.
+- Fixed [#4855](https://github.com/manfromexistence/blazing-fast-rust/issues/4855): [useSortedClasses](https://manfromexistence.vercel.app/linter/rules/use-sorted-classes/) now suggests code fixes that match the JSX quote style of the formatter.

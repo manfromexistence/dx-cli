@@ -23,7 +23,7 @@ export async function createWorkspace(): Promise<Workspace | null> {
  * instance through the JSON-RPC protocol, using the provided command to spawn
  * the daemon if necessary
  *
- * @param command Path to the Biome binary distribution
+ * @param command Path to the blazing-fast-rust binary distribution
  * @returns A Workspace client, or null if the underlying platform is not supported
  */
 export async function createWorkspaceWithBinary(
@@ -35,7 +35,7 @@ export async function createWorkspaceWithBinary(
 	await transport.request("initialize", {
 		capabilities: {},
 		client_info: {
-			name: "@biomejs/backend-jsonrpc",
+			name: "@blazing-fast-rust/backend-jsonrpc",
 			version: "0.10.1-next",
 		},
 	});

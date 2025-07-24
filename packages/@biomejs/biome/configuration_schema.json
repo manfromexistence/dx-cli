@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"title": "Configuration",
-	"description": "The configuration that is contained inside the file `biome.json`",
+	"description": "The configuration that is contained inside the file `blazing-fast-rust.json`",
 	"type": "object",
 	"properties": {
 		"$schema": {
@@ -88,7 +88,7 @@
 			"anyOf": [{ "$ref": "#/definitions/Plugins" }, { "type": "null" }]
 		},
 		"root": {
-			"description": "Indicates whether this configuration file is at the root of a Biome project. By default, this is `true`.",
+			"description": "Indicates whether this configuration file is at the root of a blazing-fast-rust project. By default, this is `true`.",
 			"anyOf": [{ "$ref": "#/definitions/Bool" }, { "type": "null" }]
 		},
 		"vcs": {
@@ -382,7 +382,7 @@
 			"type": "object",
 			"properties": {
 				"recommended": {
-					"description": "It enables the assist actions recommended by Biome. `true` by default.",
+					"description": "It enables the assist actions recommended by blazing-fast-rust. `true` by default.",
 					"type": ["boolean", "null"]
 				},
 				"source": {
@@ -396,15 +396,15 @@
 			"type": "object",
 			"properties": {
 				"actions": {
-					"description": "Whether Biome should fail in CLI if the assist were not applied to the code.",
+					"description": "Whether blazing-fast-rust should fail in CLI if the assist were not applied to the code.",
 					"anyOf": [{ "$ref": "#/definitions/Actions" }, { "type": "null" }]
 				},
 				"enabled": {
-					"description": "Whether Biome should enable assist via LSP and CLI.",
+					"description": "Whether blazing-fast-rust should enable assist via LSP and CLI.",
 					"anyOf": [{ "$ref": "#/definitions/Bool" }, { "type": "null" }]
 				},
 				"includes": {
-					"description": "A list of glob patterns. Biome will include files/folders that will match these patterns.",
+					"description": "A list of glob patterns. blazing-fast-rust will include files/folders that will match these patterns.",
 					"type": ["array", "null"],
 					"items": { "$ref": "#/definitions/NormalizedGlob" }
 				}
@@ -1386,16 +1386,16 @@
 			"type": "object",
 			"properties": {
 				"experimentalScannerIgnores": {
-					"description": "Set of file and folder names that should be unconditionally ignored by Biome's scanner.\n\nBiome maintains an internal list of default ignore entries, which is based on user feedback and which may change in any release. This setting allows overriding this internal list completely.\n\nThis is considered an advanced feature that users _should_ not need to tweak themselves, but they can as a last resort. This setting can only be configured in root configurations, and is ignored in nested configs.\n\nEntries must be file or folder *names*. Specific paths and globs are not supported.\n\nExamples where this may be useful:\n\n```jsonc { \"files\": { \"experimentalScannerIgnores\": [ // You almost certainly don't want to scan your `.git` // folder, which is why it's already ignored by default: \".git\",\n\n// But the scanner does scan `node_modules` by default. If // you *really* don't want this, you can ignore it like // this: \"node_modules\",\n\n// But it's probably better to ignore a specific dependency. // For instance, one that happens to be particularly slow to // scan: \"RedisCommander.d.ts\", ], } } ```\n\nPlease be aware that rules relying on the module graph or type inference information may be negatively affected if dependencies of your project aren't (fully) scanned.",
+					"description": "Set of file and folder names that should be unconditionally ignored by blazing-fast-rust's scanner.\n\nblazing-fast-rust maintains an internal list of default ignore entries, which is based on user feedback and which may change in any release. This setting allows overriding this internal list completely.\n\nThis is considered an advanced feature that users _should_ not need to tweak themselves, but they can as a last resort. This setting can only be configured in root configurations, and is ignored in nested configs.\n\nEntries must be file or folder *names*. Specific paths and globs are not supported.\n\nExamples where this may be useful:\n\n```jsonc { \"files\": { \"experimentalScannerIgnores\": [ // You almost certainly don't want to scan your `.git` // folder, which is why it's already ignored by default: \".git\",\n\n// But the scanner does scan `node_modules` by default. If // you *really* don't want this, you can ignore it like // this: \"node_modules\",\n\n// But it's probably better to ignore a specific dependency. // For instance, one that happens to be particularly slow to // scan: \"RedisCommander.d.ts\", ], } } ```\n\nPlease be aware that rules relying on the module graph or type inference information may be negatively affected if dependencies of your project aren't (fully) scanned.",
 					"type": ["array", "null"],
 					"items": { "type": "string" }
 				},
 				"ignoreUnknown": {
-					"description": "Tells Biome to not emit diagnostics when handling files that doesn't know",
+					"description": "Tells blazing-fast-rust to not emit diagnostics when handling files that doesn't know",
 					"anyOf": [{ "$ref": "#/definitions/Bool" }, { "type": "null" }]
 				},
 				"includes": {
-					"description": "A list of glob patterns. Biome will handle only those files/folders that will match these patterns.",
+					"description": "A list of glob patterns. blazing-fast-rust will handle only those files/folders that will match these patterns.",
 					"type": ["array", "null"],
 					"items": { "$ref": "#/definitions/NormalizedGlob" }
 				},
@@ -1465,7 +1465,7 @@
 					"anyOf": [{ "$ref": "#/definitions/Bool" }, { "type": "null" }]
 				},
 				"expand": {
-					"description": "Whether to expand arrays and objects on multiple lines. When set to `auto`, object literals are formatted on multiple lines if the first property has a newline, and array literals are formatted on a single line if it fits in the line. When set to `always`, these literals are formatted on multiple lines, regardless of length of the list. When set to `never`, these literals are formatted on a single line if it fits in the line. When formatting `package.json`, Biome will use `always` unless configured otherwise. Defaults to \"auto\".",
+					"description": "Whether to expand arrays and objects on multiple lines. When set to `auto`, object literals are formatted on multiple lines if the first property has a newline, and array literals are formatted on a single line if it fits in the line. When set to `always`, these literals are formatted on multiple lines, regardless of length of the list. When set to `never`, these literals are formatted on a single line if it fits in the line. When formatting `package.json`, blazing-fast-rust will use `always` unless configured otherwise. Defaults to \"auto\".",
 					"anyOf": [{ "$ref": "#/definitions/Expand" }, { "type": "null" }]
 				},
 				"formatWithErrors": {
@@ -1494,7 +1494,7 @@
 					"anyOf": [{ "$ref": "#/definitions/LineWidth" }, { "type": "null" }]
 				},
 				"useEditorconfig": {
-					"description": "Use any `.editorconfig` files to configure the formatter. Configuration in `biome.json` will override `.editorconfig` configuration.\n\nDefault: `true`.",
+					"description": "Use any `.editorconfig` files to configure the formatter. Configuration in `blazing-fast-rust.json` will override `.editorconfig` configuration.\n\nDefault: `true`.",
 					"anyOf": [{ "$ref": "#/definitions/Bool" }, { "type": "null" }]
 				}
 			},
@@ -1957,7 +1957,7 @@
 					"anyOf": [{ "$ref": "#/definitions/Bool" }, { "type": "null" }]
 				},
 				"expand": {
-					"description": "Whether to expand arrays and objects on multiple lines. When set to `auto`, object literals are formatted on multiple lines if the first property has a newline, and array literals are formatted on a single line if it fits in the line. When set to `always`, these literals are formatted on multiple lines, regardless of length of the list. When set to `never`, these literals are formatted on a single line if it fits in the line. When formatting `package.json`, Biome will use `always` unless configured otherwise. Defaults to \"auto\".",
+					"description": "Whether to expand arrays and objects on multiple lines. When set to `auto`, object literals are formatted on multiple lines if the first property has a newline, and array literals are formatted on a single line if it fits in the line. When set to `always`, these literals are formatted on multiple lines, regardless of length of the list. When set to `never`, these literals are formatted on a single line if it fits in the line. When formatting `package.json`, blazing-fast-rust will use `always` unless configured otherwise. Defaults to \"auto\".",
 					"anyOf": [{ "$ref": "#/definitions/Expand" }, { "type": "null" }]
 				},
 				"indentStyle": {
@@ -2096,7 +2096,7 @@
 					"anyOf": [{ "$ref": "#/definitions/Bool" }, { "type": "null" }]
 				},
 				"expand": {
-					"description": "Whether to expand arrays and objects on multiple lines. When set to `auto`, object literals are formatted on multiple lines if the first property has a newline, and array literals are formatted on a single line if it fits in the line. When set to `always`, these literals are formatted on multiple lines, regardless of length of the list. When set to `never`, these literals are formatted on a single line if it fits in the line. When formatting `package.json`, Biome will use `always` unless configured otherwise. Defaults to \"auto\".",
+					"description": "Whether to expand arrays and objects on multiple lines. When set to `auto`, object literals are formatted on multiple lines if the first property has a newline, and array literals are formatted on a single line if it fits in the line. When set to `always`, these literals are formatted on multiple lines, regardless of length of the list. When set to `never`, these literals are formatted on a single line if it fits in the line. When formatting `package.json`, blazing-fast-rust will use `always` unless configured otherwise. Defaults to \"auto\".",
 					"anyOf": [{ "$ref": "#/definitions/Expand" }, { "type": "null" }]
 				},
 				"indentStyle": {
@@ -2155,7 +2155,7 @@
 			"description": "Indicates the type of runtime or transformation used for interpreting JSX.",
 			"oneOf": [
 				{
-					"description": "Indicates a modern or native JSX environment, that doesn't require special handling by Biome.",
+					"description": "Indicates a modern or native JSX environment, that doesn't require special handling by blazing-fast-rust.",
 					"type": "string",
 					"enum": ["transparent"]
 				},
@@ -3770,13 +3770,13 @@
 			"type": "object",
 			"additionalProperties": false
 		},
-		"NoQuickfixBiomeConfiguration": {
+		"NoQuickfixblazing-fast-rustConfiguration": {
 			"anyOf": [
 				{ "$ref": "#/definitions/RulePlainConfiguration" },
-				{ "$ref": "#/definitions/RuleWithNoQuickfixBiomeOptions" }
+				{ "$ref": "#/definitions/RuleWithNoQuickfixblazing-fast-rustOptions" }
 			]
 		},
-		"NoQuickfixBiomeOptions": {
+		"NoQuickfixblazing-fast-rustOptions": {
 			"type": "object",
 			"properties": {
 				"additionalPaths": {
@@ -4694,7 +4694,7 @@
 			"additionalProperties": false
 		},
 		"NormalizedGlob": {
-			"description": "Normalized Biome glob pattern that strips `./` from the pattern.",
+			"description": "Normalized blazing-fast-rust glob pattern that strips `./` from the pattern.",
 			"allOf": [{ "$ref": "#/definitions/Glob" }]
 		},
 		"Nursery": {
@@ -4812,10 +4812,10 @@
 						{ "type": "null" }
 					]
 				},
-				"noQuickfixBiome": {
+				"noQuickfixblazing-fast-rust": {
 					"description": "Succinct description of the rule.",
 					"anyOf": [
-						{ "$ref": "#/definitions/NoQuickfixBiomeConfiguration" },
+						{ "$ref": "#/definitions/NoQuickfixblazing-fast-rustConfiguration" },
 						{ "type": "null" }
 					]
 				},
@@ -5145,7 +5145,7 @@
 					"anyOf": [{ "$ref": "#/definitions/Bool" }, { "type": "null" }]
 				},
 				"expand": {
-					"description": "Whether to expand arrays and objects on multiple lines. When set to `auto`, object literals are formatted on multiple lines if the first property has a newline, and array literals are formatted on a single line if it fits in the line. When set to `always`, these literals are formatted on multiple lines, regardless of length of the list. When set to `never`, these literals are formatted on a single line if it fits in the line. When formatting `package.json`, Biome will use `always` unless configured otherwise. Defaults to \"auto\".",
+					"description": "Whether to expand arrays and objects on multiple lines. When set to `auto`, object literals are formatted on multiple lines if the first property has a newline, and array literals are formatted on a single line if it fits in the line. When set to `always`, these literals are formatted on multiple lines, regardless of length of the list. When set to `never`, these literals are formatted on a single line if it fits in the line. When formatting `package.json`, blazing-fast-rust will use `always` unless configured otherwise. Defaults to \"auto\".",
 					"anyOf": [{ "$ref": "#/definitions/Expand" }, { "type": "null" }]
 				},
 				"formatWithErrors": {
@@ -5250,7 +5250,7 @@
 					]
 				},
 				"includes": {
-					"description": "A list of glob patterns. Biome will include files/folders that will match these patterns.",
+					"description": "A list of glob patterns. blazing-fast-rust will include files/folders that will match these patterns.",
 					"anyOf": [
 						{ "$ref": "#/definitions/OverrideGlobs" },
 						{ "type": "null" }
@@ -7877,7 +7877,7 @@
 			},
 			"additionalProperties": false
 		},
-		"RuleWithNoQuickfixBiomeOptions": {
+		"RuleWithNoQuickfixblazing-fast-rustOptions": {
 			"type": "object",
 			"required": ["level"],
 			"properties": {
@@ -7887,7 +7887,7 @@
 				},
 				"options": {
 					"description": "Rule's options",
-					"allOf": [{ "$ref": "#/definitions/NoQuickfixBiomeOptions" }]
+					"allOf": [{ "$ref": "#/definitions/NoQuickfixblazing-fast-rustOptions" }]
 				}
 			},
 			"additionalProperties": false
@@ -11313,7 +11313,7 @@
 					]
 				},
 				"recommended": {
-					"description": "It enables the lint rules recommended by Biome. `true` by default.",
+					"description": "It enables the lint rules recommended by blazing-fast-rust. `true` by default.",
 					"type": ["boolean", "null"]
 				},
 				"security": {
@@ -13843,7 +13843,7 @@
 			]
 		},
 		"VcsConfiguration": {
-			"description": "Set of properties to integrate Biome with a VCS software.",
+			"description": "Set of properties to integrate blazing-fast-rust with a VCS software.",
 			"type": "object",
 			"properties": {
 				"clientKind": {
@@ -13858,15 +13858,15 @@
 					"type": ["string", "null"]
 				},
 				"enabled": {
-					"description": "Whether Biome should integrate itself with the VCS client",
+					"description": "Whether blazing-fast-rust should integrate itself with the VCS client",
 					"anyOf": [{ "$ref": "#/definitions/Bool" }, { "type": "null" }]
 				},
 				"root": {
-					"description": "The folder where Biome should check for VCS files. By default, Biome will use the same folder where `biome.json` was found.\n\nIf Biome can't find the configuration, it will attempt to use the current working directory. If no current working directory can't be found, Biome won't use the VCS integration, and a diagnostic will be emitted",
+					"description": "The folder where blazing-fast-rust should check for VCS files. By default, blazing-fast-rust will use the same folder where `blazing-fast-rust.json` was found.\n\nIf blazing-fast-rust can't find the configuration, it will attempt to use the current working directory. If no current working directory can't be found, blazing-fast-rust won't use the VCS integration, and a diagnostic will be emitted",
 					"type": ["string", "null"]
 				},
 				"useIgnoreFile": {
-					"description": "Whether Biome should use the VCS ignore file. When [true], Biome will ignore the files specified in the ignore file.",
+					"description": "Whether blazing-fast-rust should use the VCS ignore file. When [true], blazing-fast-rust will ignore the files specified in the ignore file.",
 					"anyOf": [{ "$ref": "#/definitions/Bool" }, { "type": "null" }]
 				}
 			},

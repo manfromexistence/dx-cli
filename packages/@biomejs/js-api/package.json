@@ -1,22 +1,22 @@
 {
-  "name": "@biomejs/js-api",
+  "name": "@blazing-fast-rust/js-api",
   "version": "2.0.3",
-  "description": "JavaScript APIs for the Biome package",
+  "description": "JavaScript APIs for the blazing-fast-rust package",
   "scripts": {
     "tsc": "tsc --noEmit",
-    "format": "cargo biome-cli-dev format --write .",
-    "ci": "cargo biome-cli-dev ci ./src && tsc --noEmit",
-    "check": "pnpm biome:check && tsc --noEmit",
-    "biome:check": "cargo biome-cli-dev check .",
-    "check:apply": "cargo biome-cli-dev check --apply-unsafe .",
+    "format": "cargo blazing-fast-rust-cli-dev format --write .",
+    "ci": "cargo blazing-fast-rust-cli-dev ci ./src && tsc --noEmit",
+    "check": "pnpm blazing-fast-rust:check && tsc --noEmit",
+    "blazing-fast-rust:check": "cargo blazing-fast-rust-cli-dev check .",
+    "check:apply": "cargo blazing-fast-rust-cli-dev check --apply-unsafe .",
     "build:wasm-dev": "pnpm run \"/^build:wasm-.+-dev$/\"",
     "build:wasm": "pnpm run \"/^build:wasm-.+(?<!dev)$/\"",
-    "build:wasm-bundler-dev": "wasm-pack build --out-dir ../../packages/@biomejs/wasm-bundler --target bundler --dev --scope biomejs ../../../crates/biome_wasm",
-    "build:wasm-bundler": "wasm-pack build --out-dir ../../packages/@biomejs/wasm-bundler --target bundler --release --scope biomejs ../../../crates/biome_wasm",
-    "build:wasm-node-dev": "wasm-pack build --out-dir ../../packages/@biomejs/wasm-nodejs --target nodejs --dev --scope biomejs ../../../crates/biome_wasm",
-    "build:wasm-node": "wasm-pack build --out-dir ../../packages/@biomejs/wasm-nodejs --target nodejs --release --scope biomejs ../../../crates/biome_wasm",
-    "build:wasm-web-dev": "wasm-pack build --out-dir ../../packages/@biomejs/wasm-web --target web --dev --scope biomejs ../../../crates/biome_wasm",
-    "build:wasm-web": "wasm-pack build --out-dir ../../packages/@biomejs/wasm-web --target web --release --scope biomejs ../../../crates/biome_wasm",
+    "build:wasm-bundler-dev": "wasm-pack build --out-dir ../../packages/@blazing-fast-rust/wasm-bundler --target bundler --dev --scope blazing-fast-rustjs ../../../crates/blazing-fast-rust_wasm",
+    "build:wasm-bundler": "wasm-pack build --out-dir ../../packages/@blazing-fast-rust/wasm-bundler --target bundler --release --scope blazing-fast-rustjs ../../../crates/blazing-fast-rust_wasm",
+    "build:wasm-node-dev": "wasm-pack build --out-dir ../../packages/@blazing-fast-rust/wasm-nodejs --target nodejs --dev --scope blazing-fast-rustjs ../../../crates/blazing-fast-rust_wasm",
+    "build:wasm-node": "wasm-pack build --out-dir ../../packages/@blazing-fast-rust/wasm-nodejs --target nodejs --release --scope blazing-fast-rustjs ../../../crates/blazing-fast-rust_wasm",
+    "build:wasm-web-dev": "wasm-pack build --out-dir ../../packages/@blazing-fast-rust/wasm-web --target web --dev --scope blazing-fast-rustjs ../../../crates/blazing-fast-rust_wasm",
+    "build:wasm-web": "wasm-pack build --out-dir ../../packages/@blazing-fast-rust/wasm-web --target web --release --scope blazing-fast-rustjs ../../../crates/blazing-fast-rust_wasm",
     "test": "vitest",
     "test:ci": "vitest run",
     "build": "tsc"
@@ -53,42 +53,42 @@
     "JavaScript",
     "bindings",
     "APIs",
-    "biome"
+    "blazing-fast-rust"
   ],
   "license": "MIT OR Apache-2.0",
-  "homepage": "https://biomejs.dev",
+  "homepage": "https://manfromexistence.vercel.app",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/biomejs/biome.git",
-    "directory": "packages/@biomejs/js-api"
+    "url": "git+https://github.com/manfromexistence/blazing-fast-rust.git",
+    "directory": "packages/@blazing-fast-rust/js-api"
   },
-  "author": "Biome Developers and Contributors",
-  "bugs": "https://github.com/biomejs/biome/issues",
+  "author": "blazing-fast-rust Developers and Contributors",
+  "bugs": "https://github.com/manfromexistence/blazing-fast-rust/issues",
   "devDependencies": {
-    "@biomejs/wasm-bundler": "workspace:*",
-    "@biomejs/wasm-nodejs": "workspace:*",
-    "@biomejs/wasm-web": "workspace:*",
+    "@blazing-fast-rust/wasm-bundler": "workspace:*",
+    "@blazing-fast-rust/wasm-nodejs": "workspace:*",
+    "@blazing-fast-rust/wasm-web": "workspace:*",
     "typescript": "5.8.3",
     "vite": "7.0.5",
     "vitest": "3.2.4"
   },
   "peerDependencies": {
-    "@biomejs/wasm-bundler": "^2.1.2",
-    "@biomejs/wasm-nodejs": "^2.1.2",
-    "@biomejs/wasm-web": "^2.1.2"
+    "@blazing-fast-rust/wasm-bundler": "^2.1.2",
+    "@blazing-fast-rust/wasm-nodejs": "^2.1.2",
+    "@blazing-fast-rust/wasm-web": "^2.1.2"
   },
   "peerDependenciesMeta": {
-    "@biomejs/wasm-bundler": {
+    "@blazing-fast-rust/wasm-bundler": {
       "optional": true
     },
-    "@biomejs/wasm-nodejs": {
+    "@blazing-fast-rust/wasm-nodejs": {
       "optional": true
     },
-    "@biomejs/wasm-web": {
+    "@blazing-fast-rust/wasm-web": {
       "optional": true
     }
   },
   "publishConfig": {
-    "provenance": true
+    "provenance": false
   }
 }

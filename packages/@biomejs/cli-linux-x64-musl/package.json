@@ -1,16 +1,16 @@
 {
-  "name": "@biomejs/cli-linux-x64-musl",
+  "name": "@blazing-fast-rust/cli-linux-x64-musl",
   "version": "2.1.2",
   "license": "MIT OR Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/biomejs/biome.git",
-    "directory": "packages/@biomejs/biome/cli-linux-x64-musl"
+    "url": "git+https://github.com/manfromexistence/blazing-fast-rust.git",
+    "directory": "packages/@blazing-fast-rust/cli-linux-x64-musl"
   },
   "engines": {
     "node": ">=14.21.3"
   },
-  "homepage": "https://biomejs.dev",
+  "homepage": "https://manfromexistence.vercel.app",
   "os": [
     "linux"
   ],
@@ -21,6 +21,6 @@
     "musl"
   ],
   "publishConfig": {
-    "provenance": true
+    "provenance": false
   }
 }

@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { Biome } from "../dist/web";
+import { blazing-fast-rust } from "../dist/web";
 
-describe("Biome for web", () => {
-	it("should export Biome", () => {
-		expect(Biome).not.toBeUndefined();
+describe("blazing-fast-rust for web", () => {
+	it("should export blazing-fast-rust", () => {
+		expect(blazing-fast-rust).not.toBeUndefined();
 	});
 });

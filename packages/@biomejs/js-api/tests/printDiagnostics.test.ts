@@ -1,16 +1,16 @@
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
-import { Biome, Distribution } from "../dist";
+import { blazing-fast-rust, Distribution } from "../dist";
 
-describe("Biome WebAssembly DiagnosticPrinter", () => {
-	let biome: Biome;
+describe("blazing-fast-rust WebAssembly DiagnosticPrinter", () => {
+	let blazing-fast-rust: blazing-fast-rust;
 	beforeEach(async () => {
-		biome = await Biome.create({
+		blazing-fast-rust = await blazing-fast-rust.create({
 			distribution: Distribution.NODE,
 		});
 	});
 
 	afterEach(() => {
-		biome.shutdown();
+		blazing-fast-rust.shutdown();
 	});
 
 	it("should format content", () => {
@@ -20,7 +20,7 @@ if(expr()) {
     statement();
 }`;
 
-		const html = biome.printDiagnostics(
+		const html = blazing-fast-rust.printDiagnostics(
 			[
 				{
 					advices: {

@@ -1,4 +1,4 @@
-# @biomejs/cli-darwin-arm64
+# @blazing-fast-rust/cli-darwin-arm64
 
 ## 2.1.2
 

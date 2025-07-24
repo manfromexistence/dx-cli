@@ -1,10 +1,10 @@
-export type BiomePath = string;
+export type blazing-fast-rustPath = string;
 export type ProjectKey = number;
 
 interface UpdateSettingsParams<Configuration> {
 	configuration: Configuration;
 	projectKey: ProjectKey;
-	workspaceDirectory?: BiomePath;
+	workspaceDirectory?: blazing-fast-rustPath;
 }
 
 type TextRange = [TextSize, TextSize];
@@ -13,7 +13,7 @@ type TextSize = number;
 
 interface OpenProjectParams {
 	openUninitialized: boolean;
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 }
 export interface OpenProjectResult {
 	/**
@@ -41,30 +41,30 @@ If a target path indicates a folder, all files within are scanned as well.
 
 Target paths must be absolute. 
 	*/
-				targetPaths: BiomePath[];
+				targetPaths: blazing-fast-rustPath[];
 			};
 	  }
 	| "project";
 interface OpenFileParams {
 	content: FileContent;
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	projectKey: ProjectKey;
 }
 type FileContent = { content: string; type: "fromClient"; version: number };
 
 interface CloseFileParams {
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	projectKey: ProjectKey;
 }
 
 interface GetFormatterIRParams {
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	projectKey: ProjectKey;
 }
 
 interface PullDiagnosticsParams {
 	categories: RuleCategories;
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	projectKey: ProjectKey;
 	/**
 	 * When `false` the diagnostics, don't have code frames of the code actions
@@ -80,19 +80,19 @@ interface PullDiagnosticsResult<Diagnostic> {
 }
 
 interface FormatFileParams {
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	projectKey: ProjectKey;
 }
 
 interface FormatRangeParams {
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	projectKey: ProjectKey;
 	range: TextRange;
 }
 
 interface FixFileParams {
 	fixFileMode: FixFileMode;
-	path: BiomePath;
+	path: blazing-fast-rustPath;
 	projectKey: ProjectKey;
 	ruleCategories: RuleCategories;
 	shouldFormat: boolean;

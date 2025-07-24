@@ -1,11 +1,11 @@
-import type { Configuration, Diagnostic } from "@biomejs/wasm-nodejs";
-import * as moduleNodeJs from "@biomejs/wasm-nodejs";
-import { BiomeCommon } from "./common";
+import type { Configuration, Diagnostic } from "@blazing-fast-rust/wasm-nodejs";
+import * as moduleNodeJs from "@blazing-fast-rust/wasm-nodejs";
+import { blazing-fast-rustCommon } from "./common";
 
 export type * from "./common";
 export type { Configuration, Diagnostic };
 
-export class Biome extends BiomeCommon<Configuration, Diagnostic> {
+export class blazing-fast-rust extends blazing-fast-rustCommon<Configuration, Diagnostic> {
 	constructor() {
 		super(moduleNodeJs);
 	}
