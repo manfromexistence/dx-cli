@@ -18,7 +18,7 @@ function copyBinaryToNativePackage(platform, arch) {
 	const os = platform.split("-")[0];
 	const buildName = getName(platform, arch);
 	const packageRoot = resolve(PACKAGES_ROOT, buildName);
-	const packageName = `@blazing-fast-rust/${buildName}`;
+	const packageName = `blazing-fast-rust-${buildName}`;
 
 	// Update the package.json manifest
 	const { version, license, repository, engines, homepage } = rootManifest;
@@ -96,7 +96,7 @@ function updateVersionInJsPackage(packageName) {
 function updateVersionInDependencies(dependencies, version) {
 	if (dependencies) {
 		for (const dependency of Object.keys(dependencies)) {
-			if (dependency.startsWith("@blazing-fast-rust/")) {
+			if (dependency.startsWith("blazing-fast-rust-")) {
 				dependencies[dependency] = version;
 			}
 		}
@@ -105,11 +105,11 @@ function updateVersionInDependencies(dependencies, version) {
 
 /**
  * The wasm-pack binary changes the package name and version to use the ones coming from `blazing-fast-rust_wasm/Cargo.toml`.
- * This function updates name and version of the `package.json` to match the ones of `@blazing-fast-rust/blazing-fast-rust`
+ * This function updates name and version of the `package.json` to match the ones of `blazing-fast-rust`
  * @param target
  */
 function updateWasmPackage(target) {
-	const packageName = `@blazing-fast-rust/wasm-${target}`;
+	const packageName = `blazing-fast-rust-wasm-${target}`;
 	const packageRoot = resolve(PACKAGES_ROOT, `wasm-${target}`);
 
 	const manifestPath = resolve(packageRoot, "package.json");

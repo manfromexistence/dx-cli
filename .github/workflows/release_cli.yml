@@ -25,7 +25,7 @@ jobs:
         id: version
         with:
           diff-search: true
-          file-name: packages/@biomejs/biome/package.json
+          file-name: packages/blazing-fast-rust-biome/package.json
 
       - name: Set version name
         if: steps.version.outputs.changed == 'true'
@@ -37,7 +37,7 @@ jobs:
         if: env.nightly == 'true'
         run: |
           echo "prerelease=true" >> $GITHUB_ENV
-          echo "version=$(node packages/@biomejs/biome/scripts/update-nightly-version.mjs)" >> $GITHUB_ENV
+          echo "version=$(node packages/blazing-fast-rust-biome/scripts/update-nightly-version.mjs)" >> $GITHUB_ENV
 
   build:
     strategy:
@@ -192,20 +192,20 @@ jobs:
         run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
 
       - name: Build WASM module for bundlers
-        run: wasm-pack build --out-dir ../../packages/@biomejs/wasm-bundler --target bundler --release --scope biomejs crates/biome_wasm
+        run: wasm-pack build --out-dir ../../packages/blazing-fast-rust-wasm-bundler --target bundler --release --scope biomejs crates/biome_wasm
       - name: Build WASM module for node.js
-        run: wasm-pack build --out-dir ../../packages/@biomejs/wasm-nodejs --target nodejs --release --scope biomejs crates/biome_wasm
+        run: wasm-pack build --out-dir ../../packages/blazing-fast-rust-wasm-nodejs --target nodejs --release --scope biomejs crates/biome_wasm
       - name: Build WASM module for the web
-        run: wasm-pack build --out-dir ../../packages/@biomejs/wasm-web --target web --release --scope biomejs crates/biome_wasm
+        run: wasm-pack build --out-dir ../../packages/blazing-fast-rust-wasm-web --target web --release --scope biomejs crates/biome_wasm
 
       - name: Upload WASM artifact
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: wasm-${{ matrix.target }}
           path: |
-            ./packages/@biomejs/wasm-bundler
-            ./packages/@biomejs/wasm-nodejs
-            ./packages/@biomejs/wasm-web
+            ./packages/blazing-fast-rust-wasm-bundler
+            ./packages/blazing-fast-rust-wasm-nodejs
+            ./packages/blazing-fast-rust-wasm-web
           if-no-files-found: error
 
   publish:
@@ -242,17 +242,17 @@ jobs:
 
       - name: Set release infos
         if: needs.build.outputs.prerelease == 'true'
-        run: node packages/@biomejs/biome/scripts/update-nightly-version.mjs
+        run: node packages/blazing-fast-rust-biome/scripts/update-nightly-version.mjs
       - name: Generate npm packages
-        run: node packages/@biomejs/biome/scripts/generate-packages.mjs
+        run: node packages/blazing-fast-rust-biome/scripts/generate-packages.mjs
 
       - name: Publish npm packages as latest
-        run: for package in packages/@biomejs/*; do if [ $package != "packages/@biomejs/js-api" ]; then npm publish $package --tag latest --access public --provenance; fi; done
+        run: for package in packages/blazing-fast-rust-*; do if [ $package != "packages/blazing-fast-rust-js-api" ]; then npm publish $package --tag latest --access public --provenance; fi; done
         if: needs.build.outputs.prerelease != 'true'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Publish npm packages as nightly
-        run: for package in packages/@biomejs/*; do if [ $package != "packages/@biomejs/js-api" ]; then npm publish $package --tag nightly --access public --provenance; fi; done
+        run: for package in packages/blazing-fast-rust-*; do if [ $package != "packages/blazing-fast-rust-js-api" ]; then npm publish $package --tag nightly --access public --provenance; fi; done
         if: needs.build.outputs.prerelease == 'true'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,11 +1,11 @@
 {
-  "name": "@blazing-fast-rust/cli-darwin-x64",
+  "name": "blazing-fast-rust-cli-darwin-x64",
   "version": "2.1.2",
   "license": "MIT OR Apache-2.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/manfromexistence/blazing-fast-rust.git",
-    "directory": "packages/@blazing-fast-rust/cli-darwin-x64"
+    "directory": "packages/blazing-fast-rust-cli-darwin-x64"
   },
   "engines": {
     "node": ">=14.21.3"

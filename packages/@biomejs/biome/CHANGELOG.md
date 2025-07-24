@@ -1,4 +1,4 @@
-# @blazing-fast-rust/blazing-fast-rust
+# blazing-fast-rust
 
 ## 2.1.2
 
@@ -556,7 +556,7 @@
   You can now insert a file from your JS code:
 
   ```js
-  import { MemoryFileSystem, Workspace } from "@blazing-fast-rust/wasm-web";
+  import { MemoryFileSystem, Workspace } from "blazing-fast-rust-wasm-web";
 
   const fs = new MemoryFileSystem();
   const workspace = Workspace.withFileSystem(fs);
@@ -882,7 +882,7 @@
 
 ### Patch Changes
 
-- [#6436](https://github.com/manfromexistence/blazing-fast-rust/pull/6436) [`ec7c63d`](https://github.com/manfromexistence/blazing-fast-rust/commit/ec7c63df520103b5d8ea0090c59486574e7370dd) Thanks [@ematipico](https://github.com/ematipico)! - Fixed an issue where binaries weren't copied anymore inside the `@blazing-fast-rust/cli-*` packages.
+- [#6436](https://github.com/manfromexistence/blazing-fast-rust/pull/6436) [`ec7c63d`](https://github.com/manfromexistence/blazing-fast-rust/commit/ec7c63df520103b5d8ea0090c59486574e7370dd) Thanks [@ematipico](https://github.com/ematipico)! - Fixed an issue where binaries weren't copied anymore inside the `blazing-fast-rust-cli-*` packages.
 
 ## 2.0.1
 

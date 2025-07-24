@@ -1,15 +1,15 @@
 import type {
 	Configuration as ConfigurationBundler,
 	Diagnostic as DiagnosticBundler,
-} from "@blazing-fast-rust/wasm-bundler";
+} from "blazing-fast-rust-wasm-bundler";
 import type {
 	Configuration as ConfigurationNodejs,
 	Diagnostic as DiagnosticNodeJs,
-} from "@blazing-fast-rust/wasm-nodejs";
+} from "blazing-fast-rust-wasm-nodejs";
 import type {
 	Configuration as ConfigurationWeb,
 	Diagnostic as DiagnosticWeb,
-} from "@blazing-fast-rust/wasm-web";
+} from "blazing-fast-rust-wasm-web";
 import { blazing-fast-rustCommon } from "./common";
 
 export type * from "./common";
@@ -51,11 +51,11 @@ export class blazing-fast-rust extends blazing-fast-rustCommon<Configuration, Di
 	static async create({ distribution }: blazing-fast-rustCreate): Promise<blazing-fast-rust> {
 		switch (distribution) {
 			case Distribution.BUNDLER:
-				return new blazing-fast-rust(await import("@blazing-fast-rust/wasm-bundler"));
+				return new blazing-fast-rust(await import("blazing-fast-rust-wasm-bundler"));
 			case Distribution.NODE:
-				return new blazing-fast-rust(await import("@blazing-fast-rust/wasm-nodejs"));
+				return new blazing-fast-rust(await import("blazing-fast-rust-wasm-nodejs"));
 			case Distribution.WEB:
-				return new blazing-fast-rust(await import("@blazing-fast-rust/wasm-web"));
+				return new blazing-fast-rust(await import("blazing-fast-rust-wasm-web"));
 			default:
 				throw new Error(`Unknown distribution: ${distribution}`);
 		}

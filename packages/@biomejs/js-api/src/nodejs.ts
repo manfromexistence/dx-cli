@@ -1,5 +1,5 @@
-import type { Configuration, Diagnostic } from "@blazing-fast-rust/wasm-nodejs";
-import * as moduleNodeJs from "@blazing-fast-rust/wasm-nodejs";
+import type { Configuration, Diagnostic } from "blazing-fast-rust-wasm-nodejs";
+import * as moduleNodeJs from "blazing-fast-rust-wasm-nodejs";
 import { blazing-fast-rustCommon } from "./common";
 
 export type * from "./common";

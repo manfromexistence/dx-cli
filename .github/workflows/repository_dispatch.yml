@@ -20,7 +20,7 @@ concurrency:
 
 jobs:
   build-wasm:
-    name: Build @biomejs/wasm-web
+    name: Build blazing-fast-rust-wasm-web
     runs-on: depot-ubuntu-24.04-arm-16
     steps:
       - name: Checkout repository
@@ -32,14 +32,14 @@ jobs:
         with:
           path: |
             ./target
-            ./packages/@biomejs/wasm-web
+            ./packages/blazing-fast-rust-wasm-web
           key: ${{ env.WASM_PACK_CACHE_KEY }}
 
       - name: Install wasm-pack
         run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
 
       - name: Build WASM module for the web
-        run: wasm-pack build --out-dir ../../packages/@biomejs/wasm-web --target web --profiling --scope biomejs crates/biome_wasm
+        run: wasm-pack build --out-dir ../../packages/blazing-fast-rust-wasm-web --target web --profiling --scope biomejs crates/biome_wasm
 
       # https://github.com/actions/cache/issues/342
       - name: Clear old wasm-pack cache
@@ -56,7 +56,7 @@ jobs:
         with:
           path: |
             ./target
-            ./packages/@biomejs/wasm-web
+            ./packages/blazing-fast-rust-wasm-web
           key: ${{ env.WASM_PACK_CACHE_KEY }}
 
       - name: Install pnpm
@@ -70,13 +70,13 @@ jobs:
           cache: pnpm
 
       - name: Update package.json
-        working-directory: packages/@biomejs/wasm-web
+        working-directory: packages/blazing-fast-rust-wasm-web
         run: |
-          npm pkg set name='@biomejs/wasm-web'
+          npm pkg set name='blazing-fast-rust-wasm-web'
           npm pkg set version='0.0.0-rev.${{ github.event.head_commit.id }}'
 
       - name: Publish
-        working-directory: packages/@biomejs/wasm-web
+        working-directory: packages/blazing-fast-rust-wasm-web
         run: pnpx pkg-pr-new publish
 
   repository-dispatch:

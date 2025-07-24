@@ -13,8 +13,8 @@
     "enabled": false
   },
   "assignees": [
-    "@biomejs/maintainers",
-    "@biomejs/core-contributors"
+    "blazing-fast-rust-maintainers",
+    "blazing-fast-rust-core-contributors"
   ],
   "packageRules": [
     {

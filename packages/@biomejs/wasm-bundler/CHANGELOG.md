@@ -1,4 +1,4 @@
-# @blazing-fast-rust/wasm-bundler
+# blazing-fast-rust-wasm-bundler
 
 ## 2.1.2
 

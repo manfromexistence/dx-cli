@@ -1,4 +1,4 @@
-# @blazing-fast-rust/cli-linux-arm64-musl
+# blazing-fast-rust-cli-linux-arm64-musl
 
 ## 2.1.2
 

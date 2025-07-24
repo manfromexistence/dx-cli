@@ -1,5 +1,5 @@
 {
-  "name": "@blazing-fast-rust/wasm-web",
+  "name": "blazing-fast-rust-wasm-web",
   "type": "module",
   "collaborators": [
     "blazing-fast-rust Developers and Contributors"

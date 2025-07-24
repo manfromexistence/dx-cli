@@ -1,4 +1,4 @@
-# @blazing-fast-rust/wasm-web
+# blazing-fast-rust-wasm-web
 
 ## 2.1.2
 

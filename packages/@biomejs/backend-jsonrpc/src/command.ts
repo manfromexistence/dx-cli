@@ -14,16 +14,16 @@ export function getCommand(): string | null {
 
 	const PLATFORMS: PlatformPaths = {
 		win32: {
-			x64: "@blazing-fast-rust/cli-win32-x64/blazing-fast-rust.exe",
-			arm64: "@blazing-fast-rust/cli-win32-arm64/blazing-fast-rust.exe",
+			x64: "blazing-fast-rust-cli-win32-x64/blazing-fast-rust.exe",
+			arm64: "blazing-fast-rust-cli-win32-arm64/blazing-fast-rust.exe",
 		},
 		darwin: {
-			x64: "@blazing-fast-rust/cli-darwin-x64/blazing-fast-rust",
-			arm64: "@blazing-fast-rust/cli-darwin-arm64/blazing-fast-rust",
+			x64: "blazing-fast-rust-cli-darwin-x64/blazing-fast-rust",
+			arm64: "blazing-fast-rust-cli-darwin-arm64/blazing-fast-rust",
 		},
 		linux: {
-			x64: "@blazing-fast-rust/cli-linux-x64/blazing-fast-rust",
-			arm64: "@blazing-fast-rust/cli-linux-arm64/blazing-fast-rust",
+			x64: "blazing-fast-rust-cli-linux-x64/blazing-fast-rust",
+			arm64: "blazing-fast-rust-cli-linux-arm64/blazing-fast-rust",
 		},
 	};
 

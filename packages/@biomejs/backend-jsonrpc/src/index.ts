@@ -35,7 +35,7 @@ export async function createWorkspaceWithBinary(
 	await transport.request("initialize", {
 		capabilities: {},
 		client_info: {
-			name: "@blazing-fast-rust/backend-jsonrpc",
+			name: "blazing-fast-rust-backend-jsonrpc",
 			version: "0.10.1-next",
 		},
 	});

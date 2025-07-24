@@ -1,5 +1,5 @@
 {
-  "name": "@blazing-fast-rust/js-api",
+  "name": "blazing-fast-rust-js-api",
   "version": "2.0.3",
   "description": "JavaScript APIs for the blazing-fast-rust package",
   "scripts": {
@@ -11,12 +11,12 @@
     "check:apply": "cargo blazing-fast-rust-cli-dev check --apply-unsafe .",
     "build:wasm-dev": "pnpm run \"/^build:wasm-.+-dev$/\"",
     "build:wasm": "pnpm run \"/^build:wasm-.+(?<!dev)$/\"",
-    "build:wasm-bundler-dev": "wasm-pack build --out-dir ../../packages/@blazing-fast-rust/wasm-bundler --target bundler --dev --scope blazing-fast-rustjs ../../../crates/blazing-fast-rust_wasm",
-    "build:wasm-bundler": "wasm-pack build --out-dir ../../packages/@blazing-fast-rust/wasm-bundler --target bundler --release --scope blazing-fast-rustjs ../../../crates/blazing-fast-rust_wasm",
-    "build:wasm-node-dev": "wasm-pack build --out-dir ../../packages/@blazing-fast-rust/wasm-nodejs --target nodejs --dev --scope blazing-fast-rustjs ../../../crates/blazing-fast-rust_wasm",
-    "build:wasm-node": "wasm-pack build --out-dir ../../packages/@blazing-fast-rust/wasm-nodejs --target nodejs --release --scope blazing-fast-rustjs ../../../crates/blazing-fast-rust_wasm",
-    "build:wasm-web-dev": "wasm-pack build --out-dir ../../packages/@blazing-fast-rust/wasm-web --target web --dev --scope blazing-fast-rustjs ../../../crates/blazing-fast-rust_wasm",
-    "build:wasm-web": "wasm-pack build --out-dir ../../packages/@blazing-fast-rust/wasm-web --target web --release --scope blazing-fast-rustjs ../../../crates/blazing-fast-rust_wasm",
+    "build:wasm-bundler-dev": "wasm-pack build --out-dir ../../packages/blazing-fast-rust-wasm-bundler --target bundler --dev --scope blazing-fast-rustjs ../../../crates/blazing-fast-rust_wasm",
+    "build:wasm-bundler": "wasm-pack build --out-dir ../../packages/blazing-fast-rust-wasm-bundler --target bundler --release --scope blazing-fast-rustjs ../../../crates/blazing-fast-rust_wasm",
+    "build:wasm-node-dev": "wasm-pack build --out-dir ../../packages/blazing-fast-rust-wasm-nodejs --target nodejs --dev --scope blazing-fast-rustjs ../../../crates/blazing-fast-rust_wasm",
+    "build:wasm-node": "wasm-pack build --out-dir ../../packages/blazing-fast-rust-wasm-nodejs --target nodejs --release --scope blazing-fast-rustjs ../../../crates/blazing-fast-rust_wasm",
+    "build:wasm-web-dev": "wasm-pack build --out-dir ../../packages/blazing-fast-rust-wasm-web --target web --dev --scope blazing-fast-rustjs ../../../crates/blazing-fast-rust_wasm",
+    "build:wasm-web": "wasm-pack build --out-dir ../../packages/blazing-fast-rust-wasm-web --target web --release --scope blazing-fast-rustjs ../../../crates/blazing-fast-rust_wasm",
     "test": "vitest",
     "test:ci": "vitest run",
     "build": "tsc"
@@ -60,31 +60,31 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/manfromexistence/blazing-fast-rust.git",
-    "directory": "packages/@blazing-fast-rust/js-api"
+    "directory": "packages/blazing-fast-rust-js-api"
   },
   "author": "blazing-fast-rust Developers and Contributors",
   "bugs": "https://github.com/manfromexistence/blazing-fast-rust/issues",
   "devDependencies": {
-    "@blazing-fast-rust/wasm-bundler": "workspace:*",
-    "@blazing-fast-rust/wasm-nodejs": "workspace:*",
-    "@blazing-fast-rust/wasm-web": "workspace:*",
+    "blazing-fast-rust-wasm-bundler": "workspace:*",
+    "blazing-fast-rust-wasm-nodejs": "workspace:*",
+    "blazing-fast-rust-wasm-web": "workspace:*",
     "typescript": "5.8.3",
     "vite": "7.0.5",
     "vitest": "3.2.4"
   },
   "peerDependencies": {
-    "@blazing-fast-rust/wasm-bundler": "^2.1.2",
-    "@blazing-fast-rust/wasm-nodejs": "^2.1.2",
-    "@blazing-fast-rust/wasm-web": "^2.1.2"
+    "blazing-fast-rust-wasm-bundler": "^2.1.2",
+    "blazing-fast-rust-wasm-nodejs": "^2.1.2",
+    "blazing-fast-rust-wasm-web": "^2.1.2"
   },
   "peerDependenciesMeta": {
-    "@blazing-fast-rust/wasm-bundler": {
+    "blazing-fast-rust-wasm-bundler": {
       "optional": true
     },
-    "@blazing-fast-rust/wasm-nodejs": {
+    "blazing-fast-rust-wasm-nodejs": {
       "optional": true
     },
-    "@blazing-fast-rust/wasm-web": {
+    "blazing-fast-rust-wasm-web": {
       "optional": true
     }
   },

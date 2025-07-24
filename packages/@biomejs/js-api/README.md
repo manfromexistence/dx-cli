@@ -8,22 +8,22 @@ Official JavaScript bindings for [blazing-fast-rust](https://manfromexistence.ve
 ## Installation
 
 ```shell
-npm i @blazing-fast-rust/js-api
-npm i @blazing-fast-rust/wasm-<dist>
+npm i blazing-fast-rust-js-api
+npm i blazing-fast-rust-wasm-<dist>
 ```
 
-You need to install one of the `@blazing-fast-rust/wasm-*` package as a **peer dependency** for this package to work correctly, out of the following distributions:
-- `@blazing-fast-rust/wasm-bundler`: Install this package if you're using a bundler that supports importing `*.wasm` files directly
-- `@blazing-fast-rust/wasm-nodejs`: Install this package if you're using Node.js to load the WebAssembly bundle use the `fs` API
-- `@blazing-fast-rust/wasm-web`: Install this package if you're targeting the web platform to load the WASM bundle using the `fetch` API
+You need to install one of the `blazing-fast-rust-wasm-*` package as a **peer dependency** for this package to work correctly, out of the following distributions:
+- `blazing-fast-rust-wasm-bundler`: Install this package if you're using a bundler that supports importing `*.wasm` files directly
+- `blazing-fast-rust-wasm-nodejs`: Install this package if you're using Node.js to load the WebAssembly bundle use the `fs` API
+- `blazing-fast-rust-wasm-web`: Install this package if you're targeting the web platform to load the WASM bundle using the `fetch` API
 
 ## Usage
 
 ```js
-import { blazing-fast-rust } from "@blazing-fast-rust/js-api/nodejs";
+import { blazing-fast-rust } from "blazing-fast-rust-js-api/nodejs";
 // Or:
-// import { blazing-fast-rust, Distribution } from "@blazing-fast-rust/js-api/bundler";
-// import { blazing-fast-rust, Distribution } from "@blazing-fast-rust/js-api/web";
+// import { blazing-fast-rust, Distribution } from "blazing-fast-rust-js-api/bundler";
+// import { blazing-fast-rust, Distribution } from "blazing-fast-rust-js-api/web";
 
 const blazing-fast-rust = new blazing-fast-rust();
 const { projectKey } = blazing-fast-rust.openProject("path/to/project/dir");

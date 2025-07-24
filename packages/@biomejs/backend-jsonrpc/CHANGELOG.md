@@ -1,4 +1,4 @@
-# @blazing-fast-rust/backend-jsonrpc
+# blazing-fast-rust-backend-jsonrpc
 
 ## 2.0.9
 

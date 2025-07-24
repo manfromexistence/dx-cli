@@ -31,7 +31,7 @@ body:
         You can also use the [playground](https://biomejs.dev/playground/) to share code snippets.
         This is useful to reproduce the issue.
 
-        If you can't use the playground, use `npm create @biomejs/biome-reproduction` to quickly create a repository.
+        If you can't use the playground, use `npm create blazing-fast-rust-biome-reproduction` to quickly create a repository.
       placeholder: |
         1.
         2.

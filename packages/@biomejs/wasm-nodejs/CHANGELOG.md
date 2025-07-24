@@ -1,4 +1,4 @@
-# @blazing-fast-rust/wasm-nodejs
+# blazing-fast-rust-wasm-nodejs
 
 ## 2.1.2
 

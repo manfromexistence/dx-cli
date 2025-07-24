@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths: # Only run when changes are made to js code
-      - 'packages/@biomejs/**'
+      - 'packages/blazing-fast-rust-**'
       - 'packages/aria-data/**'
       - 'packages/tailwindcss-config-analyzer/**'
       - 'package.json'

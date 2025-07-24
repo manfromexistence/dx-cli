@@ -21,7 +21,7 @@ jobs:
 
       - name: Set beta version
         run: |
-          echo "version=$(node packages/@biomejs/js-api/scripts/update-beta-version.mjs)" >> $GITHUB_ENV
+          echo "version=$(node packages/blazing-fast-rust-js-api/scripts/update-beta-version.mjs)" >> $GITHUB_ENV
 
   build:
     needs: version
@@ -55,27 +55,27 @@ jobs:
       - uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
 
       - name: Set beta version
-        run: node packages/@biomejs/js-api/scripts/update-beta-version.mjs
+        run: node packages/blazing-fast-rust-js-api/scripts/update-beta-version.mjs
 
       - name: Compile backends
         run: |
-          pnpm --filter @biomejs/js-api run build:wasm-bundler
-          pnpm --filter @biomejs/js-api run build:wasm-node
-          pnpm --filter @biomejs/js-api run build:wasm-web
-          pnpm --filter @biomejs/backend-jsonrpc i
-          pnpm --filter @biomejs/backend-jsonrpc run build
+          pnpm --filter blazing-fast-rust-js-api run build:wasm-bundler
+          pnpm --filter blazing-fast-rust-js-api run build:wasm-node
+          pnpm --filter blazing-fast-rust-js-api run build:wasm-web
+          pnpm --filter blazing-fast-rust-backend-jsonrpc i
+          pnpm --filter blazing-fast-rust-backend-jsonrpc run build
 
       - name: Build package
         run: |
-          pnpm --filter @biomejs/js-api i
-          pnpm --filter @biomejs/js-api run build
+          pnpm --filter blazing-fast-rust-js-api i
+          pnpm --filter blazing-fast-rust-js-api run build
 
       - name: Upload JS API artifact
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: js-api
           path: |
-            ./packages/@biomejs/js-api/dist
+            ./packages/blazing-fast-rust-js-api/dist
           if-no-files-found: error
 
   publish:
@@ -93,7 +93,7 @@ jobs:
         uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
         with:
           name: js-api
-          path: packages/@biomejs/js-api/dist
+          path: packages/blazing-fast-rust-js-api/dist
 
       - name: Install Node.js
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
@@ -102,10 +102,10 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - name: Set beta version
-        run: node packages/@biomejs/js-api/scripts/update-beta-version.mjs
+        run: node packages/blazing-fast-rust-js-api/scripts/update-beta-version.mjs
 
       - name: Publish npm package as beta
-        run: npm publish packages/@biomejs/js-api --tag beta --access public --provenance
+        run: npm publish packages/blazing-fast-rust-js-api --tag beta --access public --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
@@ -115,7 +115,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           name: JavaScript APIs v${{ needs.build.outputs.version }}
-          tag_name: "@biomejs/js-api@v${{ needs.build.outputs.version }}"
+          tag_name: "blazing-fast-rust-js-api@v${{ needs.build.outputs.version }}"
           draft: false
           prerelease: true
           generate_release_notes: true

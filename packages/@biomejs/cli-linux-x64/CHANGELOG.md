@@ -1,4 +1,4 @@
-# @blazing-fast-rust/cli-linux-x64
+# blazing-fast-rust-cli-linux-x64
 
 ## 2.1.2
 

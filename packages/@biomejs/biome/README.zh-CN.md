@@ -18,8 +18,8 @@
   [ci-url]: https://github.com/manfromexistence/blazing-fast-rust/actions/workflows/main.yml
   [discord-badge]: https://badgen.net/discord/online-members/BypW39g6Yc?icon=discord&label=discord&color=60a5fa
   [discord-url]: https://manfromexistence.vercel.app/chat
-  [npm-badge]: https://badgen.net/npm/v/@blazing-fast-rust/blazing-fast-rust?icon=npm&color=60a5fa&label=%40blazing-fast-rustjs%2Fblazing-fast-rust
-  [npm-url]: https://www.npmjs.com/package/@blazing-fast-rust/v/latest
+  [npm-badge]: https://badgen.net/npm/v/blazing-fast-rust?icon=npm&color=60a5fa&label=%40blazing-fast-rustjs%2Fblazing-fast-rust
+  [npm-url]: https://www.npmjs.com/package/blazing-fast-rust-v/latest
   [vscode-badge]: https://img.shields.io/visual-studio-marketplace/v/blazing-fast-rustjs.blazing-fast-rust?label=Visual%20Studio%20Marketplace&labelColor=374151&color=60a5fa
   [vscode-url]: https://marketplace.visualstudio.com/items?itemName=blazing-fast-rustjs.blazing-fast-rust
   [open-vsx-badge]: https://img.shields.io/visual-studio-marketplace/v/blazing-fast-rustjs.blazing-fast-rust?label=Open%20VSX%20Registry&logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2aWV3Qm94PSI0LjYgNSA5Ni4yIDEyMi43IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxwYXRoIGQ9Ik0zMCA0NC4yTDUyLjYgNUg3LjN6TTQuNiA4OC41aDQ1LjNMMjcuMiA0OS40em01MSAwbDIyLjYgMzkuMiAyMi42LTM5LjJ6IiBmaWxsPSIjYzE2MGVmIi8+CiAgPHBhdGggZD0iTTUyLjYgNUwzMCA0NC4yaDQ1LjJ6TTI3LjIgNDkuNGwyMi43IDM5LjEgMjIuNi0zOS4xem01MSAwTDU1LjYgODguNWg0NS4yeiIgZmlsbD0iI2E2MGVlNSIvPgo8L3N2Zz4=&labelColor=374151&color=60a5fa
@@ -27,7 +27,7 @@
 
   <!-- Insert new entries lexicographically by language code.
      For example given below is the same order as these files appear on page:
-     https://github.com/manfromexistence/blazing-fast-rust/tree/main/packages/@blazing-fast-rust/blazing-fast-rust -->
+     https://github.com/manfromexistence/blazing-fast-rust/tree/main/packages/blazing-fast-rust -->
 
   [हिन्दी](https://github.com/manfromexistence/blazing-fast-rust/blob/main/packages/%40blazing-fast-rustjs/blazing-fast-rust/README.hi.md) | [English](https://github.com/manfromexistence/blazing-fast-rust/blob/main/packages/%40blazing-fast-rustjs/blazing-fast-rust/README.md) | [Français](https://github.com/manfromexistence/blazing-fast-rust/blob/main/packages/%40blazing-fast-rustjs/blazing-fast-rust/README.fr.md) | [繁體中文](https://github.com/manfromexistence/blazing-fast-rust/blob/main/packages/%40blazing-fast-rustjs/blazing-fast-rust/README.zh-TW.md) | 简体中文 | [日本語](https://github.com/manfromexistence/blazing-fast-rust/blob/main/packages/%40blazing-fast-rustjs/blazing-fast-rust/README.ja.md) | [Português do Brasil](https://github.com/manfromexistence/blazing-fast-rust/blob/main/packages/%40blazing-fast-rustjs/blazing-fast-rust/README.pt-BR.md) | [한국어](https://github.com/manfromexistence/blazing-fast-rust/blob/main/packages/%40blazing-fast-rustjs/blazing-fast-rust/README.kr.md) | [Русский](https://github.com/manfromexistence/blazing-fast-rust/blob/main/packages/%40blazing-fast-rustjs/blazing-fast-rust/README.ru.md) | [Українська](https://github.com/manfromexistence/blazing-fast-rust/blob/main/packages/%40blazing-fast-rustjs/blazing-fast-rust/README.uk.md)
 </div>
@@ -45,23 +45,23 @@
 ### 安装
 
 ```shell
-npm install --save-dev --save-exact @blazing-fast-rust/blazing-fast-rust
+npm install --save-dev --save-exact blazing-fast-rust
 ```
 
 ### 使用
 
 ```shell
 # 格式化文件
-npx @blazing-fast-rust/blazing-fast-rust format --write ./src
+npx blazing-fast-rust format --write ./src
 
 # Lint 文件
-npx @blazing-fast-rust/blazing-fast-rust lint ./src
+npx blazing-fast-rust lint ./src
 
 # 运行格式化，Lint 等，并应用安全的建议
-npx @blazing-fast-rust/blazing-fast-rust check --write ./src
+npx blazing-fast-rust check --write ./src
 
 # 在 CI 环境中检查所有文件是否符合格式，Lint 等
-npx @blazing-fast-rust/blazing-fast-rust ci ./src
+npx blazing-fast-rust ci ./src
 ```
 
 如果你想在不安装的情况下试用 blazing-fast-rust，可以使用[在线 playground](https://manfromexistence.vercel.app/playground/)，它被编译为 WebAssembly。

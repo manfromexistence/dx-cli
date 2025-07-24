@@ -1,5 +1,5 @@
-import type { Configuration, Diagnostic } from "@blazing-fast-rust/wasm-bundler";
-import * as moduleBundler from "@blazing-fast-rust/wasm-bundler";
+import type { Configuration, Diagnostic } from "blazing-fast-rust-wasm-bundler";
+import * as moduleBundler from "blazing-fast-rust-wasm-bundler";
 import { blazing-fast-rustCommon } from "./common";
 
 export type * from "./common";

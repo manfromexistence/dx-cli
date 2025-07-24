@@ -1,4 +1,4 @@
-# @blazing-fast-rust/cli-win32-arm64
+# blazing-fast-rust-cli-win32-arm64
 
 ## 2.1.2
 
