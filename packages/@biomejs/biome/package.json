@@ -13,7 +13,7 @@
   "author": "manfromexistence",
   "license": "MIT OR Apache-2.0",
   "bugs": "https://github.com/manfromexistence/blazing-fast-rust/issues",
-  "description": "Enhance Developer Expreince",
+  "description": "Enhance Developer Experience",
   "files": [
     "bin/blazing-fast-rust",
     "configuration_schema.json",
