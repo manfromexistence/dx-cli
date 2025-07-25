@@ -1,0 +1,18 @@
+# .gitpod.yml
+tasks:
+  - name: Install Rust tools
+    init: |
+      # This runs only once when the workspace is first created.
+      rustup-init -y
+      source "$HOME/.cargo/env"
+      echo "✅ Rust is ready!"
+    command: |
+      # This runs every time you start the workspace.
+      source "$HOME/.cargo/env"
+      cargo install cross
+      echo "✅ cross is installed and ready to use!"
+
+# This ensures VS Code extensions for Rust are installed.
+vscode:
+  extensions:
+    - rust-lang.rust-analyzer
