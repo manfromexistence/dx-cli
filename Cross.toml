@@ -1,5 +1,9 @@
+# Cross.toml
+
 [target.x86_64-unknown-linux-gnu]
 image = "ghcr.io/cross-rs/x86_64-unknown-linux-gnu:0.2.5"
 
 [target.x86_64-pc-windows-gnu]
 image = "ghcr.io/cross-rs/x86_64-pc-windows-gnu:0.2.5"
+# Use our custom script instead of the default docker command.
+runner = "./windows-runner.sh"

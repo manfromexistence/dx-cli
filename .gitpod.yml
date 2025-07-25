@@ -16,3 +16,19 @@ tasks:
 vscode:
   extensions:
     - rust-lang.rust-analyzer
+
+# (type -p wget >/dev/null || (sudo apt-get update && sudo apt-get install wget -y)) \
+# && sudo mkdir -p -m 755 /etc/apt/keyrings \
+# && wget -qO- https://cli.github.com/packages/githubcli-archive-key.gpg | sudo tee /etc/apt/keyrings/githubcli-archive-key.gpg > /dev/null \
+# && sudo chmod go+r /etc/apt/keyrings/githubcli-archive-key.gpg \
+# && echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-key.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+# && sudo apt-get update \
+# && sudo apt-get install gh -y
+
+
+# # 1. Create a git tag (e.g., v1.0.0)
+# git tag v1.0.0
+# git push origin v1.0.0
+
+# # 2. Create the release and upload your file(s)
+# gh release create v1.0.0 ./target/x86_64-unknown-linux-gnu/release/biome --notes "My first manual release"
